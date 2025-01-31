@@ -1,0 +1,29 @@
+{
+  "media-notes:insert-media-timestamp": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "media-notes:toggle-play-pause": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": " "
+    }
+  ],
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ]
+}
