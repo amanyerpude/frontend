@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -176,6 +177,15 @@
   },
   "active": "478a42d9f244daa2",
   "lastOpenFiles": [
+    "Real-Time Updates/media/Vertical_Scaling_or_Scaling_Up_add_CPU_RAM_etc.jpg",
+    "Real-Time Updates/media/Short_Polling.png",
+    "Real-Time Updates/media/Short_Polling_Useless_Requests.jpg",
+    "Real-Time Updates/media/Short_Polling_Frequent_or_Random_Updates.png",
+    "Real-Time Updates/media/Long_Polling.jpg",
+    "Real-Time Updates/media/Load_Balancer.jpg",
+    "Real-Time Updates/media/Horizontal_Scaling.jpg",
+    "Real-Time Updates/media/Horizontal_Scaling_or_Scaling_Out_add_servers.jpg",
+    "Real-Time Updates/media/add_more_CPU_and_RAM_to_the_server.jpg",
     "z_01_System Design/Concepts & Techniques/03. Web Storages/Web Storages.md",
     "z_01_System Design/Real World Systems/04. Autocomplete or Typeahead Suggestions/Autocomplete-Typeahead.md",
     "z_01_System Design/Real World Systems/04. Autocomplete or Typeahead Suggestions/Typeahead Widget.md",
@@ -201,7 +211,6 @@
     "z_01_System Design/Concepts & Techniques/01. Introduction/All In One Comprehensive Guide.md",
     "z_01_System Design/Concepts & Techniques/02. Client Server API/Client-Server Architecture . Web Architecture.md",
     "z_01_System Design/Concepts & Techniques/02. Client Server API/02. GraphQL, gRPC, tRPC.md",
-    "z_01_System Design/Concepts & Techniques/02. Client Server API/03. Summary, Examples, Interview Tips.md",
     "Journal/2025/01. January",
     "Journal/2025/00. Decision Bucket",
     "Journal/2025",
