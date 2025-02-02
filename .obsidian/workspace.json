@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "478a42d9f244daa2",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Real-Time Updates/media/Short_Polling_Frequent_or_Random_Updates.png"
-              },
-              "icon": "lucide-image",
-              "title": "Short_Polling_Frequent_or_Random_Updates"
-            }
-          },
-          {
             "id": "1f850afa24db3c7b",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "00. index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "right": {
     "id": "f4eee6ad96935111",
