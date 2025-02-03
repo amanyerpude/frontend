@@ -178,8 +178,9 @@
   },
   "active": "1f850afa24db3c7b",
   "lastOpenFiles": [
-    "Building_Blocks/Real_Time_Updates/media/add_more_CPU_and_RAM_to_the_server.jpg",
+    "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
     "Building_Blocks/Real_Time_Updates/00. index.md",
+    "Building_Blocks/Real_Time_Updates/media/add_more_CPU_and_RAM_to_the_server.jpg",
     "Building_Blocks/Real_Time_Updates/media/Load_Balancer.jpg",
     "Building_Blocks/Real_Time_Updates/media/Short_Polling_Frequent_or_Random_Updates.png",
     "Building_Blocks/Real_Time_Updates/media/Short_Polling.png",
@@ -190,7 +191,6 @@
     "Building_Blocks/Real_Time_Updates/media/Shared_Storage.png",
     "Building_Blocks/Real_Time_Updates/media/Vertical_Scaling_or_Scaling_Up_add_CPU_RAM_etc.jpg",
     "Building_Blocks/Real_Time_Updates/media/Short_Polling_Useless_Requests.jpg",
-    "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
     "Building_Blocks/Real_Time_Updates/media/Horizontal_Scaling.jpg",
     "Building_Blocks/Real_Time_Updates/media/Horizontal_Scaling_or_Scaling_Out_add_servers.jpg",
     "z_01_System Design/Concepts & Techniques/03. Web Storages/Web Storages.md",
