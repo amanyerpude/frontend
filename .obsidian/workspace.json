@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Building_Blocks/Web_Rendering_Patterns/00. index.md",
+                "file": "Building_Blocks/Real_Time_Updates/00. index.md",
                 "mode": "source",
                 "source": false
               },
@@ -175,11 +175,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "385f7fa91e0985fa",
+  "active": "1f850afa24db3c7b",
   "lastOpenFiles": [
+    "Building_Blocks/Web_Rendering_Patterns/00. index.md",
     "Building_Blocks",
     "Building_Blocks/Real_Time_Updates/00. index.md",
-    "Building_Blocks/Web_Rendering_Patterns/00. index.md",
     "Building_Blocks/Web_Rendering_Patterns/media",
     "Building_Blocks/Web_Rendering_Patterns",
     "Building_Blocks/Real_Time_Updates/media/Short_Polling_Frequent_or_Random_Updates.png",
@@ -222,7 +222,6 @@
     "Journal/2024/11. November",
     "z_03_Javascript/Chai aur Code",
     "z_03_Javascript/ProCodrr",
-    "Information Technology/Data Structure And Algorithm/Tree",
     "Untitled.canvas"
   ]
 }
