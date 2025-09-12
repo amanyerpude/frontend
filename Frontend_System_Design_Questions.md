@@ -1,30 +1,3 @@
-Nice, this one is a **big one** 👌  
-We’ve got **42 frontend system design problems**. These are real-world **machine coding + architecture design** exercises.
-
-### Analysis
-
-The list naturally falls into categories:
-
-1. **Media & Streaming Apps** – YouTube, Netflix, Spotify, Google Photos, etc.
-    
-2. **Social & Collaboration** – Instagram, Slack, LinkedIn, Twitter feeds, Collaborative editor, etc.
-    
-3. **Commerce & Booking** – E-commerce, Swiggy, Airbnb, Calendly, dining/movies.
-    
-4. **Widgets, SDKs & Micro-Apps** – Polls, chat, feature flag, analytics SDK, testimonial SDK, etc.
-    
-5. **Enterprise & Dashboards** – Admin dashboards, role-based apps, routing, A/B testing.
-    
-6. **Utility Apps** – Todo list, form builder, news website, event listings, membership apps.
-    
-7. **Advanced/Edge Cases** – High-frequency trading, coding platforms, observability systems.
-    
-
-For learning flow, we should start **small/simple** → **consumer apps** → **collaboration & social** → **commerce** → **widgets/SDKs** → **enterprise dashboards** → **advanced edge cases**.
-
----
-
-Here’s the **Obsidian-ready roadmap**:
 
 ```markdown
 # 🏗️ Frontend System Design Questions (42 Topics) – Learning Roadmap
