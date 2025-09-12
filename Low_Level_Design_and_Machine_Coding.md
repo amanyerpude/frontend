@@ -73,20 +73,3 @@
 
 ---
 ```
-
----
-
-⚡ Flow explanation:
-
-- Start with **fun coding problems** (tic tac toe, circles).
-    
-- Move to **building blocks (UI components)**.
-    
-- Add **user experience patterns (animations, effects, interactions)**.
-    
-- Scale into **complex reusable components** (file explorer, snack bar, walkthrough).
-    
-- End with **real-world performance & system-level design** (feature flags, portals, large datasets).
-    
-
-Do you want me to also **tag each component** in Obsidian with `#ui`, `#ux`, `#game`, `#performance`, etc. so you can filter them by type?
