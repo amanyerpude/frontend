@@ -122,14 +122,3 @@
 
 ---
 ```
-
-✅ This works nicely in Obsidian because:
-
-- Each **category is a second-level heading (`##`)** → easier navigation with the outline plugin.
-    
-- Problems are in **numbered lists** → good for tracking progress.
-    
-- `---` keeps clear separations in Preview mode.
-    
-
-Do you also want me to add **[ ] checkboxes** next to each problem so you can tick them off as you solve them in Obsidian?
