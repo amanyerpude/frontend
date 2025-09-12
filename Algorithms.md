@@ -1,6 +1,6 @@
 
 ```markdown
-# 📘 Algorithms (179 Problems) – Learning Roadmap
+# 📘 Algorithms (179 Problems)
 
 ## 1. Arrays & Number Theory (Basics → Subarrays → Mathy → Advanced)
 1. Swap two numbers without temp  
