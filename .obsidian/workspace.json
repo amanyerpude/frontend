@@ -50,6 +50,20 @@
             }
           },
           {
+            "id": "25e834e10335bbcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web_Fundamentals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web_Fundamentals"
+            }
+          },
+          {
             "id": "d2bbfa734592ba90",
             "type": "leaf",
             "state": {
@@ -64,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -219,10 +233,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "eea01310d5aa5867",
+  "active": "25e834e10335bbcf",
   "lastOpenFiles": [
-    "JavaScript_based_problems.md",
     "Optimization_Techniques.md",
+    "Web_Fundamentals.md",
+    "JavaScript_based_problems.md",
     "Algorithms.md",
     "Question_Bank/00_JavaScript_interview/00_JavaScript_Interview.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/01_String_Manipulation/Question_01_Print_All_Substrings_Including_Null.md",
@@ -256,7 +271,6 @@
     "Question_Bank/02_Coding_and_LeetCode_Patterns/04_Math_and_Logical_Patterns/Problem_02_Prime_Arrangements.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/04_Math_and_Logical_Patterns/Problem_01_aximum_Number_of_Balloons.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/04_Math_and_Logical_Patterns/Extras.md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/03_Sorting_and_Searching/Problem_04_Relative_Sort_Array.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
