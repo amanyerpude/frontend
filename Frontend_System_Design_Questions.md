@@ -76,26 +76,3 @@
 
 ---
 ```
-
----
-
-⚡ Flow explanation:
-
-- **Starter projects** → warmups like todo, polls, chat.
-    
-- **Media apps** → streaming & photo-based.
-    
-- **Social & collaboration** → feeds, messaging, conferencing.
-    
-- **Commerce** → Swiggy, E-commerce, Airbnb, Calendly.
-    
-- **Widgets & SDKs** → smaller focused systems.
-    
-- **Enterprise apps** → admin dashboards, observability, roles.
-    
-- **Utility apps** → forms, memberships, events.
-    
-- **Advanced systems** → Drive, coding platforms, stock trading.
-    
-
-Would you like me to also **tag each project with type** (`#media`, `#social`, `#commerce`, `#sdk`, `#enterprise`, `#utility`, `#advanced`) so you can filter designs in Obsidian by category?
