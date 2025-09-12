@@ -41,18 +41,3 @@
 
 ---
 ```
-
----
-
-⚡ Flow explanation:
-
-- **Creational** first → easiest entry point.
-    
-- **Structural** next → shows how to assemble bigger systems from parts.
-    
-- **Behavioral** → more abstract, focuses on communication patterns.
-    
-- **Advanced/System** → real-world performance & resilience (Object Pool, Circuit Breaker).
-    
-
-Would you like me to also add **tags for each pattern** (like `#creational`, `#structural`, `#behavioral`, `#system`) so in Obsidian you can quickly filter/search patterns by type?
