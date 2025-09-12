@@ -1,43 +1,92 @@
 
 ```markdown
-# ⚛️ React Hooks (20 Topics) – Learning Roadmap
+# 🛠️ Low-Level Design & Machine Coding (44 Topics) – Learning Roadmap
 
-## 1. Utility Hooks (Simple → DOM helpers)
-1. useToggle() hook  
-2. useCopy() hook  
-3. useHover() hook  
-4. useUnmount() hook in React  
-
----
-
-## 2. Performance Hooks (Optimizations)
-1. useDebounce() hook  
-2. useThrottle() hook  
-3. Polyfill for useMemo() and useCallback() hooks  
+## 1. Games & Logic (Fun → Problem Solving)
+1. Tic tac toe game with bot  
+2. Detect overlapping circles in React  
+3. Change color of the squares in the order clicked  
+4. Create a typing test with invalid character highlighting in React  
+5. Maintain timer state during page navigation  
 
 ---
 
-## 3. UI / UX Hooks (Responsive → Visibility → Interaction Control)
-1. useResponsive() hook  
-2. useOnScreen() hook  
-3. useOnClickOutside() hook  
-4. useLockedBody() hook  
+## 2. Basic UI Components (Simple → Common Widgets)
+1. Switch-Case component in React  
+2. Toggle switch in React  
+3. Accordion in React  
+4. Functional modal component in Reactjs  
+5. Create a lightbox (modal-image-gallery) in Reactjs  
+6. Create a spinner with CSS  
+7. Tab component with Lazy loading  
 
 ---
 
-## 4. Async & Data Hooks (Async workflows → Pagination → Tracking)
-1. useAsync() hook  
-2. useScript() hook  
-3. Custom hook for infinite scroll with cursor-based pagination  
-4. usePageVisits() hook  
+## 3. Interactive UI & UX Effects (Animations → User Feedback)
+1. Animate elements in a sequence  
+2. Typing effect component in React  
+3. Number increment counter in React  
+4. Preview zoomed image on Hover  
+5. Preview selected color from swatches  
+6. Highlight text on selection in React 🆕  
+7. Image comparison slider in React 🆕  
+8. Scroll indicator in React  
 
 ---
 
-## 5. Debugging & Inspection Hooks (Update → History → Focus → Idle)
-1. useWhyDidYouUpdate() hook  
-2. usePrevious() hook  
-3. useHasFocus() hook  
-4. useIdle() hook  
+## 4. Lists, Forms & Data Handling (Basic → Advanced Interactions)
+1. Editable todo-list in React  
+2. Code a TODO card list  
+3. Create a sortable Todo list with Drag and Drop option  
+4. Multi-Stepper component in React  
+5. Multi-Stepper form in React  
+6. Two-step login form in React  
+7. Pagination component in React  
+8. Search with pagination in Reactjs  
+9. Search with Autocomplete – React  
+10. Search with autosuggestion in VanillaJS  
+
+---
+
+## 5. Media & Slideshow Components (Visual → Responsive)
+1. Responsive slideshow in Reactjs  
+2. Create responsive slideshow gallery in Reactjs  
+3. Image auto carousel in React  
+
+---
+
+## 6. Advanced UI Components (Complex → Reusable)
+1. Create stacked snack bar in React  
+2. Create a grid component in React  
+3. Create a file explorer in React  
+4. Create website walkthrough assistant in JavaScript  
+5. Capture product visible on viewport when user stops scrolling  
+
+---
+
+## 7. Performance & System Design (Optimization → Real-World Scale)
+1. Implement Feature Flag component in React  
+2. React Portal  
+3. How to effectively render a large dataset (millions) in React?  
+4. Batch API calls in sequence in React 🆕  
+5. Time in human readable format in React 🆕  
 
 ---
 ```
+
+---
+
+⚡ Flow explanation:
+
+- Start with **fun coding problems** (tic tac toe, circles).
+    
+- Move to **building blocks (UI components)**.
+    
+- Add **user experience patterns (animations, effects, interactions)**.
+    
+- Scale into **complex reusable components** (file explorer, snack bar, walkthrough).
+    
+- End with **real-world performance & system-level design** (feature flags, portals, large datasets).
+    
+
+Do you want me to also **tag each component** in Obsidian with `#ui`, `#ux`, `#game`, `#performance`, etc. so you can filter them by type?
