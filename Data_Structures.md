@@ -25,18 +25,3 @@
 
 ---
 ```
-
----
-
-⚡ Flow explanation:
-
-- Start with **fundamentals (stack, queue, list, objects)**
-    
-- Then **linked lists and their variations (doubly, circular, deque)**
-    
-- Next **priority-based and hierarchical structures (priority queue, tree, heap)**
-    
-- Finally **advanced/modern structures (treap, trie, graph, AVL tree)**
-    
-
-Do you want me to also create a **difficulty tag** for each (like `#easy`, `#medium`, `#hard`) so that in Obsidian you can filter which DS to tackle first?
