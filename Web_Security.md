@@ -1,7 +1,3 @@
-Perfect 👍  
-I’ll apply the same Obsidian-ready **learning roadmap** format, sequencing from **fundamental web attacks → authentication/authorization → advanced exploits → best practices**.
-
-Here’s the final output for **Web Security**:
 
 ```markdown
 # 🔒 Web Security (14 Topics) – Learning Roadmap
@@ -24,14 +20,3 @@ Here’s the final output for **Web Security**:
 
 ---
 ```
-
----
-
-⚡ Flow is **attack-first → protection-after**:
-
-- Learner sees _what can go wrong (XSS, CSRF, XEE, injections)_
-    
-- Then _how to secure it (auth, session mgmt, CSP, best practices)_
-    
-
-Do you want me to also create a **“Master Web Security Checklist.md”** version where each item has sub-bullets like ✅ _what to do_ and ❌ _what to avoid_, so it becomes actionable in Obsidian?
