@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "State_Management.md",
+                "file": "Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "State_Management"
+              "title": "Algorithms"
             }
           },
           {
@@ -305,10 +305,10 @@
   },
   "active": "256cb6947b7f6581",
   "lastOpenFiles": [
-    "Rendering Patterns.md",
-    "State_Management.md",
-    "Design_Patterns.md",
     "Data_Structures.md",
+    "State_Management.md",
+    "Rendering Patterns.md",
+    "Design_Patterns.md",
     "Web_Security.md",
     "Web_Fundamentals.md",
     "Optimization_Techniques.md",

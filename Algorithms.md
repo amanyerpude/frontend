@@ -166,16 +166,3 @@
 ```
 
 ---
-
-⚡ Now this matches exactly the style of your example:
-
-- `#` for main header
-    
-- `##` for categories with sequencing hints
-    
-- numbered lists under each
-    
-- `---` dividers between categories
-    
-
-Do you also want me to add a **Table of Contents** at the top (with Obsidian links like `[[#Arrays & Number Theory]]`) so you can jump between categories quickly?
