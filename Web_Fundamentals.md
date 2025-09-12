@@ -22,18 +22,3 @@
 
 ---
 ```
-
----
-
-⚡ Structured in **easy → hard flow**:
-
-- First **browser basics & hosting**
-    
-- Then **API paradigms (REST, GraphQL, gRPC)**
-    
-- Then **modern web features (WebRTC, PWA, CDN, caching)**
-    
-- Finally **architectures, automation, error handling**.
-    
-
-Do you want me to **merge all these roadmaps (Algorithms + Optimization + Web Fundamentals)** into one **Master Roadmap.md** so you can navigate everything from one file in Obsidian?
