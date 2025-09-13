@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shared/03_Vue_js.md",
+                "file": "Shared/05_TypeScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_Vue_js"
+              "title": "05_TypeScript"
             }
           }
         ]
@@ -178,8 +178,10 @@
   },
   "active": "226397b1ecef9e3e",
   "lastOpenFiles": [
-    "Shared/02_JavaScript.md",
+    "Shared/04_Coding_and_LeetCode.md",
+    "Shared/05_TypeScript.md",
     "Shared/03_Vue_js.md",
+    "Shared/02_JavaScript.md",
     "Shared/01_HTML_CSS.md",
     "Shared/02_JavaScript",
     "Question_Bank/00_JavaScript_interview/00_JavaScript_Interview.md",
@@ -212,8 +214,6 @@
     "Question_Bank/02_Coding_and_LeetCode_Patterns/01_String_Manipulation/Question_03_Check_if_Two_Strings_Are_Anagrams.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Problem_01_Generate_Valid_Parenthesis_Pairs.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Extras.md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Extras.md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Challenge_02_Counter_Till_10,_Then_Next_10_(Pausing_at_Intervals).md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
