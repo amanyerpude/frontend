@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shared/01_HTML_CSS.md",
+                "file": "Shared/02_JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_HTML_CSS"
+              "title": "02_JavaScript"
             }
           }
         ]
@@ -178,8 +178,10 @@
   },
   "active": "226397b1ecef9e3e",
   "lastOpenFiles": [
-    "Question_Bank/00_JavaScript_interview/00_JavaScript_Interview.md",
     "Shared/01_HTML_CSS.md",
+    "Shared/02_JavaScript.md",
+    "Shared/02_JavaScript",
+    "Question_Bank/00_JavaScript_interview/00_JavaScript_Interview.md",
     "Shared",
     "01_JavaScript_based_problems.md",
     "React_Hooks.md",
@@ -205,7 +207,6 @@
     "Building_Blocks/Real_Time_Updates/00. index.md",
     "Senior_Frontend_Engineer/Scenario_Based_Questions",
     "Senior_Frontend_Engineer/TypeScript",
-    "Senior_Frontend_Engineer/Testing",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Problem_02_Next_Permutation.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/01_String_Manipulation/Question_03_Check_if_Two_Strings_Are_Anagrams.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Problem_01_Generate_Valid_Parenthesis_Pairs.md",
@@ -213,7 +214,6 @@
     "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Extras.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Challenge_02_Counter_Till_10,_Then_Next_10_(Pausing_at_Intervals).md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Challenge_01_React_JS_Counter_(Auto_Increment_with_Direction_Flip).md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/07_Optimization_and_Memoization/Problem_01_Implement_a_`memoize(fn)`_Function.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
