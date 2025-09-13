@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shared/02_JavaScript.md",
+                "file": "Shared/03_Vue_js.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_JavaScript"
+              "title": "03_Vue_js"
             }
           }
         ]
@@ -178,8 +178,9 @@
   },
   "active": "226397b1ecef9e3e",
   "lastOpenFiles": [
-    "Shared/01_HTML_CSS.md",
     "Shared/02_JavaScript.md",
+    "Shared/03_Vue_js.md",
+    "Shared/01_HTML_CSS.md",
     "Shared/02_JavaScript",
     "Question_Bank/00_JavaScript_interview/00_JavaScript_Interview.md",
     "Shared",
@@ -213,7 +214,6 @@
     "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Extras.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Extras.md",
     "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Challenge_02_Counter_Till_10,_Then_Next_10_(Pausing_at_Intervals).md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/08_React_Coding_Challenges/Challenge_01_React_JS_Counter_(Auto_Increment_with_Direction_Flip).md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
