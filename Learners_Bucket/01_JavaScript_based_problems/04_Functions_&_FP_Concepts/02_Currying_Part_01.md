@@ -1,11 +1,16 @@
+Got it ⚡ here’s your **fully polished Obsidian note** with a final **`> [!summary]` callout** at the bottom for a one-liner takeaway:
+
+---
+
+> [!quote] Metadata  
+> **Posted on:** January 4, 2020  
+> **Author:** Prashant Yadav  
+> **Posted in:** Interview, Javascript  
+> **Tags:** #Interview #Javascript #Easy
 
 ---
 
 # Javascript function that returns sum of the previous values
-
-  **Posted in:** Interview, Javascript | **Tagged:** Easy
-
----
 
 We will see how to create a javascript function that will remember its previously passed values and return the sum of the current and previous value.
 
@@ -74,7 +79,14 @@ console.log(sum());  // 12
 
 ---
 
-> [!tip] Key Point  
+> [!tip] Key Point
+> 
+> ```javascript
+> // Why this works
+> // Closures allow the inner function to keep a reference
+> // to 'sum' from the parent function even after 'curry' has finished execution.
+> ```
+> 
 > This works because of **closures** — the inner function keeps a reference to the variable `sum` from the parent function even after `curry` has finished execution.
 
 ---
@@ -84,3 +96,10 @@ console.log(sum());  // 12
 [Watch on YouTube](https://youtu.be/QJkltlNkmqs)
 
 ---
+
+> [!summary] Takeaway  
+> Use **closures** to persist state between function calls — allowing functions to “remember” values across executions.
+
+---
+
+Do you want me to also create a **templated Obsidian structure** (like a reusable note template with `Metadata → Example → Concept → Implementation → Key Point → Summary`) so you can reuse this for future coding notes?
