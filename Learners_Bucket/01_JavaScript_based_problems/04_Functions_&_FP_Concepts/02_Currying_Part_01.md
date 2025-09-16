@@ -84,5 +84,3 @@ console.log(sum());  // 12
 [Watch on YouTube](https://youtu.be/QJkltlNkmqs)
 
 ---
-
-Do you also want me to **add syntax highlighting for “javascript”** inside the callouts (so code inside callouts is colored too in Obsidian)?
