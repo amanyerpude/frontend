@@ -243,5 +243,3 @@ console.log(res, res2, res3, res4, res5, res6);
 [Watch on YouTube](https://youtu.be/7me5z_QNN1M)
 
 ---
-
-Do you also want me to **cross-link both posts in Obsidian** (like `[[Javascript function that returns sum of the previous values]]`) so you can jump between them?
