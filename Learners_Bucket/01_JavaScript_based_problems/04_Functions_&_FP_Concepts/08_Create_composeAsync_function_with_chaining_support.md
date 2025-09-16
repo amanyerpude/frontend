@@ -317,9 +317,3 @@ Final Result: 2
 [Watch on YouTube](https://youtu.be/zVvIn9aZLos?si=7YmV9kHxrdziz-F5)
 
 ---
-
-Would you like me to also create a **comparison note** that summarizes:
-
-- `composeAsync` (Promise-based) vs
-    
-- `compose` (callback-based, this Part 2)?
