@@ -131,5 +131,3 @@ true
 [Watch on YouTube](https://youtu.be/qONGx06Z4_A)
 
 ---
-
-Would you like me to also add **backlinks at the bottom** (like “🔗 Related Notes”) that list all currying-related notes together for easier navigation?
