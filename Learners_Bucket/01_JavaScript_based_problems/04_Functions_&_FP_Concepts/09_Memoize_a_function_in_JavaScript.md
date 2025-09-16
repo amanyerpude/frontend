@@ -1,17 +1,3 @@
-Perfect 👍 I’ll format this into the **final Obsidian-ready version** with:
-
-- `> [!quote]` for metadata
-    
-- `> [!example]` for usage example
-    
-- `> [!tip]` to highlight what memoization is
-    
-- `> [!summary]` for takeaway
-    
-- 🎥 Related Video
-    
-
-Here’s your **final version**:
 
 ---
 
@@ -134,5 +120,3 @@ console.log(b);
 [Watch on YouTube](https://youtu.be/ktL5L2DnYYg)
 
 ---
-
-Do you want me to also add this under **Functions & FP Concepts** in your index file (alongside Currying and Piping)?
