@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/02_Currying_Part_01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_index"
+              "title": "02_Currying_Part_01"
             }
           }
         ]
@@ -178,10 +178,15 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/03_Currying_Part_02.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/02_Currying_Part_01.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
     "Learners_Bucket",
     "Learners_Bucket/02_Algorithms.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Shared/05_TypeScript.md",
     "Shared/04_Coding_and_LeetCode.md",
     "Shared/03_Vue_js.md",
@@ -208,12 +213,7 @@
     "Senior_Frontend_Engineer/CSS_pre_processors_SASS_LESS",
     "Senior_Frontend_Engineer/Git",
     "Question_Bank/03_React_Interview.md",
-    "Senior_Frontend_Engineer/Machine_Coding",
     "Building_Blocks/Real_Time_Updates/00. index.md",
-    "Senior_Frontend_Engineer/Scenario_Based_Questions",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Problem_02_Next_Permutation.md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/01_String_Manipulation/Question_03_Check_if_Two_Strings_Are_Anagrams.md",
-    "Question_Bank/02_Coding_and_LeetCode_Patterns/06_Recursion_and_Backtracking/Problem_01_Generate_Valid_Parenthesis_Pairs.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
