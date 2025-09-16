@@ -125,5 +125,3 @@ console.log(result);
 [Watch on YouTube](https://youtu.be/jL6fLgf9Urw)
 
 ---
-
-Would you like me to now create a **combined MOC note** that links: _Currying Parts 1–4_ + _Piping Parts 1–2_ + _Sampling function_ — so you have a central hub for all FP-related problems?
