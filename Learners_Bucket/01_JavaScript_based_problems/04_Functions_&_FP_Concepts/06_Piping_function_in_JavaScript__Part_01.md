@@ -141,5 +141,3 @@ console.log(pipe(test)(1, 1, 1));
 [Watch on YouTube](https://youtu.be/anvBprk5q-c)
 
 ---
-
-Would you like me to also create a **series index note** in Obsidian that links _Piping Part 1_, _Part 2_, and your earlier _Currying_ posts together for easier navigation?
