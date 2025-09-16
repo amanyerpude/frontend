@@ -50,8 +50,9 @@
 5. [Currying – Part 4](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/05_Currying_Part_04.md)  
 6. Piping function – Part 1  
 7. Piping function – Part 2  
-8. Create composeAsync function with chaining support  
-9. Memoize a function  
+8. Create composeAsync function with chaining support - Part 1
+9. Compose Async Functions – Part 2 (Callback-driven)
+10. Memoize a function  
 
 ---
 
