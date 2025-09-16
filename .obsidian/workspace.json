@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/06_Piping function_in_JavaScript__Part_01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_Sampling_function"
+              "title": "06_Piping function_in_JavaScript__Part_01"
             }
           }
         ],
@@ -194,6 +194,7 @@
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/06_Piping function_in_JavaScript__Part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
@@ -228,7 +229,6 @@
     "Senior_Frontend_Engineer/Rendering_Patterns",
     "Senior_Frontend_Engineer/CSS_pre_processors_SASS_LESS",
     "Senior_Frontend_Engineer/Git",
-    "Question_Bank/03_React_Interview.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
