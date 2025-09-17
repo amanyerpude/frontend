@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** August 3, 2021  
-> **Author:** Prashant Yadav  
+> **Author:** 
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #polyfill #filter #array #prototype #interview
 
