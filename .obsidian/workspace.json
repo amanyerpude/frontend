@@ -35,7 +35,8 @@
               "title": "00_index"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -190,10 +191,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f6b14098da4ea7a2",
+  "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/06_Implement Store Class (HashSet) in JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/05_Polyfill for `extend` in JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create an Immutability Helper in JavaScript.md",
