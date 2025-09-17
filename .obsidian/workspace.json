@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_Currying_Part_03"
+              "title": "05_Currying_Part_04"
             }
           }
         ],
@@ -193,6 +193,7 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/03_Currying_Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/02_Currying_Part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
@@ -215,7 +216,6 @@
     "Create Compose Async Functions with Chaining Support.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/06_Piping_function_in_JavaScript__Part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
     "Learners_Bucket",
