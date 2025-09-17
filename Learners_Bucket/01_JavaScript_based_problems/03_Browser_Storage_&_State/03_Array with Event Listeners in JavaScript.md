@@ -1,23 +1,3 @@
-Perfect 👍 I’ll format this into the **final Obsidian-ready version** with:
-
-- `> [!quote]` metadata
-    
-- Problem statement
-    
-- Example usage (Input/Output)
-    
-- Implementation with prototype methods
-    
-- Input/Output full test case
-    
-- Tips (limitations, e.g., anonymous functions in `removeListener`)
-    
-- Takeaway
-    
-- 🎥 Related Video
-    
-
-Here’s the **final version**:
 
 ---
 

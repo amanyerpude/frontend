@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/03_Array with Event Listeners in JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_Create_an_Immutability_Helper_in_JavaScript"
+              "title": "03_Array with Event Listeners in JavaScript"
             }
           }
         ],
@@ -193,11 +193,11 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/05_Polyfill_for_extend_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/06_Implement_Store_Class_(HashSet)_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
-    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/03_Array with Event Listeners in JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/02_Create Custom Cookie in JavaScript.md",
