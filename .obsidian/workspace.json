@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/Untitled.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/11_.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "11_"
             }
           }
         ],
@@ -193,9 +193,9 @@
   },
   "active": "4795d24b660637a7",
   "lastOpenFiles": [
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/Untitled.md",
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/11_.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
