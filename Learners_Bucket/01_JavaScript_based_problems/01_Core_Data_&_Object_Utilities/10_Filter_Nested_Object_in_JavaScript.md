@@ -191,5 +191,3 @@ console.log(obj);
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/filter-nested-object-in-javascript/)
 
 ---
-
-Would you like me to also extend this with an **“Edge Cases”** section (like handling arrays inside objects, or distinguishing between `null` and `{}`) for more robust interview answers?
