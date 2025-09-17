@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** August 13, 2023  
-> **Author:** Prashant Yadav  
+> **Author:** 
 > **Posted in:** Interview, Javascript  
 > **Tags:** #search #inmemory #class
 
