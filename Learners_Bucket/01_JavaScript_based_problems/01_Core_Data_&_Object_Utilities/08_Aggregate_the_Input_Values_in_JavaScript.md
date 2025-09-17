@@ -178,5 +178,3 @@ const aggregateValues = (id) => {
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/aggregate-the-input-values/)
 
 ---
-
-Would you like me to also extend this with a **“Handling Arrays in Input Names”** section (e.g., `name="a.b[0].c"`) so it matches how libraries like Formik or Lodash handle nested forms?
