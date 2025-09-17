@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_index"
+              "title": "01_Create_Custom_Cookie_in_JavaScript"
             }
           }
         ],
@@ -193,13 +193,13 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/02_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/03_Array_with_Event_Listeners_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/05_Polyfill_for_extend_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/06_Implement_Store_Class_(HashSet)_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/08_Create_composeAsync_function_with_chaining_support_part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
