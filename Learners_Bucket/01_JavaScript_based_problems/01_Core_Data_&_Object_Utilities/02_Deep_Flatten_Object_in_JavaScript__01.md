@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** June 5, 2021  
-> **Author:** Prashant Yadav  
+> **Author:** 
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #object #flatten #recursion #array #deep
 
