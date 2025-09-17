@@ -182,5 +182,3 @@ const flatten = function(arr, result = []) {
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/array/how-to-flat-an-array-in-javascript/)
 
 ---
-
-Do you want me to also add a **“🎥 Related Video” section** (like your cookie post) for every such note, even if the original article doesn’t have one?
