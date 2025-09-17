@@ -208,5 +208,3 @@ console.log(object.x[0].y.z); // 5
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/set-object-value-at-the-string-path/)
 
 ---
-
-Would you like me to also add a **"Get vs Set Polyfill" comparison table** in these posts so you can quickly revise both side-by-side before interviews?
