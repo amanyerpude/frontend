@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09_Convert_Entity_Relation_Array_to_Object_in_JavaScript"
+              "title": "10_Filter_Nested_Object_in_JavaScript"
             }
           }
         ],
@@ -194,6 +194,7 @@
   "active": "4795d24b660637a7",
   "lastOpenFiles": [
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
@@ -219,7 +220,6 @@
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/05_Polyfill_for_extend_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/03_Array_with_Event_Listeners_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/02_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
