@@ -254,5 +254,3 @@ console.log(flatten(nested));
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/deep-flatten-object-in-javascript-1/)
 
 ---
-
-Would you like me to also **add a “Comparison Table” section** (Approach 1 vs Approach 2: Pros & Cons) for these posts so you can quickly glance the trade-offs in Obsidian?
