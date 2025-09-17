@@ -35,7 +35,8 @@
               "title": "03_"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -190,11 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d0a66af7ccf21d83",
+  "active": "4795d24b660637a7",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/03_.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
