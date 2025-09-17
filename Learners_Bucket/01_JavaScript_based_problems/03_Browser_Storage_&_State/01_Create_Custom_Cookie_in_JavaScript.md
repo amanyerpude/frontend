@@ -169,5 +169,3 @@ setTimeout(() => {
 [Watch on YouTube](https://youtu.be/21rvzoieIU0)
 
 ---
-
-Do you want me to also add this one under **Browser Storage & State** in your Obsidian index (alongside LocalStorage, Immutability Helper, etc.) so it’s linked with the rest?
