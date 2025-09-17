@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** April 2, 2024  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, Javascript  
 > **Tags:** #immutability #helper #function
 
