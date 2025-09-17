@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** June 2, 2023  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, Javascript  
 > **Tags:** #function #cookie #document
 
