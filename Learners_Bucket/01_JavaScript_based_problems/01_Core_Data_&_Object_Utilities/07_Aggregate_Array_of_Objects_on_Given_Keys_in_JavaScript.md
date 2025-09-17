@@ -182,5 +182,3 @@ console.log(aggregate(endorsements, "skill", "user"));
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/aggregate-array-of-objects-on-the-given-keys/)
 
 ---
-
-Would you like me to also add a **“Duplicate Handling” enhancement** (e.g., ensuring unique values with `Set`) so this post covers both **raw aggregation** and **unique aggregation** scenarios?
