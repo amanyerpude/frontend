@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** February 22, 2022  
-> **Author:** Prashant Yadav  
+> **Author:** 
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #multidimensional #filter #recursion #prototype #function
 
