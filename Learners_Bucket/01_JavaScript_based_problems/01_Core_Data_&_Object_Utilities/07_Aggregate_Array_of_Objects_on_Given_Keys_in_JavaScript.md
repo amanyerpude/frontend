@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** October 3, 2022  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #aggregate #reduce #array #object #groupBy
 
