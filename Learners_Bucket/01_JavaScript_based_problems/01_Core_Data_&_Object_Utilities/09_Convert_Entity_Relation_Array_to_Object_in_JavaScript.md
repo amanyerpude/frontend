@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** June 7, 2021  
-> **Author:** Prashant Yadav  
+> **Author:** 
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #relations #tree #reduce #recursion #arrays-to-object
 
