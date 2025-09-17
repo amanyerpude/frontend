@@ -181,5 +181,3 @@ console.log(get(obj, 'a.c'));          // undefined
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/get-object-value-from-string-path/)
 
 ---
-
-Would you like me to also add a **"Limitations & Improvements"** section here (e.g., handling escaped dots in keys, supporting default values if path not found) so you have interview talking points ready?
