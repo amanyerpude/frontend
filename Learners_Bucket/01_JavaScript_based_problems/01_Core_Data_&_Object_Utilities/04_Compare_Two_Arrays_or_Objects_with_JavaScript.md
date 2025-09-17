@@ -407,5 +407,3 @@ If you want, you can use libraries as well, e.g. **Lodash**: `_.isEqual(obj1, ob
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/array/compare-two-array-or-object-with-javascript/)
 
 ---
-
-Do you want me to add a small **“Edge-Cases Checklist”** section (Dates, RegExps, NaN, -0/+0, Maps/Sets) to all compare/equality posts so they’re ready for rapid review before interviews?
