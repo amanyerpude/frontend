@@ -321,5 +321,3 @@ Sometimes it’s easier to rely on tested libraries:
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/how-to-merge-objects-in-javascript/)
 
 ---
-
-Shall I also start adding a **comparison table** (like _Spread vs Assign vs Custom vs Deep_) for quick visual scanning in Obsidian? That way, you’d see trade-offs side by side.
