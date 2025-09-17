@@ -156,5 +156,3 @@ This is much closer to the **native iterator protocol** that powers constructs l
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/array-iterator-method-in-javascript/)
 
 ---
-
-Would you like me to also add a **“Real-World Use Case” section** (like paginated API responses or lazy-loading arrays) so the iterator concept feels more practical beyond interview prep?
