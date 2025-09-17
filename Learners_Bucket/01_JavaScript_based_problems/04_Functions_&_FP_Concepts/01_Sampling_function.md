@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** April 5, 2022  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, Javascript  
 > **Tags:** #function
 

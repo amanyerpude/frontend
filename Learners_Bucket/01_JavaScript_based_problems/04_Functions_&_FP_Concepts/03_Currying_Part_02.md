@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** June 12, 2021  
-> **Author:** Prashant Yadav  
+> **Author:**  
 > **Posted in:** Interview, Javascript
 
 ---

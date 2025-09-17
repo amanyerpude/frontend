@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** January 4, 2020  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, Javascript  
 > **Tags:** #Interview #Javascript #Easy
 
