@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** April 1, 2023  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, Javascript  
 > **Tags:** #array #event #function
 
