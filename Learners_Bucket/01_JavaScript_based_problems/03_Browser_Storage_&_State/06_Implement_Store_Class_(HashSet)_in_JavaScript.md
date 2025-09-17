@@ -123,5 +123,3 @@ false
 >     
 
 ---
-
-Do you want me to also create a **second version with ES6 `class` syntax** (instead of function-constructor) to keep both styles in your notes?

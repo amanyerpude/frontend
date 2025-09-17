@@ -1,4 +1,3 @@
-Perfect — I’ll structure this one into the **final Obsidian-ready format** like the others:
 
 ---
 
