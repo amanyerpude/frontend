@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** November 9, 2019  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Arrays, Interview, JavaScript  
 > **Tags:** #compare #deepEqual #array #object #equality #interview
 
