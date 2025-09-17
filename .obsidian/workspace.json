@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f6b14098da4ea7a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "07_Implement_an_In-Memory_Search_Engine"
-            }
-          },
-          {
             "id": "d0a66af7ccf21d83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10_Memoize_a_function_in_JavaScript"
+              "title": "00_index"
+            }
+          },
+          {
+            "id": "4795d24b660637a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01_"
             }
           }
         ],
@@ -191,8 +191,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d0a66af7ccf21d83",
+  "active": "4795d24b660637a7",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_.md",
+    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
+    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/09_Compose_Async_Functions_Callback_driven__Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/08_Create_composeAsync_function_with_chaining_support_part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/07_Piping_function_in_JavaScript__Part_02.md",
@@ -201,20 +208,15 @@
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/03_Currying_Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/02_Currying_Part_01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/05_Polyfill_for_extend_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/04_Create_an_Immutability_Helper_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/03_Array_with_Event_Listeners_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/02_Create_Custom_Cookie_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/02_Algorithms.md",
     "Data_Structures.md",
     "Design_Patterns.md",
-    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/06_Implement_Store_Class_(HashSet)_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
     "Create Compose Async Functions with Chaining Support.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
@@ -222,13 +224,11 @@
     "Shared/05_TypeScript.md",
     "Shared/04_Coding_and_LeetCode.md",
     "Shared/03_Vue_js.md",
-    "Shared/02_JavaScript.md",
     "Shared/02_JavaScript",
     "Shared",
     "Senior_Frontend_Engineer/Next_js",
     "Senior_Frontend_Engineer/dev_tools_babel_webpack_npm",
     "Senior_Frontend_Engineer/Rendering_Patterns",
-    "Senior_Frontend_Engineer/CSS_pre_processors_SASS_LESS",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
