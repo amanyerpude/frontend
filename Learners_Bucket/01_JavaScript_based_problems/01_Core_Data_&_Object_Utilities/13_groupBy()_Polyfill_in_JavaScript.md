@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** September 28, 2022  
-> **Author:**  
+> **Author:** Prashant Yadav 
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #polyfill #groupBy #reduce #aggregation #interview
 
