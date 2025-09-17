@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/07_Piping_function_in_JavaScript__Part_02.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/09_Compose_Async_Functions_Callback_driven__Part_02.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07_Piping_function_in_JavaScript__Part_02"
+              "title": "09_Compose_Async_Functions_Callback_driven__Part_02"
             }
           }
         ],
@@ -193,6 +193,8 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/08_Create_composeAsync_function_with_chaining_support_part_01.md",
+    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/07_Piping_function_in_JavaScript__Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/06_Piping_function_in_JavaScript__Part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
@@ -210,9 +212,7 @@
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/06_Implement_Store_Class_(HashSet)_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/08_Create_composeAsync_function_with_chaining_support_part_01.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/07_Piping_function_in_JavaScript__Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/09_Compose_Async_Functions_Callback_driven__Part_02.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
     "Create Compose Async Functions with Chaining Support.md",
