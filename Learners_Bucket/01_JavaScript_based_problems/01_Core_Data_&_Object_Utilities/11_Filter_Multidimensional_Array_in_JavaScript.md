@@ -171,5 +171,3 @@ console.log(JSON.stringify(filtered));
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/filter-multidimensional-array-in-javascript/)
 
 ---
-
-Do you want me to also add a **“Flatten + Filter” hybrid variant** (where filtering happens while flattening) as an advanced bonus section? That often comes up in interviews when discussing recursion + arrays.
