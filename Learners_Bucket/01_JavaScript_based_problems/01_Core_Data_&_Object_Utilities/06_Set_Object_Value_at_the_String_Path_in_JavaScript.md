@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** June 9, 2023  
-> **Author:** Prashant Yadav  
+> **Author:**  
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #object #set #lodash #polyfill #recursion
 
