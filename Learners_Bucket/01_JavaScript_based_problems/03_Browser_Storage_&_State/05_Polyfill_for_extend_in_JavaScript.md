@@ -158,5 +158,3 @@ console.log(student1 instanceof Student); // true
 >     
 
 ---
-
-Would you like me to also prepare a **comparison snippet** that shows the same inheritance using modern `class` / `extends` syntax, so you have both the ES5 polyfill and ES6+ approach side by side?

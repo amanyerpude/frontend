@@ -1,4 +1,3 @@
-Got it 👍 This one doesn’t have a video, so I’ll keep it clean and structured in the same style as the earlier posts:
 
 ---
 
