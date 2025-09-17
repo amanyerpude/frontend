@@ -167,5 +167,3 @@ Array.prototype.map = function (callback, thisArg) {
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/polyfill-for-array-map/)
 
 ---
-
-Would you like me to also extend this with **a side-by-side comparison** of your polyfill vs. native `map()` behavior (including edge cases like sparse arrays and `thisArg`)? That would make this interview prep even stronger.
