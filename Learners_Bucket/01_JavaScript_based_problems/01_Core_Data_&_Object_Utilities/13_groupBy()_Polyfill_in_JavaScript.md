@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** September 28, 2022  
-> **Author:** Prashant Yadav 
+> **Author:**  
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #polyfill #groupBy #reduce #aggregation #interview
 
@@ -149,5 +149,3 @@ But since this is **not supported everywhere**, building the polyfill prepares y
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/groupby-polyfill-in-javascript/)
 
 ---
-
-Would you like me to also add a **performance comparison** (spread operator vs. push) so the post highlights interview-level optimization as well?
