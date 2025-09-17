@@ -3,7 +3,7 @@
 
 > [!quote] Metadata  
 > **Posted on:** March 22, 2023  
-> **Author:** Prashant Yadav  
+> **Author:**   
 > **Posted in:** Interview, JavaScript  
 > **Tags:** #iterator #closure #array #helper #interview
 
