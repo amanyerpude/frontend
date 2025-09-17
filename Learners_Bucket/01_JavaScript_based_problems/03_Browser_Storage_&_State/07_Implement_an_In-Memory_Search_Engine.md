@@ -1,6 +1,3 @@
-Perfect ✅ I’ll preserve the **entire original context** and just format it into a polished **Obsidian-ready final version** with metadata, structured sections, examples, implementation, and the video link.
-
-Here’s the **final version**:
 
 ---
 
@@ -185,5 +182,3 @@ console.log(searchEngine.search(
 [Watch on YouTube](https://youtu.be/8I5RbXzhzKI)
 
 ---
-
-Do you want me to also add **a second example using `year` sorting** so your notes show both numeric sorting (rating) and chronological sorting (year)?
