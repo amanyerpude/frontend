@@ -185,5 +185,3 @@ console.log(arr.filter(Boolean));
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/polyfill-for-array-filter/)
 
 ---
-
-Would you like me to also create a **side-by-side example table** comparing native `filter()` vs. polyfill behavior (normal arrays, sparse arrays, wrong callback type) so you can show interviewers you’ve thought about edge cases?

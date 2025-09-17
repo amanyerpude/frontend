@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15_Polyfill_for_Array.filter()_in_JavaScript"
+              "title": "04_Compare_Two_Arrays_or_Objects_with_JavaScript"
             }
           }
         ],
@@ -193,18 +193,18 @@
   },
   "active": "4795d24b660637a7",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/11_Filter_Multidimensional_Array_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/12_Array_Iterator_Method_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/13_groupBy()_Polyfill_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/14_Polyfill_for_Array.map()_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/13_groupBy()_Polyfill_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/12_Array_Iterator_Method_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/11_Filter_Multidimensional_Array_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/10_Filter_Nested_Object_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/03_How_to_Merge_Objects_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
