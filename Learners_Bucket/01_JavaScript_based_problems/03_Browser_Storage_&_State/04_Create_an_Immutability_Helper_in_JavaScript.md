@@ -266,5 +266,3 @@ console.log(newState);
 >     
 
 ---
-
-Do you want me to also add this **under Browser Storage & State** in your index (next to “Array with event listeners” and “Custom Cookie”), or create a new section like **Immutability Utilities**?
