@@ -266,5 +266,3 @@ console.log(ancestry(arr));
 [Original Post on LearnersBucket](https://learnersbucket.com/examples/interview/convert-entity-relation-array-to-object-in-javascript/)
 
 ---
-
-Want me to add an optional **“Cycle & Orphan Handling”** section (with visited-set detection and top-root discovery) so the snippet is production-ready?
