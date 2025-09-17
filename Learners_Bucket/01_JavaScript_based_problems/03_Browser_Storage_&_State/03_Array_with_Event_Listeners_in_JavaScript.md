@@ -167,5 +167,3 @@ console.log(arr);
 [Watch on YouTube](https://youtu.be/3jKvw-iZOXk)
 
 ---
-
-Do you want me to also add this note under your **Browser Storage & State** section in the index, or should I create a separate section like **“Event-driven Utilities”**?
