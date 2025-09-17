@@ -1,6 +1,3 @@
-Got it 👍 — I’ll keep the **full original context** intact and only reformat it into a clean, Obsidian-ready post (with metadata, sections, callouts, examples, and test cases), without shortening or cutting anything out.
-
-Here’s the **final version** for your post:
 
 ---
 
