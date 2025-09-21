@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+                "file": "javascript-interview-questions/implementation-based/00_index.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,26 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design_Patterns.md",
+                "file": "Learners_Bucket/02_Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Design_Patterns"
+              "title": "02_Algorithms"
             }
           },
           {
-            "id": "8efd6583514b3746",
+            "id": "fdf1101e34bc7547",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript_CORE.md",
+                "file": "javascript-interview-questions/conceptual-based/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JavaScript_CORE"
+              "title": "index"
             }
           }
         ],
@@ -205,44 +205,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8efd6583514b3746",
+  "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
-    "Design_Patterns.md",
+    "javascript-interview-questions/implementation-based/00_index.md",
+    "javascript-interview-questions/conceptual-based/index.md",
+    "Learners_Bucket/02_Algorithms.md",
+    "javascript-interview-questions/conceptual-based",
+    "javascript-interview-questions/implementation-based",
+    "javascript-interview-questions",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/03_How_to_Merge_Objects_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
     "JavaScript_CORE.md",
+    "Design_Patterns.md",
     "Frontend_System_Design_Questions.md",
     "Low_Level_Design_and_Machine_Coding.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/08_Share Data Between Two Browser Windows with JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/07_Implement `getByClassNameHierarchy()` Function in JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/06_Polyfill for `getElementsByStyle()`.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/05_Polyfill for `getElementsByClassName()`.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/04_CSS Selector Generator.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
-    "Learners_Bucket/02_Algorithms.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/08_Share Data Between Two Browser Windows with JavaScript.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/07_Implement `getByClassNameHierarchy()` Function in JavaScript.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/06_Polyfill for `getElementsByStyle()`.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/05_Polyfill for `getElementsByClassName()`.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/04_CSS Selector Generator.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
     "TypeScript/index.md",
     "Building_Blocks/Real_Time_Updates/00. index.md",
     "TypeScript",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/03_How_to_Merge_Objects_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/09_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities",
-    "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
+    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/08_Aggregate_the_Input_Values_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities",
+    "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State",
+    "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
     "Learners_Bucket",
-    "Shared/02_JavaScript",
-    "Shared",
-    "Senior_Frontend_Engineer/Next_js",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
