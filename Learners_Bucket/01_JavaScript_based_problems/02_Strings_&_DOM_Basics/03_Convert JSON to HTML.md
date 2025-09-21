@@ -245,5 +245,3 @@ console.log(JSONtoHTML(json));
     
 
 ---
-
-Do you want me to also extend this post with a **bonus section showing how the same JSON could be converted into an HTML string** (not DOM elements) — since that’s another common interview variation?

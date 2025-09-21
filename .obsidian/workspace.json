@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_Convert JSON to HTML"
+              "title": "Untitled"
             }
           }
         ],
@@ -193,8 +193,9 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/Untitled.md",
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
     "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
     "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
@@ -221,7 +222,6 @@
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
