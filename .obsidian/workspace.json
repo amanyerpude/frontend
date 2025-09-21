@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/Untitled.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/04_CSS Selector Generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "04_CSS Selector Generator"
             }
           }
         ],
@@ -193,9 +193,9 @@
   },
   "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
-    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/Untitled.md",
     "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/04_CSS Selector Generator.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
     "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
     "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
