@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/09_.md",
+                "file": "javascript-interview-questions/conceptual-based/11_.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09_"
+              "title": "11_"
             }
           }
         ],
@@ -193,8 +193,10 @@
   },
   "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
+    "javascript-interview-questions/conceptual-based/10_Storage, Tooling & Ecosystem.md",
+    "javascript-interview-questions/conceptual-based/11_.md",
+    "javascript-interview-questions/conceptual-based/09_Advanced JavaScript Concepts.md",
     "javascript-interview-questions/conceptual-based/08_DOM & Frontend Concepts.md",
-    "javascript-interview-questions/conceptual-based/09_.md",
     "javascript-interview-questions/conceptual-based/07_Asynchronous JavaScript.md",
     "javascript-interview-questions/conceptual-based/06_ES6+ Features.md",
     "javascript-interview-questions/conceptual-based/05_Control Flow, Loops & Iteration.md",
@@ -220,8 +222,6 @@
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/06_Polyfill for `getElementsByStyle()`.md",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/05_Polyfill for `getElementsByClassName()`.md",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/04_CSS Selector Generator.md",
-    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
-    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
     "TypeScript",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities",
