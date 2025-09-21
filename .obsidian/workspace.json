@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d0a66af7ccf21d83",
+            "id": "4795d24b660637a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "4795d24b660637a7",
+            "id": "d0a66af7ccf21d83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
+                "file": "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_Compare_Two_Arrays_or_Objects_with_JavaScript"
+              "title": "03_Convert JSON to HTML"
             }
           }
         ],
@@ -191,8 +191,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4795d24b660637a7",
+  "active": "d0a66af7ccf21d83",
   "lastOpenFiles": [
+    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
+    "Learners_Bucket/02_Algorithms.md",
+    "TypeScript/index.md",
+    "Building_Blocks/Real_Time_Updates/00. index.md",
+    "TypeScript",
+    "Learners_Bucket/01_JavaScript_based_problems/02_Strings_&_DOM_Basics",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/03_How_to_Merge_Objects_in_JavaScript.md",
+    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/07_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
@@ -203,23 +217,11 @@
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/12_Array_Iterator_Method_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/13_groupBy()_Polyfill_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/14_Polyfill_for_Array.map()_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/00_index.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/03_How_to_Merge_Objects_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/01_Create_Custom_Cookie_in_JavaScript.md",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/01_Sampling_function.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State/07_Implement_an_In-Memory_Search_Engine.md",
     "Learners_Bucket/01_JavaScript_based_problems/01_Core_Data_&_Object_Utilities",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/10_Memoize_a_function_in_JavaScript.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/09_Compose_Async_Functions_Callback_driven__Part_02.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/08_Create_composeAsync_function_with_chaining_support_part_01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/07_Piping_function_in_JavaScript__Part_02.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/06_Piping_function_in_JavaScript__Part_01.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/05_Currying_Part_04.md",
-    "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts/04_Currying_Part_03.md",
     "Learners_Bucket/01_JavaScript_based_problems/03_Browser_Storage_&_State",
     "Learners_Bucket/01_JavaScript_based_problems/04_Functions_&_FP_Concepts",
     "Learners_Bucket/01_JavaScript_based_problems",
@@ -227,8 +229,6 @@
     "Shared/02_JavaScript",
     "Shared",
     "Senior_Frontend_Engineer/Next_js",
-    "Senior_Frontend_Engineer/dev_tools_babel_webpack_npm",
-    "Senior_Frontend_Engineer/Rendering_Patterns",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
