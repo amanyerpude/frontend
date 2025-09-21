@@ -41,3 +41,25 @@
 
 ---
 ```
+
+
+--------------------------------------------------------------------------
+Design Patterns for Object Oriented
+Playlist : https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc
+
+--------------------------------------------------------------------------
+Design Patterns in JavaScript
+https://www.youtube.com/playlist?list=PL2sQdFoGnLIizdb8a7O2H2PkSCWazP6F9
+--------------------------------------------------------------------------
+SOLID Design Principles | Complete Guide with Code Examples
+https://youtu.be/UsNl8kcU4UA?si=e7lsc8FwPlryks9B
+--------------------------------------------------------------------------
+SOLID Principles in React with Examples by Frontend Master
+https://youtu.be/qaAPFQtRHLE?si=p-6NmXLC3xBVGzqI
+--------------------------------------------------------------------------
+SOLID Principles in One Video 🔥 | Clean Code & OOP Design Simplified for Developers
+https://youtu.be/jlnhHxzC9-w?si=xdkH4XE9I25IkpYe
+--------------------------------------------------------------------------
+Clean code and design patterns
+https://www.youtube.com/playlist?list=PLmzGdRRZtjPfkKJroG4fHSKquN5AIpHw3
+--------------------------------------------------------------------------
