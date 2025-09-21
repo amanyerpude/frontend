@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/02_.md",
+                "file": "javascript-interview-questions/conceptual-based/04_.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_"
+              "title": "04_"
             }
           }
         ],
@@ -193,8 +193,10 @@
   },
   "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
+    "javascript-interview-questions/conceptual-based/03_Arrays & Objects.md",
+    "javascript-interview-questions/conceptual-based/04_.md",
+    "javascript-interview-questions/conceptual-based/02_Variables & Scope.md",
     "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
-    "javascript-interview-questions/conceptual-based/02_.md",
     "javascript-interview-questions/conceptual-based/00_index.md",
     "javascript-interview-questions/implementation-based/00_index.md",
     "Learners_Bucket/02_Algorithms.md",
@@ -222,8 +224,6 @@
     "TypeScript",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/04_Compare_Two_Arrays_or_Objects_with_JavaScript.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/05_Get_Object_Value_from_String_Path_in_JavaScript.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/06_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities",
     "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts",
