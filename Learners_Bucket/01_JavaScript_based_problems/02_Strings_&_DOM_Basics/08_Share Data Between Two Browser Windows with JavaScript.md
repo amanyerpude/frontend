@@ -207,5 +207,3 @@ This pattern is widely used in:
     
 
 ---
-
-Do you want me to also add a **bonus variation** explaining how to share data **across tabs** (not just parent-child windows) using `localStorage` or `BroadcastChannel`? That’s another common interview follow-up.
