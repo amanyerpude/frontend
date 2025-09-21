@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/07_.md",
+                "file": "javascript-interview-questions/conceptual-based/08_.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07_"
+              "title": "08_"
             }
           }
         ],
@@ -193,8 +193,9 @@
   },
   "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
+    "javascript-interview-questions/conceptual-based/07_Asynchronous JavaScript.md",
+    "javascript-interview-questions/conceptual-based/08_.md",
     "javascript-interview-questions/conceptual-based/06_ES6+ Features.md",
-    "javascript-interview-questions/conceptual-based/07_.md",
     "javascript-interview-questions/conceptual-based/05_Control Flow, Loops & Iteration.md",
     "javascript-interview-questions/conceptual-based/04_Functions_&_Scoping.md",
     "javascript-interview-questions/conceptual-based/03_Arrays & Objects.md",
@@ -221,7 +222,6 @@
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/03_Convert JSON to HTML.md",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/02_Highlight the Words in a String.md",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics/01_HTML Encoding of a String in JavaScript.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
     "TypeScript",
     "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities",
