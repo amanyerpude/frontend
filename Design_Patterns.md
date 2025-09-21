@@ -63,3 +63,6 @@ https://youtu.be/jlnhHxzC9-w?si=xdkH4XE9I25IkpYe
 Clean code and design patterns
 https://www.youtube.com/playlist?list=PLmzGdRRZtjPfkKJroG4fHSKquN5AIpHw3
 --------------------------------------------------------------------------
+React Design Patterns Explained by Frontend Master (HOC | Hooks | Render Prop)
+https://youtu.be/atzCa4mkxZQ?si=q9hBlOomg8ANL1Le
+--------------------------------------------------------------------------
