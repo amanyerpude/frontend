@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/index.md",
+                "file": "javascript-interview-questions/conceptual-based/00_index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "00_index"
             }
           }
         ],
@@ -205,10 +205,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdf1101e34bc7547",
+  "active": "385f7fa91e0985fa",
   "lastOpenFiles": [
     "javascript-interview-questions/implementation-based/00_index.md",
-    "javascript-interview-questions/conceptual-based/index.md",
+    "javascript-interview-questions/conceptual-based/00_index.md",
     "Learners_Bucket/02_Algorithms.md",
     "javascript-interview-questions/conceptual-based",
     "javascript-interview-questions/implementation-based",
