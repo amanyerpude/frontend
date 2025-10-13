@@ -60,9 +60,9 @@
 1. Method chaining – Part 1  
 2. Method chaining – Part 2  
 3. Async methods chaining  
-4. Method chaining with priority  
+4. Method chaining with priority  - !!!!
 5. Publisher Subscriber – 1  
-6. Publisher Subscriber – 2  
+6. Publisher Subscriber – 2  - !!!!
 7. Implement an Router middleware  
 8. Create a School using OOPs principle  
 

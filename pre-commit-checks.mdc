@@ -1,0 +1,49 @@
+---
+description: Pre-commit quality checks for staged files
+globs: ["**/*.{js,ts,vue,css,scss,json}"]
+alwaysApply: false
+---
+
+# Pre-Commit Quality Checks
+
+## Always Run Before Committing
+Run these checks on **staged files** before every commit:
+
+### Quick Pre-Commit Commands
+```bash
+# Check JavaScript/TypeScript/Vue files
+git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|ts|vue)$' | xargs npx eslint --max-warnings 0
+
+# Check CSS/SCSS/Vue files  
+git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(css|scss|vue)$' | xargs npx stylelint
+
+# Check code formatting
+git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|ts|vue|css|scss|json)$' | xargs npx prettier --check
+
+# Check TypeScript types
+git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(vue|ts)$' | xargs npx vue-tsc --noEmit
+```
+
+### One-Liner for Quick Check
+```bash
+# Run all checks in one command
+git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|ts|vue|css|scss|json)$' | xargs -I {} sh -c 'npx eslint --max-warnings 0 {} && npx stylelint {} && npx prettier --check {} && npx vue-tsc --noEmit {}'
+```
+
+## Why Pre-Commit?
+- ✅ Clean commit history
+- ✅ Atomic commits  
+- ✅ Easier debugging
+- ✅ Team collaboration
+- ✅ CI/CD efficiency
+
+## File Types to Check
+- **JavaScript/TypeScript**: `.js`, `.ts`, `.vue`
+- **CSS/SCSS**: `.css`, `.scss`, `.vue`
+- **JSON**: `.json`
+
+## Common Issues to Avoid
+- ❌ Committing without running checks
+- ❌ Committing with linting errors
+- ❌ Committing with type errors
+- ❌ Committing with formatting issues
