@@ -53,14 +53,21 @@
 
 ---
 
-## 3. Browser Storage & State
-24. Create custom cookie  
-25. Localstorage with expiry  
-26. Array with event listeners  
-27. Create a Immutability Helper  
-28. Polyfill for extend  
-29. Implement store class (hashSet)  
-30. Implement an in-memory DB with search  
+## 💾 3. Browser Storage & State
+> **Focus:** Client-side storage and state management
+
+### 🍪 Cookie & LocalStorage
+24. [[24_Create_Custom_Cookie_in_JavaScript|Create custom cookie]] #cookie #storage #interview
+25. [[25_Localstorage_with_Expiry_in_JavaScript|Localstorage with expiry]] #localstorage #storage #interview #placeholder
+
+### 🔧 State Management
+26. [[26_Array_with_Event_Listeners_in_JavaScript|Array with event listeners]] #array #events #interview
+27. [[27_Create_an_Immutability_Helper_in_JavaScript|Create a Immutability Helper]] #immutability #helper #interview
+
+### 🛠️ Utilities & Data Structures
+28. [[28_Polyfill_for_extend_in_JavaScript|Polyfill for extend]] #polyfill #extend #interview
+29. [[29_Implement_Store_Class_(HashSet)_in_JavaScript|Implement store class (hashSet)]] #store #hashset #interview
+30. [[30_Implement_an_In-Memory_Search_Engine|Implement an in-memory DB with search]] #search #database #interview  
 
 ---
 
