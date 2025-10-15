@@ -71,17 +71,24 @@
 
 ---
 
-## 4. Functions & FP Concepts
-31. Sampling function  
-32. [Currying – Part 1](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/02_Currying_Part_01.md)  
-33. [Currying – Part 2](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/03_Currying_Part_02.md)  
-34. [Currying – Part 3](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/04_Currying_Part_03.md)  
-35. [Currying – Part 4](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/05_Currying_Part_04.md)  
-36. Piping function – Part 1  
-37. Piping function – Part 2  
-38. Create composeAsync function with chaining support - Part 1
-39. Compose Async Functions – Part 2 (Callback-driven)
-40. Memoize a function  
+## ⚡ 4. Functions & FP Concepts
+> **Focus:** Functional programming and advanced function patterns
+
+### 🔄 Currying Series
+31. [[31_Sampling_function|Sampling function]] #sampling #functional #interview
+32. [[32_Currying_Part_01|Currying – Part 1]] #currying #functional #interview
+33. [[33_Currying_Part_02|Currying – Part 2]] #currying #functional #interview
+34. [[34_Currying_Part_03|Currying – Part 3]] #currying #functional #interview
+35. [[35_Currying_Part_04|Currying – Part 4]] #currying #functional #interview
+
+### 🔧 Function Composition
+36. [[36_Piping_function_in_JavaScript__Part_01|Piping function – Part 1]] #piping #functional #interview
+37. [[37_Piping_function_in_JavaScript__Part_02|Piping function – Part 2]] #piping #functional #interview
+38. [[38_Create_composeAsync_function_with_chaining_support_part_01|Create composeAsync function with chaining support - Part 1]] #async #composition #interview
+39. [[39_Compose_Async_Functions_Callback_driven__Part_02|Compose Async Functions – Part 2 (Callback-driven)]] #async #composition #interview
+
+### 🚀 Performance & OptimizationSS
+40. [[40_Memoize_a_function_in_JavaScript|Memoize a function]] #memoization #performance #interview  
 
 ---
 
