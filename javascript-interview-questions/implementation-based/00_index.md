@@ -1,7 +1,7 @@
 # 🚀 JavaScript Implementation-Based Interview Questions
 
 > [!info] Navigation Hub
-> This is your central hub for **40+ practical JavaScript coding challenges** organized by difficulty and topic.
+> This is your central hub for **81 practical JavaScript coding challenges** organized by difficulty and topic.
 
 
 ## 🧱 1. Core Data & Object Utilities
@@ -72,66 +72,66 @@
 ---
 
 ## 5. Method Chaining & Patterns
-1. Method chaining – Part 1  
-2. Method chaining – Part 2  
-3. Async methods chaining  
-4. Method chaining with priority  - !!!!
-5. Publisher Subscriber – 1  
-6. Publisher Subscriber – 2  - !!!!
-7. Implement an Router middleware  
-8. Create a School using OOPs principle  
+41. Method chaining – Part 1  
+42. Method chaining – Part 2  
+43. Async methods chaining  
+44. Method chaining with priority  - !!!!
+45. Publisher Subscriber – 1  
+46. Publisher Subscriber – 2  - !!!!
+47. Implement an Router middleware  
+48. Create a School using OOPs principle  
 
 ---
 
 ## 6. Timers & Task Scheduling
-1. Implement clearAllTimeout  
-2. Throttle an array of task  
-3. Create a throttle function with trailing and leading option  
-4. Implement throttling  
-5. Implement debouncing  
-6. Debouncing with leading and trailing options  
-7. Create promiseSchedular that can be paused and resumed  
+49. Implement clearAllTimeout  
+50. Throttle an array of task  
+51. Create a throttle function with trailing and leading option  
+52. Implement throttling  
+53. Implement debouncing  
+54. Debouncing with leading and trailing options  
+55. Create promiseSchedular that can be paused and resumed  
 
 ---
 
 ## 7. Promises & Async Control
-1. Promise.all() polyfill  
-2. Promise.race() polyfill  
-3. Promise.any() polyfill  
-4. Promise.finally() polyfill  
-5. Promise.allSettled() polyfill  
-6. Create custom promise  
-7. Execute promises in Series  
-8. Execute promises with the Priority  
-9. Retry promises N number of times  
-10. Implement mapLimit async function  
-11. Implement async filter function  
-12. Implement async reject function  
-13. Process async callbacks queue – Part 2  
-14. Implement an engine that process async callbacks  
-15. Check performance of async and sync functions  
-16. Sum up functions return value running in parallel and in sequence  
+56. Promise.all() polyfill  
+57. Promise.race() polyfill  
+58. Promise.any() polyfill  
+59. Promise.finally() polyfill  
+60. Promise.allSettled() polyfill  
+61. Create custom promise  
+62. Execute promises in Series  
+63. Execute promises with the Priority  
+64. Retry promises N number of times  
+65. Implement mapLimit async function  
+66. Implement async filter function  
+67. Implement async reject function  
+68. Process async callbacks queue – Part 2  
+69. Implement an engine that process async callbacks  
+70. Check performance of async and sync functions  
+71. Sum up functions return value running in parallel and in sequence  
 
 ---
 
 ## 8. Networking & APIs
-1. Fetch with Timeout  
-2. Fetch request and response interceptor  
-3. Make high priority Api call  
-4. Cached API call with expiry time  
+72. Fetch with Timeout  
+73. Fetch request and response interceptor  
+74. Make high priority Api call  
+75. Cached API call with expiry time  
 
 ---
 
 ## 9. Framework / Testing Specific
-1. Polyfill for ClassNames in React  
-2. Handle race condition in React  
-3. Write a function to implement Test() and expect() as in Jest  
+76. Polyfill for ClassNames in React  
+77. Handle race condition in React  
+78. Write a function to implement Test() and expect() as in Jest  
 
 ---
 
 ## 10. Algorithmic / Miscellaneous
-1. Find highest commodity price under a timestamp  
-2. Remove cycle from the object  
-3. Create analytics SDK  
+79. Find highest commodity price under a timestamp  
+80. Remove cycle from the object  
+81. Create analytics SDK  
 
 ---
