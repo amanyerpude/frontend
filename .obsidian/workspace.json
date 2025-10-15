@@ -176,8 +176,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "385f7fa91e0985fa",
+  "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
+    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/15_Polyfill_for_Array.filter()_in_JavaScript.md",
+    "javascript-interview-questions/implementation-based/00_index.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/12_Filter_Multidimensional_Array_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/11_Filter_Nested_Object_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/10_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
@@ -189,7 +191,6 @@
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/04_How_to_Merge_Objects_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/03_Array_Iterator_Method_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/12_Array_Iterator_Method_in_JavaScript.md",
-    "javascript-interview-questions/implementation-based/00_index.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/02_Deep_Flatten_Object_in_JavaScript__01.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
@@ -206,7 +207,6 @@
     "Question_Bank/00_JavaScript_interview/Fundamentals/JavaScript.md",
     "Question_Bank/00_JavaScript_interview/Fundamentals/HTML_and_CSS.md",
     "Question_Bank/00_JavaScript_interview/Fundamentals/Extra.md",
-    "Learners_Bucket/02_Algorithms.md",
     "javascript-interview-questions/conceptual-based",
     "javascript-interview-questions/implementation-based",
     "javascript-interview-questions",
