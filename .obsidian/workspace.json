@@ -178,8 +178,9 @@
   },
   "active": "fdf1101e34bc7547",
   "lastOpenFiles": [
-    "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State/26_Array_with_Event_Listeners_in_JavaScript.md",
+    "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
     "javascript-interview-questions/implementation-based/00_index.md",
+    "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State/26_Array_with_Event_Listeners_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State/25_Localstorage_with_Expiry_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State/24_Create_Custom_Cookie_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/03_Browser_Storage_&_State/02_Localstorage_with_Expiry_in_JavaScript.md",
@@ -203,7 +204,6 @@
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/10_Convert_Entity_Relation_Array_to_Object_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/09_Aggregate_the_Input_Values_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/08_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/07_Set_Object_Value_at_the_String_Path_in_JavaScript.md",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
     "machine-coding",
