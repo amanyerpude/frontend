@@ -34,15 +34,22 @@
 
 ---
 
-## 2. Strings & DOM Basics
-16. HTML encoding of a string  
-17. Highlight the words in the string  
-18. Convert JSON to HTML  
-19. CSS selector generator  
-20. Polyfill for getElementByClassName()  
-21. Polyfill for getElementsByStyle()  
-22. Implement getByClassNameHierarchy() function  
-23. Share data between two browser window  
+## 🔤 2. Strings & DOM Basics
+> **Focus:** Text processing and DOM manipulation
+
+### 📝 String Processing
+16. [[16_HTML Encoding of a String in JavaScript|HTML encoding of a string]] #html #encoding #interview
+17. [[17_Highlight the Words in a String|Highlight the words in the string]] #string #highlight #interview
+18. [[18_Convert JSON to HTML|Convert JSON to HTML]] #json #html #conversion #interview
+
+### 🎨 DOM & CSS
+19. [[19_CSS Selector Generator|CSS selector generator]] #css #selector #interview
+20. [[20_Polyfill for `getElementsByClassName()`|Polyfill for getElementsByClassName()]] #polyfill #dom #interview
+21. [[21_Polyfill for `getElementsByStyle()`|Polyfill for getElementsByStyle()]] #polyfill #dom #interview
+22. [[22_Implement `getByClassNameHierarchy()` Function in JavaScript|Implement getByClassNameHierarchy() function]] #dom #hierarchy #interview
+
+### 🌐 Browser Communication
+23. [[23_Share Data Between Two Browser Windows with JavaScript|Share data between two browser window]] #browser #communication #interview  
 
 ---
 
