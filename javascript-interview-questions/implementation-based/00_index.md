@@ -87,7 +87,7 @@
 38. [[38_Create_composeAsync_function_with_chaining_support_part_01|Create composeAsync function with chaining support - Part 1]] #async #composition #interview
 39. [[39_Compose_Async_Functions_Callback_driven__Part_02|Compose Async Functions – Part 2 (Callback-driven)]] #async #composition #interview
 
-### 🚀 Performance & OptimizationSS
+### 🚀 Performance & Optimization
 40. [[40_Memoize_a_function_in_JavaScript|Memoize a function]] #memoization #performance #interview  
 
 ---
