@@ -1,58 +1,73 @@
-# JavaScript based problems
+# 🚀 JavaScript Implementation-Based Interview Questions
 
-## 1. Core Data & Object Utilities
-1. Flatten an array  
-2. Deep flatten object  
-3. Merge two or more objects  
-4. Compare two array or object  
-5. Get object value from string path  
-6. Set object value at the string path  
-7. Aggregate array of objects on the given keys  
-8. Aggregate the Input values of the Form  
-9. Convert entity relation array to object  
-10. Filter nested object  
-11. Filter Multidimensional Array  
-12. Array iterator method  
-13. groupBy() polyfill  
-14. Polyfill for Array.map  
-15. Polyfill for Array.filter  
+> [!info] Navigation Hub
+> This is your central hub for **40+ practical JavaScript coding challenges** organized by difficulty and topic.
+
+
+## 🧱 1. Core Data & Object Utilities
+> **Focus:** Array/Object manipulation fundamentals
+
+### 📝 Array Operations
+1. [[01_How_to_Flatten_an_Array_in_JavaScript|Flatten an array]] #array #polyfill #interview
+2. [[02_Deep_Flatten_Object_in_JavaScript__01|Deep flatten object]] #object #recursion #interview
+3. [[03_Array_Iterator_Method_in_JavaScript|Array iterator method]] #iterator #array #interview
+
+### 🔧 Object Manipulation  
+4. [[04_How_to_Merge_Objects_in_JavaScript|Merge two or more objects]] #object #merge #interview
+5. [[05_Compare_Two_Arrays_or_Objects_with_JavaScript|Compare two array or object]] #object #comparison #interview
+6. [[06_Get_Object_Value_from_String_Path_in_JavaScript|Get object value from string path]] #object #path #interview
+7. [[07_Set_Object_Value_at_the_String_Path_in_JavaScript|Set object value at the string path]] #object #path #interview
+
+### 📊 Data Aggregation
+8. [[08_Aggregate_Array_of_Objects_on_Given_Keys_in_JavaScript|Aggregate array of objects on the given keys]] #aggregation #object #interview
+9. [[09_Aggregate_the_Input_Values_in_JavaScript|Aggregate the Input values of the Form]] #form #aggregation #interview
+10. [[10_Convert_Entity_Relation_Array_to_Object_in_JavaScript|Convert entity relation array to object]] #entity #relationship #interview
+
+### 🔍 Filtering Operations
+11. [[11_Filter_Nested_Object_in_JavaScript|Filter nested object]] #filter #object #interview
+12. [[12_Filter_Multidimensional_Array_in_JavaScript|Filter Multidimensional Array]] #filter #array #interview
+
+### 🛠️ Polyfills
+13. [[13_groupBy()_Polyfill_in_JavaScript|groupBy() polyfill]] #polyfill #array #interview
+14. [[14_Polyfill_for_Array.map()_in_JavaScript|Polyfill for Array.map]] #polyfill #array #interview
+15. [[15_Polyfill_for_Array.filter()_in_JavaScript|Polyfill for Array.filter]] #polyfill #array #interview
 
 ---
 
 ## 2. Strings & DOM Basics
-1. HTML encoding of a string  
-2. Highlight the words in the string  
-3. Convert JSON to HTML  
-4. CSS selector generator  
-5. Polyfill for getElementByClassName()  
-6. Polyfill for getElementsByStyle()  
-7. Implement getByClassNameHierarchy() function  
-8. Share data between two browser window  
+16. HTML encoding of a string  
+17. Highlight the words in the string  
+18. Convert JSON to HTML  
+19. CSS selector generator  
+20. Polyfill for getElementByClassName()  
+21. Polyfill for getElementsByStyle()  
+22. Implement getByClassNameHierarchy() function  
+23. Share data between two browser window  
 
 ---
 
 ## 3. Browser Storage & State
-1. Create custom cookie  
-2. Localstorage with expiry  
-3. Array with event listeners  
-4. Create a Immutability Helper  
-5. Polyfill for extend  
-6. Implement store class (hashSet)  
-7. Implement an in-memory DB with search  
+24. Create custom cookie  
+25. Localstorage with expiry  
+26. Array with event listeners  
+27. Create a Immutability Helper  
+28. Polyfill for extend  
+29. Implement store class (hashSet)  
+30. Implement an in-memory DB with search  
 
 ---
 
 ## 4. Functions & FP Concepts
-1. Sampling function  
-2. [Currying – Part 1](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/02_Currying_Part_01.md)  
-3. [Currying – Part 2](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/03_Currying_Part_02.md)  
-4. [Currying – Part 3](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/04_Currying_Part_03.md)  
-5. [Currying – Part 4](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/05_Currying_Part_04.md)  
-6. Piping function – Part 1  
-7. Piping function – Part 2  
-8. Create composeAsync function with chaining support - Part 1
-9. Compose Async Functions – Part 2 (Callback-driven)
-10. Memoize a function  
+31. Sampling function  
+32. [Currying – Part 1](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/02_Currying_Part_01.md)  
+33. [Currying – Part 2](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/03_Currying_Part_02.md)  
+34. [Currying – Part 3](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/04_Currying_Part_03.md)  
+35. [Currying – Part 4](https://github.com/amanyerpude/frontend/blob/93011f682c10dbe51a73e22986ca0048c1e22476/Learners_Bucket/01_JavaScript_based_problems/04_Functions_%26_FP_Concepts/05_Currying_Part_04.md)  
+36. Piping function – Part 1  
+37. Piping function – Part 2  
+38. Create composeAsync function with chaining support - Part 1
+39. Compose Async Functions – Part 2 (Callback-driven)
+40. Memoize a function  
 
 ---
 

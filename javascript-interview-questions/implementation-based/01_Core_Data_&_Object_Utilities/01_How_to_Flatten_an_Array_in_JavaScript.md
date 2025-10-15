@@ -1,11 +1,10 @@
 
 ---
 
-> [!quote] Metadata  
-> **Posted on:** April 15, 2020  
-> **Author:**   
-> **Posted in:** Arrays, Interview, JavaScript  
-> **Tags:** #array #flatten #flat #flatMap #polyfill
+> [!info] Challenge Metadata  
+> **Difficulty:** ⭐⭐ | **Category:** Array Operations | **Company:** Meta | **Frequency:** High  
+> **Related:** [[02_Deep_Flatten_Object_in_JavaScript__01|Deep Flatten Object]], [[14_Polyfill_for_Array.map()_in_JavaScript|Array.map Polyfill]]  
+> **Tags:** #array #flatten #flat #flatMap #polyfill #interview #meta
 
 ---
 
