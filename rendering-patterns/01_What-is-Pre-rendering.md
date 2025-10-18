@@ -76,10 +76,3 @@ The video emphasizes that the series will progress gradually to ensure a **cryst
 
 --------------------------------------------------------------------------
 
-
-
-- Without Pre-rendering --> (Simple React Application)
-	- 
-- With Pre-rendering --> (Next.js Application)
-	- 
-- XXX
