@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
+                "file": "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_Incremental Site Re-Generation (iSG)"
+              "title": "Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability"
             }
           }
         ]
@@ -178,13 +178,13 @@
   },
   "active": "400983a8d284ad27",
   "lastOpenFiles": [
+    "rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
     "rendering-patterns/03_Static Site Generation (SSG).md",
     "rendering-patterns/02_All about CSR and SSR.md",
     "rendering-patterns/01_What-is-Pre-rendering.md",
     "javascript-interview-questions/implementation-based/00_index.md",
     "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
     "rendering-patterns/00_index.md",
-    "rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
     "Rendering_Patterns.md",
     "rendering-patterns",
     "Design_Patterns.md",
