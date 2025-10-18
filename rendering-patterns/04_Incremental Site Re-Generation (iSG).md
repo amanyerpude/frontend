@@ -81,14 +81,4 @@ The instructor stresses that understanding these four rendering patterns (CSR, S
 
 The video is intended to be simple and clear so that even those without prior Next.js knowledge can understand the concepts.
 
----
-
-### Course Promotion
-
-Before diving into iSG, the video includes a promotion for an external course:
-
-- **Course:** Geeks or Geeks React.js Basic to Advanced self-placed course.
-- **Curriculum Highlights:** The course covers introduction to React.js, project setups (Dev/Production), React Basics (components, JSX, props), State and event handling (useState, form submission), Conditional Rendering, use effect, API calls, a project, Redux, Multi-page SPAs, Authentication, and Deployment.
-- **Discount:** Viewers are encouraged to enroll using the code **JS Cafe** for an extra 10% discount; the link is in the description.
-
 --------------------------------------------------------------------------
