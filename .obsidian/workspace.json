@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
+                "file": "optimization-techniques/assest-optimization/Optimize Assets Performance for Web Apps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability"
+              "title": "Optimize Assets Performance for Web Apps"
             }
           }
         ]
@@ -178,12 +178,15 @@
   },
   "active": "400983a8d284ad27",
   "lastOpenFiles": [
+    "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
+    "optimization-techniques/assest-optimization/Optimize Assets Performance for Web Apps.md",
+    "optimization-techniques/assest-optimization",
+    "optimization-techniques",
     "rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
     "rendering-patterns/03_Static Site Generation (SSG).md",
     "rendering-patterns/02_All about CSR and SSR.md",
     "rendering-patterns/01_What-is-Pre-rendering.md",
     "javascript-interview-questions/implementation-based/00_index.md",
-    "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
     "rendering-patterns/00_index.md",
     "Rendering_Patterns.md",
     "rendering-patterns",
@@ -205,15 +208,12 @@
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/33_Currying_Part_02.md",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/32_Currying_Part_01.md",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/31_Sampling_function.md",
-    "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
     "machine-coding",
     "javascript-interview-questions/conceptual-based",
     "javascript-interview-questions/implementation-based",
     "javascript-interview-questions",
-    "TypeScript",
-    "javascript-interview-questions/implementation-based/02_Strings_&_DOM_Basics",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
