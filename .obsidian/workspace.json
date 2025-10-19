@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/browser-and-communication-techniques.md",
+                "file": "client-server-communication/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "browser-and-communication-techniques"
+              "title": "Untitled"
             }
           }
         ],
@@ -193,9 +193,10 @@
   },
   "active": "3b8b82831bb4463a",
   "lastOpenFiles": [
+    "client-server-communication/browser-and-communication-techniques.md",
+    "client-server-communication/Untitled.md",
     "client-server-communication",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
-    "client-server-communication/browser-and-communication-techniques.md",
     "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/network-optimization/04-load-css-asynchronously--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
@@ -228,7 +229,6 @@
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
     "machine-coding",
-    "javascript-interview-questions/conceptual-based",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
