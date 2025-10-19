@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "browser-and-communication-techniques/Untitled.md",
+                "file": "browser-and-communication-techniques/real-time-updates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "real-time-updates"
             }
           }
         ],
@@ -194,14 +194,14 @@
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
     "browser-and-communication-techniques/Deep-dive-into-HTTP.md",
-    "browser-and-communication-techniques/Untitled.md",
     "browser-and-communication-techniques/01-browser-and-communication-techniques.md",
+    "browser-and-communication-techniques/real-time-updates.md",
+    "browser-and-communication-techniques/client-server-communication/02-REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
+    "browser-and-communication-techniques/client-server-communication/01-client-server-architecture--web-architecture.md",
     "browser-and-communication-techniques/LM prompt.md",
-    "browser-and-communication-techniques/client-server/04-Summary-Case-Studies-(Stack-Overflow-&-Netflix)-and-System-Design-Interview-Tips-Web-Communication-Protocols-for-Client-Server-APIs.md",
-    "browser-and-communication-techniques/client-server/03-GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
-    "browser-and-communication-techniques/client-server/02-REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
-    "browser-and-communication-techniques/client-server/01-client-server-architecture--web-architecture.md",
-    "browser-and-communication-techniques/client-server",
+    "browser-and-communication-techniques/client-server-communication/04-Summary-Case-Studies-(Stack-Overflow-&-Netflix)-and-System-Design-Interview-Tips-Web-Communication-Protocols-for-Client-Server-APIs.md",
+    "browser-and-communication-techniques/client-server-communication/03-GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
+    "browser-and-communication-techniques/client-server-communication",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
     "browser-and-communication-techniques",
     "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
