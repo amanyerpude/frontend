@@ -179,10 +179,10 @@
   "active": "400983a8d284ad27",
   "lastOpenFiles": [
     "optimization-techniques/network-optimization/04-load-css-asynchronously--network-optimization.md",
-    "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
     "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
     "optimization-techniques/network-optimization/01-load-javascript-aynchronously--network-optimization.md",
+    "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
     "optimization-techniques/network-optimization",
     "optimization-techniques/memory-leaks--performance-optimization/memory-leaks--performance-optimization.md",
