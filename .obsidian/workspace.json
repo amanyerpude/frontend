@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/Untitled.md",
+                "file": "client-server-communication/Untitled 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Untitled 1"
             }
           }
         ],
@@ -193,8 +193,9 @@
   },
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
-    "client-server-communication/REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
     "client-server-communication/Untitled.md",
+    "client-server-communication/Untitled 1.md",
+    "client-server-communication/REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
     "client-server-communication/LM prompt.md",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
     "client-server-communication/client-server-architecture--web-architecture.md",
@@ -224,7 +225,6 @@
     "State_Management.md",
     "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
     "machine-coding/01_star_rating_component/00_index.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
     "javascript-interview-questions/conceptual-based/CORE",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
