@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
+                "file": "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "optimize-assets-performance-for-web-apps"
+              "title": "02-lazy-load-images--network-optimization"
             }
           }
         ]
@@ -176,10 +176,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "385f7fa91e0985fa",
+  "active": "400983a8d284ad27",
   "lastOpenFiles": [
-    "optimization-techniques/memory-leaks--performance-optimization/memory-leaks--performance-optimization.md",
+    "optimization-techniques/network-optimization/01-load-javascript-aynchronously--network-optimization.md",
+    "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
     "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
+    "optimization-techniques/network-optimization",
+    "optimization-techniques/memory-leaks--performance-optimization/memory-leaks--performance-optimization.md",
     "optimization-techniques/memory-leaks--performance-optimization",
     "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
     "optimization-techniques/assest-optimization",
@@ -207,13 +210,10 @@
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/35_Currying_Part_04.md",
     "javascript-interview-questions/conceptual-based/00_index.md",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/34_Currying_Part_03.md",
-    "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/33_Currying_Part_02.md",
-    "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/32_Currying_Part_01.md",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
     "machine-coding",
     "javascript-interview-questions/conceptual-based",
-    "javascript-interview-questions/implementation-based",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
