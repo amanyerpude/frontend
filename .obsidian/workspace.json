@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "optimization-techniques/assest-optimization/Optimize Assets Performance for Web Apps.md",
+                "file": "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Optimize Assets Performance for Web Apps"
+              "title": "optimize-assets-performance-for-web-apps"
             }
           }
         ]
@@ -176,10 +176,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "400983a8d284ad27",
+  "active": "385f7fa91e0985fa",
   "lastOpenFiles": [
     "optimization-techniques/memory-leaks--performance-optimization/memory-leaks--performance-optimization.md",
-    "optimization-techniques/assest-optimization/Optimize Assets Performance for Web Apps.md",
+    "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
     "optimization-techniques/memory-leaks--performance-optimization",
     "rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
     "optimization-techniques/assest-optimization",
