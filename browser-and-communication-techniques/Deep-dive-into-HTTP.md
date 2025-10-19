@@ -1,5 +1,5 @@
 
-- Deep dive into HTTP - Part 01
+- Deep dive into HTTP 
 	- Video_Link :  https://youtu.be/gxF9fLo5XQw?si=ykqnifO9duH4L4Ck
 
 --------------------------------------------------------------------------
