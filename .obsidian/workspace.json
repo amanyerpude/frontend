@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
+                "file": "optimization-techniques/network-optimization/04.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-Preload Prefetch Preconnect - Network Optimisation"
+              "title": "04"
             }
           }
         ]
@@ -178,8 +178,9 @@
   },
   "active": "400983a8d284ad27",
   "lastOpenFiles": [
-    "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
+    "optimization-techniques/network-optimization/04.md",
+    "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
     "optimization-techniques/network-optimization/01-load-javascript-aynchronously--network-optimization.md",
     "optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
     "optimization-techniques/network-optimization",
@@ -209,7 +210,6 @@
     "javascript-interview-questions/conceptual-based/CORE",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/36_Piping_function_in_JavaScript__Part_01.md",
     "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/35_Currying_Part_04.md",
-    "javascript-interview-questions/conceptual-based/00_index.md",
     "javascript-interview-questions/implementation-based/05_Method_Chaining_&_Patterns",
     "machine-coding/01_star_rating_component",
     "machine-coding",
