@@ -1,4 +1,3 @@
-
 Video_Link : https://youtu.be/jrJX8PdU4rE?si=004m04E7xxRt3HLt
 
 --------------------------------------------------------------------------
@@ -38,7 +37,7 @@ For a standard client-server architecture, the following guidelines apply:
 
 #### 1. REST Usage
 
-REST should be used for:
+REST should beAl used for:
 
 - Simple APIs.
 - Binary data transfer.
