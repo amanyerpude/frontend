@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "optimization-techniques/network-optimization/05-.md",
+                "file": "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05-"
+              "title": "05-critical-rendering-path-explained--network-optimization"
             }
           }
         ]
@@ -179,7 +179,7 @@
   "active": "400983a8d284ad27",
   "lastOpenFiles": [
     "optimization-techniques/network-optimization/04-load-css-asynchronously--network-optimization.md",
-    "optimization-techniques/network-optimization/05-.md",
+    "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
     "optimization-techniques/network-optimization/02-lazy-load-images--network-optimization.md",
     "optimization-techniques/network-optimization/01-load-javascript-aynchronously--network-optimization.md",
