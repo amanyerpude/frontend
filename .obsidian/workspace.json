@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/LM prompt.md",
+                "file": "browser-and-communication-techniques/LM prompt.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/03-.md",
+                "file": "browser-and-communication-techniques/01-browser-and-communication-techniques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-"
+              "title": "01-browser-and-communication-techniques"
             }
           }
         ],
@@ -193,14 +193,14 @@
   },
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
-    "client-server-communication/LM prompt.md",
-    "client-server-communication/03-.md",
-    "client-server-communication/02-GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
-    "client-server-communication/01-REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
+    "browser-and-communication-techniques/client-server-architecture--web-architecture.md",
+    "browser-and-communication-techniques/01-browser-and-communication-techniques.md",
+    "browser-and-communication-techniques/03-Summary-Case-Studies-(Stack-Overflow-&-Netflix)-and-System-Design-Interview-Tips-Web-Communication-Protocols-for-Client-Server-APIs.md",
+    "browser-and-communication-techniques/LM prompt.md",
+    "browser-and-communication-techniques/02-GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
+    "browser-and-communication-techniques/01-REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
-    "client-server-communication/client-server-architecture--web-architecture.md",
-    "client-server-communication/browser-and-communication-techniques.md",
-    "client-server-communication",
+    "browser-and-communication-techniques",
     "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/network-optimization/04-load-css-asynchronously--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
