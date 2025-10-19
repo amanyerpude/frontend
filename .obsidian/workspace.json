@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/Untitled.md",
+                "file": "client-server-communication/GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols"
             }
           }
         ],
@@ -193,9 +193,9 @@
   },
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
+    "client-server-communication/01-REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
     "client-server-communication/Untitled 1.md",
-    "client-server-communication/Untitled.md",
-    "client-server-communication/REST-Architecture-Deep-Dive--Principles- Advantages-Disadvantages-and-Application-Scenarios-for-Client-Server-API-Design.md",
+    "client-server-communication/GraphQL-gRPC-and-tRPC--Detailed-Analysis-of-Web-Communication-Protocols.md",
     "client-server-communication/LM prompt.md",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
     "client-server-communication/client-server-architecture--web-architecture.md",
