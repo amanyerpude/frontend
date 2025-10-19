@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/Browser-&-Communication-Techniques.md",
+                "file": "client-server-communication/browser-and-communication-techniques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Browser-&-Communication-Techniques"
+              "title": "browser-and-communication-techniques"
             }
           }
         ],
@@ -191,11 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "385f7fa91e0985fa",
+  "active": "3b8b82831bb4463a",
   "lastOpenFiles": [
     "client-server-communication",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
-    "client-server-communication/Browser-&-Communication-Techniques.md",
+    "client-server-communication/browser-and-communication-techniques.md",
     "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
     "optimization-techniques/network-optimization/04-load-css-asynchronously--network-optimization.md",
     "optimization-techniques/network-optimization/03-Preload Prefetch Preconnect - Network Optimisation.md",
