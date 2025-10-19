@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "client-server-communication/Untitled.md",
+                "file": "client-server-communication/client-server-architecture--web-architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "client-server-architecture--web-architecture"
             }
           }
         ],
@@ -194,7 +194,7 @@
   "active": "3b8b82831bb4463a",
   "lastOpenFiles": [
     "client-server-communication/browser-and-communication-techniques.md",
-    "client-server-communication/Untitled.md",
+    "client-server-communication/client-server-architecture--web-architecture.md",
     "client-server-communication",
     "optimization-techniques/network-optimization/how-to-optimize-network-performance-for-web-apps.md",
     "optimization-techniques/network-optimization/05-critical-rendering-path-explained--network-optimization.md",
