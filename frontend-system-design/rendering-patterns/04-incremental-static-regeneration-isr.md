@@ -82,3 +82,4 @@ The instructor stresses that understanding these four rendering patterns (CSR, S
 The video is intended to be simple and clear so that even those without prior Next.js knowledge can understand the concepts.
 
 --------------------------------------------------------------------------
+

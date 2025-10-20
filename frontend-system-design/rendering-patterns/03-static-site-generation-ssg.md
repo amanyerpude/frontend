@@ -37,7 +37,7 @@ An attempt is made to export a page (`my-post.js`) that currently uses SSR (mean
 - **The Error:** Next.js throws an error because a page using `getServerSideProps` **cannot be exported**.
 - **Reason:** `getServerSideProps` is designed to generate HTML during the **runtime**, not the build time, preventing its static export.
 
-_(Note: An initial issue regarding Next.js image optimization incompatibility with `next export` required removing the `next/image` component for the demonstration to proceed)._
+_(Note: An initial issue regarding Next.js image optimization incompatibility with `next export` required removing the `next/image` component for the demonstration to proceed)._ 
 
 ### IV. Scenario 1: SSG Without Data
 
@@ -85,3 +85,4 @@ The video emphasizes that every rendering pattern has its own use case, advantag
 - **Next Topic:** This issue leads directly to the discussion of **Incremental Site Regeneration (ISR)**, which will be covered in the subsequent video.
 
 --------------------------------------------------------------------------
+

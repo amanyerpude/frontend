@@ -80,3 +80,4 @@ Next.js provides a simple method to convert the application to SSR, a procedure 
 The speaker calls Next.js a "**game changer**" and strongly encourages developers who are comfortable with React.js to **move to Next.js** to "uplift their level". The speaker is happy to contribute to viewers' careers and interviews, emphasizing that they record these videos sometimes on Sunday, working extremely hard. The video's target is **50 likes**.
 
 --------------------------------------------------------------------------
+
