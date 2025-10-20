@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend-system-design/rendering-patterns/05-web-rendering-decision-framework-and-core-web-vitals.md",
+                "file": "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/01-pre-rendering-and-hydration-basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05-web-rendering-decision-framework-and-core-web-vitals"
+              "title": "01-pre-rendering-and-hydration-basics"
             }
           }
         ]
@@ -178,13 +178,20 @@
   },
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
-    "frontend-system-design/rendering-patterns/01-pre-rendering-and-hydration-basics.md",
+    "frontend-system-design/system-design-explained-for-frontend-engineers.md",
+    "frontend-system-design/frontend-system-design-components.md",
+    "frontend-system-design/frontend-architecture-patterns.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/01-pre-rendering-and-hydration-basics.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/02-csr-vs-ssr-in-nextjs.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/03-static-site-generation-ssg.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/04-incremental-static-regeneration-isr.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/05-web-rendering-decision-framework-and-core-web-vitals.md",
+    "frontend-system-design/web-rendering-patterns-csr-ssr-ssg-isr/00-index.md",
+    "react-design-patterns/react-component-patterns.md",
+    "Design_Patterns.md",
+    "react-design-patterns",
+    "frontend-system-design/scaling-web-applications/scaling-web-applications.md",
     "frontend-system-design/rendering-patterns/web-rendering-patterns-ssr-csr-hydration-static-generation-resumability.md",
-    "frontend-system-design/rendering-patterns/05-web-rendering-decision-framework-and-core-web-vitals.md",
-    "frontend-system-design/rendering-patterns/00-index.md",
-    "frontend-system-design/rendering-patterns/02-csr-vs-ssr-in-nextjs.md",
-    "frontend-system-design/rendering-patterns/03-static-site-generation-ssg.md",
-    "frontend-system-design/rendering-patterns/04-incremental-static-regeneration-isr.md",
     "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
     "frontend-system-design/rendering-patterns/01--what-is-pre-rendering.md",
     "frontend-system-design/rendering-patterns/02--all-about-csr-and-ssr.md",
@@ -198,12 +205,6 @@
     "frontend-system-design/browser-and-communication-techniques/01-browser-and-communication-techniques.md",
     "frontend-system-design/browser-and-communication-techniques/client-server-communication/04-interview-preparation.md",
     "frontend-system-design/browser-and-communication-techniques/client-server-communication/03-graphql-grpc-trpc.md",
-    "frontend-system-design/browser-and-communication-techniques/client-server-communication/02-rest-complete-guide.md",
-    "frontend-system-design/browser-and-communication-techniques/client-server-communication/01-tier-architectures.md",
-    "LM prompt.md",
-    "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
-    "TypeScript/02--TypeScript-Full-Course-for-Beginners.md",
-    "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
     "frontend-system-design/web-storages",
     "frontend-system-design/scaling-web-applications",
     "frontend-system-design/security",
@@ -213,7 +214,6 @@
     "frontend-system-design/optimization-techniques/network-optimization",
     "frontend-system-design/optimization-techniques/memory-leaks--performance-optimization",
     "frontend-system-design/optimization-techniques/assest-optimization",
-    "frontend-system-design/optimization-techniques",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
