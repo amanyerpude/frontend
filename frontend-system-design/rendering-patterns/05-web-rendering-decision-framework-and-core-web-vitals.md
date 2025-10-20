@@ -199,3 +199,4 @@ The choice of rendering pattern depends on classifying the project and its requi
 |**Specific Case 2**|Need Offline Support?|**Trimorphic Rendering or Application Shell**||
 
 --------------------------------------------------------------------------
+

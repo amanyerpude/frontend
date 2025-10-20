@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend-system-design/rendering-patterns/web-rendering-patterns-ssr-csr-hydration-static-generation-resumability.md",
+                "file": "frontend-system-design/rendering-patterns/05-web-rendering-decision-framework-and-core-web-vitals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "web-rendering-patterns-ssr-csr-hydration-static-generation-resumability"
+              "title": "05-web-rendering-decision-framework-and-core-web-vitals"
             }
           }
         ]
@@ -179,11 +179,12 @@
   "active": "13cd9eac03ca0959",
   "lastOpenFiles": [
     "frontend-system-design/rendering-patterns/01-pre-rendering-and-hydration-basics.md",
+    "frontend-system-design/rendering-patterns/web-rendering-patterns-ssr-csr-hydration-static-generation-resumability.md",
+    "frontend-system-design/rendering-patterns/05-web-rendering-decision-framework-and-core-web-vitals.md",
     "frontend-system-design/rendering-patterns/00-index.md",
     "frontend-system-design/rendering-patterns/02-csr-vs-ssr-in-nextjs.md",
     "frontend-system-design/rendering-patterns/03-static-site-generation-ssg.md",
     "frontend-system-design/rendering-patterns/04-incremental-static-regeneration-isr.md",
-    "frontend-system-design/rendering-patterns/web-rendering-patterns-ssr-csr-hydration-static-generation-resumability.md",
     "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
     "frontend-system-design/rendering-patterns/01--what-is-pre-rendering.md",
     "frontend-system-design/rendering-patterns/02--all-about-csr-and-ssr.md",
@@ -203,7 +204,6 @@
     "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
     "TypeScript/02--TypeScript-Full-Course-for-Beginners.md",
     "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
-    "Learners_Bucket/04_Web_Security.md",
     "frontend-system-design/web-storages",
     "frontend-system-design/scaling-web-applications",
     "frontend-system-design/security",
