@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend-system-design/rendering-patterns/02_All about CSR and SSR.md",
+                "file": "frontend-system-design/rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_All about CSR and SSR"
+              "title": "04_Incremental Site Re-Generation (iSG)"
             }
           }
         ],
@@ -193,12 +193,12 @@
   },
   "active": "686a685fbfa27824",
   "lastOpenFiles": [
+    "frontend-system-design/rendering-patterns/02--all-about-csr-and-ssr.md",
+    "frontend-system-design/rendering-patterns/03--static-site-generation--ssg.md",
     "frontend-system-design/rendering-patterns/01--what-is-pre-rendering.md",
     "frontend-system-design/rendering-patterns/00_index.md",
     "frontend-system-design/rendering-patterns/Web Rendering Patterns. SSR, CSR, Hydration, Static Generation, Resumability.md",
     "frontend-system-design/rendering-patterns/04_Incremental Site Re-Generation (iSG).md",
-    "frontend-system-design/rendering-patterns/03_Static Site Generation (SSG).md",
-    "frontend-system-design/rendering-patterns/02_All about CSR and SSR.md",
     "frontend-system-design/optimization-techniques/web-vitals-explained--performance-metrics.md",
     "frontend-system-design/optimization-techniques/web-performance.md",
     "frontend-system-design/optimization-techniques/performance_and_optimization_techniques.md",
