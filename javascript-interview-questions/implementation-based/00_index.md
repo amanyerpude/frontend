@@ -99,15 +99,15 @@
 44. Method chaining with priority  - !!!!
 45. Publisher Subscriber – 1  
 46. Publisher Subscriber – 2  - !!!!
-47. Implement an Router middleware  
-48. Create a School using OOPs principle  
+47. Implement an Router middleware  - !!!!
+48. Create a School using OOPs principle  - !!!!
 
 ---
 
 ## 6. Timers & Task Scheduling
 49. Implement clearAllTimeout  
 50. Throttle an array of task  
-51. Create a throttle function with trailing and leading option  
+51. Create a throttle function with trailing and leading option  - !!!
 52. Implement throttling  
 53. Implement debouncing  
 54. Debouncing with leading and trailing options  
