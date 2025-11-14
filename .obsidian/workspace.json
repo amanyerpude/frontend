@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/CORE/03_Event_Loop.md",
+                "file": "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_Event_Loop"
+              "title": "04_Closures"
             }
           }
         ],
@@ -208,13 +208,15 @@
   "active": "1fa8e71589a7ec75",
   "lastOpenFiles": [
     "LM prompt.md",
-    "javascript-interview-questions/conceptual-based/CORE/03_Event_Loop.md",
+    "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
+    "javascript-interview-questions/conceptual-based/CORE/03_Event_Loop_in_Javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/01_Fundamentals/01_Basics.md",
     "Learners_Bucket/04_Web_Security.md",
     "Learners_Bucket/03_Optimization_Techniques.md",
     "Learners_Bucket/02_Algorithms.md",
     "Design_Patterns.md",
-    "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/02_Intermediate/01_Core_Language_Features.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/01_Fundamentals/03_Objects_Arrays.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/01_Fundamentals/02_Functions.md",
@@ -231,8 +233,6 @@
     "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems/04_System_Design.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems/03_Algorithm_Patterns.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems/02_String_Problems.md",
-    "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems/01_Array_Problems.md",
-    "Question_Bank/dump/00_Categories/01_JavaScript/04_Advanced/03_Performance.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems",
     "Question_Bank/dump/00_Categories/01_JavaScript/04_Advanced",
     "Question_Bank/dump/00_Categories/01_JavaScript/03_Async",
