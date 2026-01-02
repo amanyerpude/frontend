@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend-system-design/security/Mastering_Web_Security.md",
+                "file": "frontend-system-design/security/Introduction_to_Web Security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mastering_Web_Security"
+              "title": "Introduction_to_Web Security"
             }
           }
         ],
@@ -193,8 +193,9 @@
   },
   "active": "1fa8e71589a7ec75",
   "lastOpenFiles": [
-    "frontend-system-design/security/security.md",
     "frontend-system-design/security/Mastering_Web_Security.md",
+    "frontend-system-design/security/Introduction_to_Web Security.md",
+    "frontend-system-design/security/security.md",
     "Learn_enough_design/basics_of_design/06_design_sense.md",
     "Learn_enough_design/basics_of_design/05_UX_principles.md",
     "Learn_enough_design/basics_of_design/04_Typogragpy.md",
@@ -221,7 +222,6 @@
     "Learners_Bucket/04_Web_Security.md",
     "Learners_Bucket/03_Optimization_Techniques.md",
     "Learners_Bucket/02_Algorithms.md",
-    "Design_Patterns.md",
     "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems",
     "Question_Bank/dump/00_Categories/01_JavaScript/04_Advanced",
     "Question_Bank/dump/00_Categories/01_JavaScript/03_Async",
