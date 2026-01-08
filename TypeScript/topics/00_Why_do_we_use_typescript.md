@@ -10,4 +10,4 @@ What are the Problems in JS and how does TS solves it
 2. Scalability
 3. Maintainability
 4. Auto-complete feature
-5. 
+5. Faster development decisions
