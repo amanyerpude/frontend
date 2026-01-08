@@ -7,7 +7,7 @@
 
 What are the Problems in JS and how does TS solves it 
 1. NULL CHECK - causes the application to fail or cause error
-2. Scalability
-3. Maintainability
-4. Auto-complete feature
+2. Auto-complete feature
+3. Scalability
+4. Maintainability
 5. Faster development decisions
