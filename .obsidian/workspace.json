@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LM prompt.md",
+                "file": "TypeScript/topics/00_Why_do_we_use_typescript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LM prompt"
-            }
-          },
-          {
-            "id": "1fa8e71589a7ec75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "frontend-system-design/security/Introduction_to_Web Security.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction_to_Web Security"
+              "title": "00_Why_do_we_use_typescript"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,44 +176,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1fa8e71589a7ec75",
+  "active": "5ef1895a2b5789ae",
   "lastOpenFiles": [
-    "frontend-system-design/security/Mastering_Web_Security.md",
-    "frontend-system-design/security/Introduction_to_Web Security.md",
-    "frontend-system-design/security/security.md",
-    "Learn_enough_design/basics_of_design/06_design_sense.md",
-    "Learn_enough_design/basics_of_design/05_UX_principles.md",
-    "Learn_enough_design/basics_of_design/04_Typogragpy.md",
-    "Learn_enough_design/basics_of_design/03_visual_hirerchy.md",
-    "Learn_enough_design/basics_of_design/02_alignments.md",
-    "Learn_enough_design/basics_of_design/01_whitespaces.md",
-    "CSS/01_Box_Model.md",
-    "Learn_enough_design/basics_of_design",
-    "Learn_enough_design",
-    "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
-    "CSS",
-    "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
-    "javascript-interview-questions/conceptual-based/CORE/06_Event_Loop_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/00_index.md",
-    "javascript-interview-questions/conceptual-based/CORE/05_Events_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
-    "javascript-interview-questions/conceptual-based/CORE/03_Event_Loop_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
+    "TypeScript/topics/01_Primitive_Types.md",
+    "TypeScript/topics/00_Why_do_we_use_typescript.md",
+    "TypeScript/topics/02_Non_Primitive_Types.md",
+    "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
+    "TypeScript/topics",
+    "Design_Patterns/SOLID/React_Clean_Code__Advanced_Examples_of_SOLID_Principles.md",
+    "Design_Patterns/SOLID/Clean_Code_Lessons_for_the_Front_End_Developer.md",
     "LM prompt.md",
-    "javascript-interview-questions/implementation-based/00_index.md",
-    "javascript-interview-questions/implementation-based/04_Functions_&_FP_Concepts/31_Sampling_function.md",
-    "javascript-interview-questions/implementation-based/01_Core_Data_&_Object_Utilities/01_How_to_Flatten_an_Array_in_JavaScript.md",
-    "Question_Bank/dump/00_Categories/01_JavaScript/01_Fundamentals/01_Basics.md",
+    "Design_Patterns/SOLID/05_DIP_Dependecy_Inversion_Principle",
+    "Design_Patterns/SOLID/04_ISP_Interface_Segregation_Principle",
+    "Design_Patterns/SOLID/03_LSP_Liskov_Substitution_Principle",
+    "Design_Patterns/SOLID/02_OCP_Open_Closed_Principle",
+    "Design_Patterns/SOLID/01..md",
+    "Design_Patterns/SOLID/02..md",
+    "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle",
+    "Design_Patterns/SOLID",
+    "Frontend_System_Design_Questions.md",
+    "Design_Patterns",
+    "Low_Level_Design_and_Machine_Coding.md",
+    "React_Hooks.md",
+    "State_Management.md",
+    "Web_Fundamentals.md",
     "Learners_Bucket/04_Web_Security.md",
     "Learners_Bucket/03_Optimization_Techniques.md",
     "Learners_Bucket/02_Algorithms.md",
-    "Question_Bank/dump/00_Categories/01_JavaScript/05_Coding_Problems",
-    "Question_Bank/dump/00_Categories/01_JavaScript/04_Advanced",
-    "Question_Bank/dump/00_Categories/01_JavaScript/03_Async",
-    "Question_Bank/dump/00_Categories/01_JavaScript/02_Intermediate",
-    "Question_Bank/dump/00_Categories/01_JavaScript/01_Fundamentals",
-    "Question_Bank/dump/dump_one",
-    "Question_Bank/dump",
+    "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
+    "Extra/Framer",
+    "Extra/Playwright",
+    "javascript-interview-questions/conceptual-based/06_ES6+ Features.md",
+    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
+    "javascript-interview-questions/conceptual-based/CORE/06_Event_Loop_in_Javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
+    "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
+    "01_HTML Encoding of a String in JavaScript.md",
+    "07_Implement getByClassNameHierarchy() Function in JavaScript.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
