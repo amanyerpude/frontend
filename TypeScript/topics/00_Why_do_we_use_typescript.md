@@ -11,3 +11,12 @@ What are the Problems in JS and how does TS solves it
 3. Scalability
 4. Maintainability
 5. Faster development decisions
+
+What TS can't do 
+- It cannot stop you to run buggy code
+
+Transpiling 
+- Browser do not understand TS code it only understands JS code
+
+- #  To narrow down type
+

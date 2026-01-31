@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TypeScript/topics/00_Why_do_we_use_typescript.md",
+                "file": "React/Hooks/00_Hooks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_Why_do_we_use_typescript"
+              "title": "00_Hooks"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 401.5
   },
   "right": {
     "id": "f4eee6ad96935111",
@@ -176,44 +176,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ef1895a2b5789ae",
+  "active": "385f7fa91e0985fa",
   "lastOpenFiles": [
-    "TypeScript/topics/01_Primitive_Types.md",
+    "TypeScript/Untitled.md",
+    "React/Hooks/00_Hooks.md",
+    "React/Hooks/Custom_Hooks",
+    "React/Hooks/02_Optimization_&_Advanced_State/05_useTransition",
+    "React/Hooks/03_Specialized_&_Edge_Case_Hooks/04_useLayoutEffect",
+    "React/Hooks",
+    "React/Hooks/03_Specialized_&_Edge_Case_Hooks/03_useDebugValue",
+    "React/Hooks/03_Specialized_&_Edge_Case_Hooks/02_useId",
+    "React/Hooks/03_Specialized_&_Edge_Case_Hooks/01_useLayoutEffect",
+    "React/Hooks/02_Optimization_&_Advanced_State/04_useCallback",
+    "React/Hooks/02_Optimization_&_Advanced_State/03_useMemo",
+    "React/Hooks/02_Optimization_&_Advanced_State/02_useRef",
+    "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
+    "TypeScript/02--TypeScript-Full-Course-for-Beginners.md",
+    "Web_Fundamentals.md",
+    "State_Management.md",
+    "React_Hooks.md",
+    "Low_Level_Design_and_Machine_Coding.md",
+    "frontend-system-design/optimization-techniques/web-performance.md",
+    "CSS/01_CSS_Display_Property.md",
+    "CSS/01_Box_Model.md",
     "TypeScript/topics/00_Why_do_we_use_typescript.md",
+    "TypeScript/topics/01_Primitive_Types.md",
     "TypeScript/topics/02_Non_Primitive_Types.md",
     "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
-    "TypeScript/topics",
     "Design_Patterns/SOLID/React_Clean_Code__Advanced_Examples_of_SOLID_Principles.md",
     "Design_Patterns/SOLID/Clean_Code_Lessons_for_the_Front_End_Developer.md",
     "LM prompt.md",
-    "Design_Patterns/SOLID/05_DIP_Dependecy_Inversion_Principle",
-    "Design_Patterns/SOLID/04_ISP_Interface_Segregation_Principle",
-    "Design_Patterns/SOLID/03_LSP_Liskov_Substitution_Principle",
-    "Design_Patterns/SOLID/02_OCP_Open_Closed_Principle",
     "Design_Patterns/SOLID/01..md",
     "Design_Patterns/SOLID/02..md",
-    "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle",
-    "Design_Patterns/SOLID",
     "Frontend_System_Design_Questions.md",
-    "Design_Patterns",
-    "Low_Level_Design_and_Machine_Coding.md",
-    "React_Hooks.md",
-    "State_Management.md",
-    "Web_Fundamentals.md",
     "Learners_Bucket/04_Web_Security.md",
     "Learners_Bucket/03_Optimization_Techniques.md",
     "Learners_Bucket/02_Algorithms.md",
     "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
-    "Extra/Framer",
-    "Extra/Playwright",
     "javascript-interview-questions/conceptual-based/06_ES6+ Features.md",
-    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
-    "javascript-interview-questions/conceptual-based/CORE/06_Event_Loop_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
-    "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
-    "01_HTML Encoding of a String in JavaScript.md",
-    "07_Implement getByClassNameHierarchy() Function in JavaScript.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",

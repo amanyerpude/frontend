@@ -1,0 +1,6 @@
+- type-annotations
+- any -- unkown -- never
+- Union and Intersection
+	- TS is based on Sets
+-  "as"
+- 
