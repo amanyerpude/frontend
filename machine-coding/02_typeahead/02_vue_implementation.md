@@ -1545,3 +1545,199 @@ and we harden the system.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we enter **Stage 6 — Race Condition Handling (Production Safety)**.
+
+This is where most mid-level implementations fail.
+
+---
+
+# 🔴 Stage 6 — Prevent Stale API Responses
+
+## 🎯 The Problem (Again, Clearly)
+
+Even with debounce:
+
+1. User types: `A`
+    
+2. Debounce fires → API call #1
+    
+3. User types: `Ap`
+    
+4. Debounce fires → API call #2
+    
+5. API #2 returns first → correct results shown ✅
+    
+6. API #1 returns later → overwrites results ❌
+    
+
+This is called:
+
+> 🔥 Stale Response Overwrite
+
+We must guarantee:
+
+Only the latest request updates state.
+
+---
+
+# 🧠 Design Strategy
+
+In Vue, we will implement:
+
+> Request ID tracking
+
+Why not AbortController?
+
+Because:
+
+- Our mock API is Promise-based
+    
+- Request ID works everywhere
+    
+- Clean and predictable
+    
+
+---
+
+# 🧠 Step 1 — Add Request Counter
+
+Inside `<script setup>`:
+
+```js
+let currentRequestId = 0;
+```
+
+Important:  
+Not reactive.  
+Internal concurrency control only.
+
+---
+
+# 🧠 Step 2 — Update Debounced Fetch Block
+
+Modify debounce logic:
+
+```js
+debounceTimer = setTimeout(async () => {
+  const requestId = ++currentRequestId;
+
+  isOpen.value = true;
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const response = await fetchSuggestions(trimmed);
+
+    // 🔥 Ignore stale responses
+    if (requestId !== currentRequestId) return;
+
+    results.value = response;
+  } catch (err) {
+    if (requestId !== currentRequestId) return;
+
+    error.value = err;
+    results.value = [];
+  } finally {
+    if (requestId === currentRequestId) {
+      isLoading.value = false;
+    }
+  }
+}, 400);
+```
+
+---
+
+# 🧠 What This Does
+
+Each time a request starts:
+
+```
+currentRequestId++
+```
+
+Each request captures its own ID.
+
+When response returns:
+
+- If it’s not the latest ID → ignore it
+    
+- If it matches → update state
+    
+
+This guarantees:
+
+✔ No stale UI  
+✔ Concurrency safety  
+✔ Predictable behavior
+
+---
+
+# 🧪 Test Aggressively
+
+Type:
+
+- A
+    
+- Quickly Ap
+    
+- Quickly App
+    
+
+With random delay,  
+results should always match latest input.
+
+No flickering.  
+No incorrect overwrites.
+
+---
+
+# 🧠 Why This Is Senior-Level
+
+Because you now understand:
+
+- Async concurrency
+    
+- Non-deterministic network timing
+    
+- UI consistency guarantees
+    
+- State integrity
+    
+
+Most candidates stop at debounce.
+
+You just crossed into production thinking.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Loading  
+✔ Error  
+✔ Debounce  
+✔ Race protection  
+✔ Click selection  
+✔ Click outside
+
+Still missing:
+
+❌ Cache  
+❌ Keyboard navigation  
+❌ Highlighting  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 7 — Caching (Smart Performance Optimization)
+
+We now prevent redundant API calls.
+
+Say:
+
+**“Stage 6 complete”**
+
+and we add intelligent caching.
