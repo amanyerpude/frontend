@@ -977,3 +977,237 @@ This shifts from UI component → product engineering.
 Say:
 
 **Next Step (Vue + SVG)**
+
+--------------------------------------------------------------------------
+
+# ✅ Step 6 (Vue + SVG) — Emit to Parent + Optimistic Update
+
+Now we move from UI component → real product behavior.
+
+This is where interview difficulty increases.
+
+---
+
+# 🎯 Goal of This Step
+
+1. Emit selected rating to parent
+    
+2. Simulate backend request
+    
+3. Optimistically update UI immediately
+    
+4. Show loading indicator
+    
+5. Prepare for rollback (next step)
+    
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Right now the rating is managed entirely inside the component.  
+> In a real application, the parent would likely persist this value to a backend.  
+> I’ll emit the selected value and simulate an async API call with optimistic UI update."
+
+Strong product-thinking statement.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We now need:
+
+New state:
+
+```
+selectedIndex
+hoverIndex
+loading
+previousIndex
+```
+
+Flow:
+
+```
+1. Store previousIndex
+2. Update selectedIndex immediately
+3. Emit value
+4. Set loading = true
+5. Simulate API call
+6. On success → stop loading
+7. On failure → revert to previousIndex
+```
+
+---
+
+# 💻 Updated Rating.vue
+
+---
+
+## 📄 Script Section Update
+
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  totalItems: {
+    type: Number,
+    default: 5
+  }
+})
+
+const emit = defineEmits(['update'])
+
+const selectedIndex = ref(-1)
+const hoverIndex = ref(-1)
+const loading = ref(false)
+let previousIndex = -1
+
+function handleClick(index) {
+  if (loading.value) return
+
+  previousIndex = selectedIndex.value
+  selectedIndex.value = index
+  loading.value = true
+
+  emit('update', index)
+
+  simulateApiCall()
+    .then(() => {
+      loading.value = false
+    })
+    .catch(() => {
+      selectedIndex.value = previousIndex
+      loading.value = false
+    })
+}
+
+function handleMouseEnter(index) {
+  hoverIndex.value = index
+}
+
+function handleMouseLeave() {
+  hoverIndex.value = -1
+}
+
+function getFillColor(index) {
+  if (hoverIndex.value !== -1) {
+    if (index <= selectedIndex.value) return 'gold'
+    else if (index <= hoverIndex.value) return 'dodgerblue'
+    else return 'lightgray'
+  }
+  return index <= selectedIndex.value ? 'gold' : 'lightgray'
+}
+
+function simulateApiCall() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const success = Math.random() > 0.3
+      success ? resolve() : reject()
+    }, 1000)
+  })
+}
+</script>
+```
+
+---
+
+## 📄 Template Update (Loader)
+
+Add after buttons:
+
+```vue
+<span v-if="loading" class="loader">Saving...</span>
+```
+
+---
+
+## 📄 Optional Styling
+
+```css
+.loader {
+  margin-left: 10px;
+  font-size: 14px;
+}
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "Now the component performs an optimistic update.  
+> It immediately updates the UI for responsiveness, emits the value to the parent, and simulates an async request.  
+> If the request fails, it reverts to the previous rating."
+
+That explanation is strong.
+
+---
+
+## 🔎 What Interviewer Is Evaluating
+
+- Do you understand optimistic UI?
+    
+- Did you track previous state?
+    
+- Did you prevent double clicks during loading?
+    
+- Did you handle failure case?
+    
+- Is async handling clean?
+    
+
+---
+
+## 🧠 What You Just Demonstrated
+
+You moved from:
+
+Component-level thinking  
+→ System-level thinking
+
+Now you handle:
+
+- Async state
+    
+- Failure handling
+    
+- UX during latency
+    
+- Event emission
+    
+
+That’s senior-level signal.
+
+---
+
+## ⚠️ Hidden Trap You Avoided
+
+You blocked clicks during loading:
+
+```
+if (loading.value) return
+```
+
+This prevents race conditions.
+
+Very important.
+
+---
+
+## ⏸ Pause Here
+
+Next logical improvements:
+
+1. Improve architecture (make component controlled via v-model)
+    
+2. Refactor state logic cleaner (computed for displayIndex)
+    
+3. Improve accessibility (keyboard support)
+    
+4. Dynamic color scaling (red/yellow/green)
+    
+5. Make icon fully customizable (render slot)
+    
+
+Which direction do you want to go next?
