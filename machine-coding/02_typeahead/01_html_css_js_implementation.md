@@ -2050,3 +2050,241 @@ and we refine UI polish.
 
 --------------------------------------------------------------------------
 
+Excellent. Now we enter **UI polish + correctness under edge cases**.
+
+---
+
+# 🟢 Stage 10 — Highlight Matching Substring (Safely)
+
+Right now suggestions render like:
+
+```
+Apple
+```
+
+If user types:
+
+```
+Ap
+```
+
+We want:
+
+```
+<bold>Ap</bold>ple
+```
+
+But we must do this:
+
+- Case-insensitive
+    
+- Without breaking HTML
+    
+- Without introducing XSS risk
+    
+- Without regex bugs
+    
+
+Senior-level care required.
+
+---
+
+# 🎯 Goal
+
+Highlight the matching prefix inside each suggestion.
+
+Since we are using `startsWith`, this becomes simpler and safer.
+
+---
+
+# 🧠 Important Design Choice
+
+We will NOT use innerHTML blindly.
+
+We will:
+
+- Split string safely
+    
+- Construct nodes
+    
+- Avoid injecting raw HTML
+    
+
+This prevents XSS vulnerabilities.
+
+---
+
+# 🧠 Step 1 — Create Highlight Function
+
+Add in `script.js`:
+
+```javascript
+function createHighlightedText(text, query) {
+  const lowerText = text.toLowerCase();
+  const lowerQuery = query.toLowerCase();
+
+  if (!lowerText.startsWith(lowerQuery)) {
+    return document.createTextNode(text);
+  }
+
+  const strong = document.createElement("strong");
+  strong.textContent = text.slice(0, query.length);
+
+  const remainingText = document.createTextNode(
+    text.slice(query.length)
+  );
+
+  const fragment = document.createDocumentFragment();
+  fragment.appendChild(strong);
+  fragment.appendChild(remainingText);
+
+  return fragment;
+}
+```
+
+---
+
+# 🧠 Why DocumentFragment?
+
+Because:
+
+- It’s efficient
+    
+- Avoids multiple reflows
+    
+- Safe DOM manipulation
+    
+
+Senior move.
+
+---
+
+# 🧠 Step 2 — Modify renderSuggestions
+
+Update `renderSuggestions`:
+
+```javascript
+function renderSuggestions(items) {
+  suggestionsList.innerHTML = "";
+  activeIndex = -1;
+
+  const query = input.value.trim();
+
+  if (items.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No results found";
+    li.classList.add("no-results");
+    suggestionsList.appendChild(li);
+    suggestionsList.classList.remove("hidden");
+    return;
+  }
+
+  items.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.setAttribute("data-index", index);
+
+    const highlighted = createHighlightedText(item, query);
+    li.appendChild(highlighted);
+
+    suggestionsList.appendChild(li);
+  });
+
+  suggestionsList.classList.remove("hidden");
+}
+```
+
+---
+
+# 🧪 Test It
+
+Type:
+
+```
+Ap
+Ba
+Ma
+```
+
+You should see:
+
+- The prefix bolded
+    
+- Rest normal
+    
+- Keyboard navigation still works
+    
+- Click still works
+    
+
+---
+
+# 🧠 Why We Avoided Regex
+
+Regex-based replace can:
+
+- Break on special characters
+    
+- Be unsafe
+    
+- Cause partial match bugs
+    
+- Introduce XSS if not careful
+    
+
+Prefix match is cleaner and controlled.
+
+---
+
+# 🧠 What We Have Now
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Highlighted match  
+✔ Clean DOM updates
+
+This is already production-quality logic.
+
+---
+
+# 🧱 Still Missing (Senior Final Layer)
+
+The final stage is:
+
+# 🔵 Stage 11 — Accessibility (ARIA Roles + Screen Reader Support)
+
+This is what truly differentiates senior frontend engineers.
+
+We will:
+
+- Add `role="combobox"`
+    
+- Add `aria-expanded`
+    
+- Add `role="listbox"`
+    
+- Add `role="option"`
+    
+- Add `aria-activedescendant`
+    
+
+After that, we move into:
+
+- Deep performance discussion
+    
+- Scaling to 10k results
+    
+- Virtualization
+    
+- Memory considerations
+    
+
+---
+
+Say:
+
+**“Stage 10 complete”**
+
+and we enter accessibility engineering.
