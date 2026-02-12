@@ -1964,3 +1964,230 @@ and we master interactive UI state.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we enter **Stage 8 — Keyboard Navigation (Reactive + Clean State Coordination)**.
+
+This is where many implementations become messy.  
+We will keep it clean and reactive.
+
+---
+
+# 🟢 Stage 8 — Arrow Keys + Enter + Escape
+
+## 🎯 Goal
+
+Add support for:
+
+- ⬇ Arrow Down → move highlight down
+    
+- ⬆ Arrow Up → move highlight up
+    
+- ⏎ Enter → select highlighted item
+    
+- ⎋ Escape → close dropdown
+    
+- Loop navigation
+    
+
+All using Vue reactivity (no manual DOM class toggling).
+
+---
+
+# 🧠 Step 1 — Add Active Index State
+
+Inside `<script setup>`:
+
+```js
+const activeIndex = ref(-1);
+```
+
+Meaning:
+
+- `-1` → nothing selected
+    
+- `0..n` → currently highlighted item
+    
+
+---
+
+# 🧠 Step 2 — Reset Active Index When Results Change
+
+Add a watcher:
+
+```js
+watch(results, () => {
+  activeIndex.value = -1;
+});
+```
+
+Why?
+
+When new results arrive:
+
+- We reset selection
+    
+- Prevent stale highlighting
+    
+
+---
+
+# 🧠 Step 3 — Add Keydown Handler
+
+Add this function:
+
+```js
+function handleKeydown(event) {
+  if (!isOpen.value || !results.value.length) return;
+
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+
+    activeIndex.value =
+      (activeIndex.value + 1) % results.value.length;
+
+  } else if (event.key === "ArrowUp") {
+    event.preventDefault();
+
+    activeIndex.value =
+      (activeIndex.value - 1 + results.value.length) %
+      results.value.length;
+
+  } else if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (activeIndex.value >= 0) {
+      selectItem(results.value[activeIndex.value]);
+    }
+
+  } else if (event.key === "Escape") {
+    isOpen.value = false;
+  }
+}
+```
+
+---
+
+# 🧠 Why Modulo Logic?
+
+This enables loop behavior:
+
+- Down at end → goes to start
+    
+- Up at start → goes to end
+    
+
+Cleaner UX.
+
+---
+
+# 🧠 Step 4 — Attach Keydown to Input
+
+Modify input:
+
+```vue
+<input
+  type="text"
+  v-model="query"
+  placeholder="Search..."
+  autocomplete="off"
+  @keydown="handleKeydown"
+/>
+```
+
+Now keyboard events are handled.
+
+---
+
+# 🧠 Step 5 — Add Active Styling in Template
+
+Update suggestion list item:
+
+```vue
+<li
+  v-for="(item, index) in results"
+  :key="item"
+  @click="selectItem(item)"
+  :class="{ active: index === activeIndex }"
+>
+  {{ item }}
+</li>
+```
+
+---
+
+# 🧠 Step 6 — Add CSS for Active State
+
+```css
+.suggestions li.active {
+  background-color: #e0e0e0;
+}
+```
+
+---
+
+# 🧪 Test Carefully
+
+1. Type “A”
+    
+2. Press Arrow Down
+    
+3. Highlight should move
+    
+4. Press Enter → selection occurs
+    
+5. Press Escape → dropdown closes
+    
+
+No console errors.  
+No weird behavior.
+
+---
+
+# 🧠 Why This Is Clean
+
+We:
+
+✔ Used reactive state  
+✔ Avoided manual DOM manipulation  
+✔ Avoided document.querySelector  
+✔ Avoided classList toggling  
+✔ Used declarative class binding
+
+This is idiomatic Vue.
+
+---
+
+# 🧱 Current System Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Click selection  
+✔ Click outside  
+✔ Keyboard navigation
+
+We are now at serious production level.
+
+---
+
+Still missing:
+
+❌ Highlight matching substring  
+❌ Accessibility (ARIA)  
+❌ Composable extraction  
+❌ Deep performance discussion
+
+---
+
+# 🚀 Next Stage
+
+Stage 9 — Highlight Matching Substring (Vue-Safe Rendering)
+
+We must implement highlighting safely (without XSS).
+
+Say:
+
+**“Stage 8 complete”**
+
+and we refine UI polish properly.
