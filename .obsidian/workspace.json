@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/02_typeahead/02_vue_implementation.md",
+                "file": "machine-coding/02_typeahead/03_react_implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_vue_implementation"
+              "title": "03_react_implementation"
             }
           }
         ]
@@ -178,9 +178,12 @@
   },
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
+    "machine-coding/02_typeahead/00_index.md",
+    "machine-coding/02_typeahead/03_react_implementation.md",
     "machine-coding/02_typeahead/01_html_css_js_implementation.md",
     "machine-coding/02_typeahead/02_vue_implementation.md",
-    "machine-coding/02_typeahead/00_index.md",
+    "machine-coding/03_/00_index.md",
+    "machine-coding/03_",
     "machine-coding/01_star_rating_component/03_react_implementation.md",
     "machine-coding/02_typeahead",
     "machine-coding/01_star_rating_component/02_vue_implementation.md",
@@ -204,8 +207,6 @@
     "javascript-interview-questions/conceptual-based/03_Arrays & Objects.md",
     "javascript-interview-questions/conceptual-based/02_Variables & Scope.md",
     "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
-    "frontend-system-design/optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
-    "React/Hooks/00_Hooks.md",
     "React/Hooks/Custom_Hooks",
     "React/Hooks/02_Optimization_&_Advanced_State/05_useTransition",
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/04_useLayoutEffect",
@@ -213,7 +214,6 @@
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/03_useDebugValue",
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/02_useId",
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/01_useLayoutEffect",
-    "React/Hooks/02_Optimization_&_Advanced_State/04_useCallback",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
