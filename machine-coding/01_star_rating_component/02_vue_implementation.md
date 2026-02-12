@@ -611,3 +611,369 @@ Say:
 
 --------------------------------------------------------------------------
 
+# ✅ Step 4 (Vue + SVG) — Add Hover Preview State
+
+Now we move into real complexity.
+
+This is where many candidates mix up state logic.
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Now I’ll introduce a temporary hover state so users can preview a rating before clicking.  
+> I’ll maintain a separate `hoverIndex` ref and derive the displayed state from both `hoverIndex` and `selectedIndex`."
+
+That sentence signals maturity.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We now have:
+
+```
+selectedIndex → persistent state
+hoverIndex    → temporary state
+```
+
+Display rule:
+
+```
+displayIndex = hoverIndex !== -1 ? hoverIndex : selectedIndex
+```
+
+Hover should override selected visually, but not modify it.
+
+---
+
+# 💻 Updated Rating.vue
+
+---
+
+## 📄 components/Rating.vue
+
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  totalItems: {
+    type: Number,
+    default: 5
+  }
+})
+
+const selectedIndex = ref(-1)
+const hoverIndex = ref(-1)
+
+function handleClick(index) {
+  selectedIndex.value = index
+}
+
+function handleMouseEnter(index) {
+  hoverIndex.value = index
+}
+
+function handleMouseLeave() {
+  hoverIndex.value = -1
+}
+</script>
+
+<template>
+  <div class="rating-container">
+    <button
+      v-for="(item, index) in props.totalItems"
+      :key="index"
+      class="rating-item"
+      @click="handleClick(index)"
+      @mouseenter="handleMouseEnter(index)"
+      @mouseleave="handleMouseLeave"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="32"
+        height="32"
+        :fill="
+          index <= (hoverIndex !== -1 ? hoverIndex : selectedIndex)
+            ? 'gold'
+            : 'lightgray'
+        "
+      >
+        <path
+          d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2z"
+        />
+      </svg>
+    </button>
+  </div>
+</template>
+
+<style scoped>
+.rating-container {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.rating-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+</style>
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "Now I’m maintaining two states: `selectedIndex` and `hoverIndex`.  
+> The displayed rating prioritizes hover when it exists, otherwise it falls back to the selected rating.  
+> This ensures preview behavior without mutating the saved state."
+
+That’s a strong explanation.
+
+---
+
+## 🔎 What Interviewer Is Evaluating
+
+- Did you separate persistent and temporary state?
+    
+- Did you avoid overwriting selectedIndex on hover?
+    
+- Is your conditional logic clean?
+    
+- Are you thinking declaratively?
+    
+
+---
+
+## 🧠 What You Just Demonstrated
+
+You introduced **derived state logic**:
+
+```
+displayIndex = f(selectedIndex, hoverIndex)
+```
+
+That’s proper component architecture.
+
+---
+
+## ⚠️ Subtle Code Smell
+
+The inline conditional in `:fill` is starting to look slightly complex.
+
+It’s still acceptable — but we may refactor it into a computed property later for clarity.
+
+Not yet.
+
+---
+
+## ⏸ Pause Here
+
+Next step (bar-raiser):
+
+👉 Differentiate visually between:
+
+- Locked rating (selected)
+    
+- Hover preview (temporary extension)
+    
+
+This is advanced UX layering.
+
+Say:
+
+**Next Step (Vue + SVG)**
+
+--------------------------------------------------------------------------
+
+# ✅ Step 5 (Vue + SVG) — Differentiate Locked vs Hover Preview
+
+Now we move into **strong mid-level / senior territory**.
+
+Right now:
+
+If `selectedIndex = 2`  
+And `hoverIndex = 4`
+
+All 5 stars become gold.
+
+That hides the fact that only 3 are actually saved.
+
+We’ll fix that.
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Currently hover completely overrides the selected state visually.  
+> In a production UI, it’s better to distinguish between the saved rating and the temporary preview.  
+> I’ll adjust the rendering logic so locked stars remain gold, and preview stars use a different color."
+
+That is a strong UX-aware statement.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We want this behavior:
+
+If:
+
+```
+selectedIndex = 2  (3 locked)
+hoverIndex = 4     (hovering 5th)
+```
+
+Then visually:
+
+```
+0 1 2 → gold (locked)
+3 4   → blue (preview)
+```
+
+Logic:
+
+```
+IF hoverIndex !== -1:
+    IF index <= selectedIndex → gold
+    ELSE IF index <= hoverIndex → dodgerblue
+    ELSE → lightgray
+ELSE:
+    IF index <= selectedIndex → gold
+    ELSE → lightgray
+```
+
+---
+
+# 💻 Updated Rating.vue (Improved Fill Logic)
+
+We’ll clean up the inline logic slightly for readability.
+
+---
+
+## 📄 Updated `<script setup>`
+
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  totalItems: {
+    type: Number,
+    default: 5
+  }
+})
+
+const selectedIndex = ref(-1)
+const hoverIndex = ref(-1)
+
+function handleClick(index) {
+  selectedIndex.value = index
+}
+
+function handleMouseEnter(index) {
+  hoverIndex.value = index
+}
+
+function handleMouseLeave() {
+  hoverIndex.value = -1
+}
+
+function getFillColor(index) {
+  if (hoverIndex.value !== -1) {
+    if (index <= selectedIndex.value) {
+      return 'gold' // locked
+    } else if (index <= hoverIndex.value) {
+      return 'dodgerblue' // preview
+    } else {
+      return 'lightgray'
+    }
+  } else {
+    return index <= selectedIndex.value ? 'gold' : 'lightgray'
+  }
+}
+</script>
+```
+
+---
+
+## 📄 Updated Template SVG Binding
+
+```vue
+:fill="getFillColor(index)"
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "I’ve extracted the color logic into a helper function for clarity.  
+> Now the saved rating and hover preview are visually distinct.  
+> This avoids ambiguity and improves UX clarity."
+
+This shows code hygiene and UX maturity.
+
+---
+
+## 🔎 What Interviewer Is Evaluating
+
+- Did you think beyond basic functionality?
+    
+- Did you improve readability?
+    
+- Did you avoid messy inline logic?
+    
+- Did you handle overlapping states correctly?
+    
+
+---
+
+## 🧠 What You Just Demonstrated
+
+You moved from:
+
+Functional implementation  
+→ UX-aware layered state rendering
+
+That’s senior signal.
+
+---
+
+## ⚠️ Very Important
+
+Notice:
+
+We did NOT:
+
+- Introduce computed yet
+    
+- Over-abstract
+    
+- Over-engineer
+    
+
+We only refactored when logic became complex.
+
+That’s exactly what interviewers want to see.
+
+---
+
+## ⏸ Pause Here
+
+Now we move beyond UI.
+
+Next step:
+
+👉 Add optimistic update simulation  
+👉 Emit rating to parent  
+👉 Handle async failure rollback
+
+This shifts from UI component → product engineering.
+
+Say:
+
+**Next Step (Vue + SVG)**
