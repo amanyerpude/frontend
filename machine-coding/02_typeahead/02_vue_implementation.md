@@ -1744,3 +1744,220 @@ and we add intelligent caching.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into **Stage 7 — Caching (Intelligent Performance Optimization)**.
+
+At this point, your implementation is already strong.  
+Now we optimize behavior like a senior engineer.
+
+---
+
+# 🟡 Stage 7 — Add Caching (Using Map)
+
+## 🎯 Problem
+
+Even with:
+
+- Debounce
+    
+- Race protection
+    
+
+If user types:
+
+```
+Apple
+(clear input)
+Apple
+```
+
+We call API twice.
+
+Wasteful.
+
+---
+
+# 🧠 Design Strategy
+
+We will:
+
+- Store results per query
+    
+- Use `Map`
+    
+- Return cached results immediately
+    
+- Skip API call
+    
+- Avoid loading flicker
+    
+
+---
+
+# 🧠 Step 1 — Add Cache Store
+
+Inside `<script setup>`:
+
+```js
+const cache = new Map();
+```
+
+Why Map?
+
+- Clear key/value API
+    
+- Safe for dynamic keys
+    
+- No prototype issues
+    
+- Cleaner semantics than plain object
+    
+
+Not reactive.  
+Internal optimization only.
+
+---
+
+# 🧠 Step 2 — Modify Debounced Fetch Logic
+
+Update debounce block:
+
+```js
+debounceTimer = setTimeout(async () => {
+  const requestId = ++currentRequestId;
+
+  // 🔥 Check Cache First
+  if (cache.has(trimmed)) {
+    results.value = cache.get(trimmed);
+    isOpen.value = true;
+    return;
+  }
+
+  isOpen.value = true;
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const response = await fetchSuggestions(trimmed);
+
+    if (requestId !== currentRequestId) return;
+
+    // 🔥 Store in cache
+    cache.set(trimmed, response);
+
+    results.value = response;
+  } catch (err) {
+    if (requestId !== currentRequestId) return;
+
+    error.value = err;
+    results.value = [];
+  } finally {
+    if (requestId === currentRequestId) {
+      isLoading.value = false;
+    }
+  }
+}, 400);
+```
+
+---
+
+# 🧠 What Just Improved
+
+Now flow is:
+
+1. User types
+    
+2. Debounce fires
+    
+3. Check cache
+    
+    - If exists → instant render
+        
+    - If not → fetch → store → render
+        
+
+Zero duplicate API calls.
+
+---
+
+# 🧪 Test It
+
+Add inside `fetchSuggestions`:
+
+```js
+console.log("API CALL:", query);
+```
+
+Then:
+
+1. Type "Apple"
+    
+2. Clear
+    
+3. Type "Apple" again
+    
+
+You should see only ONE API log.
+
+Second time is instant.
+
+---
+
+# 🧠 Senior-Level Interview Insight
+
+If interviewer asks:
+
+> What about cache growth?
+
+You say:
+
+- For small search component → acceptable
+    
+- For large app → implement:
+    
+    - LRU eviction
+        
+    - TTL expiration
+        
+    - Max cache size limit
+        
+
+That shows production thinking.
+
+---
+
+# 🧱 Current System Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safety  
+✔ Cache  
+✔ Loading  
+✔ Error  
+✔ Click selection  
+✔ Click outside
+
+This is already production-grade async logic.
+
+---
+
+Still missing:
+
+❌ Keyboard navigation  
+❌ Highlighting  
+❌ Accessibility  
+❌ Reusability extraction
+
+---
+
+# 🚀 Next Stage
+
+Stage 8 — Keyboard Navigation (Reactive Active Index)
+
+This is where Vue state coordination becomes interesting.
+
+Say:
+
+**“Stage 7 complete”**
+
+and we master interactive UI state.
