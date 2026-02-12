@@ -1308,3 +1308,237 @@ Say:
 **“Stage 4 complete”**
 
 and we optimize intelligently.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we enter **Stage 5 — Debouncing in Vue (Properly Done)**.
+
+This is where Vue reactivity + performance engineering combine.
+
+---
+
+# 🟣 Stage 5 — Debounce the API Calls
+
+## 🎯 Problem
+
+Right now:
+
+Every keystroke → triggers `watch(query)` → triggers API call.
+
+If user types:
+
+```
+A
+Ap
+App
+Appl
+Apple
+```
+
+We make 5 API calls.
+
+This is bad for:
+
+- Backend load
+    
+- User experience
+    
+- Performance
+    
+
+Senior engineers fix this immediately.
+
+---
+
+# 🧠 Design Strategy
+
+We will:
+
+- Use `watch(query)`
+    
+- Clear previous timer
+    
+- Delay API call by ~400ms
+    
+- Only fire when user pauses typing
+    
+
+No external libraries.
+
+---
+
+# 🧠 Step 1 — Add Debounce Timer
+
+Inside `<script setup>`:
+
+```js
+let debounceTimer = null;
+```
+
+We use a plain variable because:
+
+- It doesn’t need to be reactive
+    
+- It does not affect rendering
+    
+- It is purely internal logic
+    
+
+Senior decision: avoid unnecessary reactivity.
+
+---
+
+# 🧠 Step 2 — Modify the Watcher
+
+Replace current `watch(query, ...)` with:
+
+```js
+watch(query, (newQuery) => {
+  const trimmed = newQuery.trim();
+
+  // Reset state if empty
+  if (!trimmed) {
+    isOpen.value = false;
+    results.value = [];
+    return;
+  }
+
+  // Clear previous timer
+  if (debounceTimer) {
+    clearTimeout(debounceTimer);
+  }
+
+  // Start new debounce timer
+  debounceTimer = setTimeout(async () => {
+    isOpen.value = true;
+    isLoading.value = true;
+    error.value = null;
+
+    try {
+      const response = await fetchSuggestions(trimmed);
+      results.value = response;
+    } catch (err) {
+      error.value = err;
+      results.value = [];
+    } finally {
+      isLoading.value = false;
+    }
+  }, 400);
+});
+```
+
+---
+
+# 🧠 What Just Happened
+
+Flow now:
+
+1. User types
+    
+2. Watch triggers
+    
+3. Old timer cleared
+    
+4. New timer set
+    
+5. If user keeps typing → timer keeps resetting
+    
+6. Only after 400ms pause → API fires
+    
+
+Clean debounce behavior.
+
+---
+
+# 🧪 Test It
+
+Add inside `fetchSuggestions`:
+
+```js
+console.log("API CALL:", query);
+```
+
+Now type quickly.
+
+You should see:
+
+Only ONE API call after you stop typing.
+
+That means debounce is working.
+
+---
+
+# 🧠 Important Interview Insight
+
+If interviewer asks:
+
+> Why debounce instead of throttle?
+
+Answer:
+
+- Debounce → better for search (wait until typing stops)
+    
+- Throttle → better for scroll/resize events
+    
+
+That’s a senior answer.
+
+---
+
+# 🚨 But Something Is Still Wrong
+
+Even with debounce:
+
+We still have race condition.
+
+If:
+
+- User types
+    
+- Debounce fires
+    
+- API call starts
+    
+- User types again
+    
+- Second API call starts
+    
+- First API returns later
+    
+
+Older result can still overwrite newer.
+
+We must fix that next.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Loading state  
+✔ Error state  
+✔ Debounce  
+✔ Click selection  
+✔ Click outside
+
+Still missing:
+
+❌ Race handling  
+❌ Cache  
+❌ Keyboard navigation  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 6 — Race Condition Handling (Vue-Safe Version)
+
+This is where we make it production-safe.
+
+Say:
+
+**“Stage 5 complete”**
+
+and we harden the system.
