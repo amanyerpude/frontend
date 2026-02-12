@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/01_star_rating_component/Untitled.md",
+                "file": "machine-coding/01_star_rating_component/03_react_implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "03_react_implementation"
             }
           }
         ]
@@ -179,7 +179,7 @@
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
     "machine-coding/01_star_rating_component/02_vue_implementation.md",
-    "machine-coding/01_star_rating_component/Untitled.md",
+    "machine-coding/01_star_rating_component/03_react_implementation.md",
     "machine-coding/01_star_rating_component/01_HTML_CSS_JS_implementation.md",
     "machine-coding/01_star_rating_component/prompt.md",
     "machine-coding/01_star_rating_component/00_index.md",
