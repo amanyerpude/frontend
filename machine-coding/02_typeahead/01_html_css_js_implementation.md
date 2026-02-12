@@ -995,14 +995,6 @@ We will:
 - Add loading state
     
 
----
-
-Say:
-
-**“Stage 4 complete”**
-
-and we move to async version.
-
 --------------------------------------------------------------------------
 # 🔵 Stage 5 — Convert to Async API Simulation
 
@@ -1225,10 +1217,5 @@ We now prevent:
 - Multiple API calls on every keystroke
     
 
----
+--------------------------------------------------------------------------
 
-Say:
-
-**“Stage 5 complete”**
-
-And now we move into serious performance engineering.
