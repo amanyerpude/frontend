@@ -757,3 +757,197 @@ Ready for that step?
 
 --------------------------------------------------------------------------
 
+# ✅ Step 6 — Introduce Optimistic Update (Async Simulation)
+
+Now we move beyond UI.
+
+This is where interview difficulty increases significantly.
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Now I’ll simulate a real-world scenario where selecting a rating sends a request to a backend.  
+> I’ll implement an optimistic update — meaning the UI updates immediately — and then simulate an API call.  
+> If the request fails, I’ll revert the rating to the previous value."
+
+This is a very strong statement.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We now need:
+
+New state:
+
+```
+selectedIndex
+hoverIndex
+previousIndex
+loading
+```
+
+Flow:
+
+```
+1. Store previousIndex
+2. Update selectedIndex immediately
+3. Set loading = true
+4. Simulate API
+5. On success → do nothing
+6. On failure → revert to previousIndex
+7. loading = false
+```
+
+This introduces state rollback.
+
+---
+
+# 💻 Updated script.js (Add Optimistic Logic)
+
+Add this at top:
+
+```javascript
+let loading = false;
+let previousIndex = -1;
+```
+
+---
+
+### 🔁 Update Click Handler
+
+Replace click handler with:
+
+```javascript
+button.addEventListener("click", () => {
+  if (loading) return; // Prevent multiple clicks during API call
+
+  previousIndex = selectedIndex;
+  selectedIndex = i;
+  loading = true;
+
+  renderRating(totalItems);
+
+  simulateApiCall()
+    .then(() => {
+      loading = false;
+      renderRating(totalItems);
+    })
+    .catch(() => {
+      selectedIndex = previousIndex; // rollback
+      loading = false;
+      renderRating(totalItems);
+    });
+});
+```
+
+---
+
+### 🧪 Add Simulated API Function
+
+```javascript
+function simulateApiCall() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const isSuccess = Math.random() > 0.3; // 70% success rate
+      if (isSuccess) {
+        resolve();
+      } else {
+        reject();
+      }
+    }, 1000);
+  });
+}
+```
+
+---
+
+### 🌀 Show Loading Indicator
+
+Inside `renderRating`, at the bottom:
+
+```javascript
+if (loading) {
+  const loader = document.createElement("span");
+  loader.textContent = " Saving...";
+  loader.style.marginLeft = "10px";
+  loader.style.fontSize = "14px";
+  ratingContainer.appendChild(loader);
+}
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "Now when a user clicks, the UI updates immediately for responsiveness.  
+> I simulate a backend request.  
+> If it fails, I revert to the previous rating.  
+> During the request, I disable further interaction to avoid race conditions."
+
+That last sentence is important.
+
+---
+
+## 🔎 What Interviewer Is Evaluating
+
+- Do you understand optimistic UI?
+    
+- Can you handle async state?
+    
+- Did you track previous state?
+    
+- Did you prevent race conditions?
+    
+- Did you handle failure properly?
+    
+
+---
+
+## 🧠 What You Just Demonstrated
+
+You moved from:
+
+UI Developer → Product Engineer
+
+Because now you handled:
+
+- Async behavior
+    
+- Rollback logic
+    
+- Failure cases
+    
+- User experience during latency
+    
+
+---
+
+## ⚠️ Hidden Interview Trap
+
+If interviewer clicks rapidly:  
+Without `if (loading) return;`  
+You would have multiple overlapping API calls.
+
+You handled that correctly.
+
+---
+
+## ⏸ Pause Here
+
+Next possible steps:
+
+1. Refactor rendering logic (cleaner structure)
+    
+2. Improve accessibility (keyboard navigation)
+    
+3. Add dynamic color scaling (red → yellow → green)
+    
+4. Convert to more reusable architecture
+    
+
+Which direction do you want to go next?
+
+--------------------------------------------------------------------------
+
