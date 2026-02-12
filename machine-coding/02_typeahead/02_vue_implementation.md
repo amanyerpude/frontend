@@ -2417,3 +2417,214 @@ and we implement accessible combobox behavior properly.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we enter the final implementation layer:
+
+# 🟣 Stage 10 — Accessibility (ARIA Combobox Pattern)
+
+This is what truly separates senior frontend engineers from feature coders.
+
+Right now:
+
+✔ Visually works  
+✔ Keyboard works  
+✔ Async works
+
+But for:
+
+- Screen readers
+    
+- Assistive technology
+    
+- Accessibility compliance
+    
+
+We are not fully correct yet.
+
+We now fix that.
+
+---
+
+# 🧠 What We Are Implementing
+
+We will follow the ARIA Combobox pattern:
+
+- `role="combobox"` on input
+    
+- `aria-expanded`
+    
+- `aria-controls`
+    
+- `aria-autocomplete="list"`
+    
+- `role="listbox"` on dropdown
+    
+- `role="option"` on items
+    
+- `aria-activedescendant` to indicate active option
+    
+
+This is the correct modern pattern.
+
+---
+
+# 🟢 Step 1 — Update Input
+
+Modify input element:
+
+```vue
+<input
+  type="text"
+  v-model="query"
+  placeholder="Search..."
+  autocomplete="off"
+  role="combobox"
+  aria-autocomplete="list"
+  :aria-expanded="isOpen.toString()"
+  aria-controls="suggestions-list"
+  :aria-activedescendant="activeDescendant"
+  @keydown="handleKeydown"
+/>
+```
+
+---
+
+# 🧠 Why `:aria-expanded="isOpen.toString()"`?
+
+ARIA attributes expect string values.  
+Vue binds boolean → convert to string.
+
+---
+
+# 🟢 Step 2 — Update Suggestions List
+
+Modify `<ul>`:
+
+```vue
+<ul
+  v-if="isOpen"
+  id="suggestions-list"
+  class="suggestions"
+  role="listbox"
+>
+```
+
+Now screen readers know:
+
+This is a selectable list.
+
+---
+
+# 🟢 Step 3 — Update List Items
+
+Modify `<li>`:
+
+```vue
+<li
+  v-for="(item, index) in results"
+  :key="item"
+  :id="`option-${index}`"
+  role="option"
+  :aria-selected="index === activeIndex"
+  @click="selectItem(item)"
+  :class="{ active: index === activeIndex }"
+>
+```
+
+---
+
+# 🟢 Step 4 — Add Active Descendant Computed
+
+Inside `<script setup>`:
+
+```js
+const activeDescendant = computed(() => {
+  if (activeIndex.value >= 0) {
+    return `option-${activeIndex.value}`;
+  }
+  return undefined;
+});
+```
+
+---
+
+# 🧠 Why `aria-activedescendant`?
+
+Instead of moving focus to `<li>`:
+
+- Focus remains on input (correct UX)
+    
+- We inform screen reader which option is active
+    
+
+This is how professional comboboxes behave.
+
+---
+
+# 🧪 Manual Accessibility Check
+
+While typing:
+
+- `aria-expanded` should toggle
+    
+- Each option has unique ID
+    
+- Active option updates `aria-activedescendant`
+    
+- Escape closes and sets expanded false
+    
+
+Even without screen reader, inspect DOM.
+
+---
+
+# 🧠 What We Achieved
+
+You now built:
+
+✔ Async  
+✔ Debounce  
+✔ Race-safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Highlighting  
+✔ Click outside  
+✔ ARIA-compliant combobox
+
+This is far beyond typical tutorial-level code.
+
+---
+
+# 🧱 Final Architecture Status
+
+This component is now:
+
+Production-grade  
+Accessible  
+Performance-aware  
+Concurrency-safe  
+Reactive and clean
+
+---
+
+# 🚀 Now We Enter Senior Territory
+
+The implementation is complete.
+
+Next level options:
+
+1️⃣ Extract into reusable `AutoComplete.vue`  
+2️⃣ Extract async logic into `useAutocomplete()` composable  
+3️⃣ Discuss scaling to 10k+ results  
+4️⃣ Discuss SSR + hydration behavior  
+5️⃣ Mock FAANG cross-questioning  
+6️⃣ Convert this into interview-ready explanation script
+
+---
+
+You’ve built it.
+
+Now the question is:
+
+👉 Do you want to refine architecture?  
+👉 Or simulate senior-level interview probing?
