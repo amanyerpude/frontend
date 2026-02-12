@@ -2193,3 +2193,227 @@ Say:
 and we refine UI polish properly.
 
 --------------------------------------------------------------------------
+Excellent.  
+Now we enter **Stage 9 — Highlight Matching Substring (Vue-Safe + No XSS)**.
+
+This is UI polish, but we implement it in a **secure, senior way**.
+
+---
+
+# 🟢 Stage 9 — Highlight Matched Prefix
+
+## 🎯 Goal
+
+If user types:
+
+```
+Ap
+```
+
+We render:
+
+```
+<strong>Ap</strong>ple
+```
+
+Instead of:
+
+```
+Apple
+```
+
+But we must:
+
+- Avoid `v-html`
+    
+- Avoid raw HTML injection
+    
+- Avoid XSS
+    
+- Keep reactivity clean
+    
+
+---
+
+# 🧠 Why NOT Use `v-html`?
+
+If you do something like:
+
+```vue
+<li v-html="highlightedString"></li>
+```
+
+You risk:
+
+- XSS injection
+    
+- Rendering unsafe content
+    
+- Breaking security guarantees
+    
+
+Senior engineers avoid this unless sanitized.
+
+We will use safe string splitting instead.
+
+---
+
+# 🧠 Step 1 — Create Highlight Helper Function
+
+Inside `<script setup>`:
+
+```js
+function splitHighlight(text) {
+  const q = query.value.trim().toLowerCase();
+  const lowerText = text.toLowerCase();
+
+  if (!q || !lowerText.startsWith(q)) {
+    return {
+      prefix: "",
+      suffix: text
+    };
+  }
+
+  return {
+    prefix: text.slice(0, q.length),
+    suffix: text.slice(q.length)
+  };
+}
+```
+
+---
+
+# 🧠 What This Does
+
+For "Apple" and "Ap":
+
+Returns:
+
+```
+{
+  prefix: "Ap",
+  suffix: "ple"
+}
+```
+
+No HTML injection.  
+No regex complexity.  
+Safe prefix-based logic.
+
+---
+
+# 🧠 Step 2 — Update Template Rendering
+
+Modify list item:
+
+```vue
+<li
+  v-for="(item, index) in results"
+  :key="item"
+  @click="selectItem(item)"
+  :class="{ active: index === activeIndex }"
+>
+  <template v-if="splitHighlight(item).prefix">
+    <strong>{{ splitHighlight(item).prefix }}</strong>
+    {{ splitHighlight(item).suffix }}
+  </template>
+
+  <template v-else>
+    {{ item }}
+  </template>
+</li>
+```
+
+---
+
+# 🧠 Why This Is Safe
+
+We:
+
+- Render plain text bindings
+    
+- Use `<strong>` element directly
+    
+- Avoid dynamic HTML injection
+    
+- Let Vue handle escaping
+    
+
+Secure and clean.
+
+---
+
+# 🧪 Test It
+
+Type:
+
+```
+Ap
+Ba
+Ma
+```
+
+You should see:
+
+- Prefix bolded
+    
+- Keyboard navigation still works
+    
+- Click still works
+    
+- No errors
+    
+
+---
+
+# 🧠 Minor Optimization (Optional Senior Thought)
+
+Right now `splitHighlight(item)` is called multiple times per render.
+
+If interviewer asks:
+
+You could optimize by computing once per item.
+
+But for small list (max 5), this is negligible.
+
+Shows balanced thinking.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Click outside  
+✔ Highlighted matches
+
+This is now fully functional and polished.
+
+---
+
+Still missing:
+
+❌ Accessibility (ARIA roles)  
+❌ Extraction into reusable component  
+❌ Composable extraction  
+❌ Deep performance & scaling discussion
+
+---
+
+# 🚀 Next Stage
+
+Stage 10 — Accessibility (ARIA Combobox Compliance)
+
+This is what truly separates senior frontend engineers.
+
+Say:
+
+**“Stage 9 complete”**
+
+and we implement accessible combobox behavior properly.
+
+--------------------------------------------------------------------------
+
