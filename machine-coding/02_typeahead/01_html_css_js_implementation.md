@@ -1831,3 +1831,222 @@ and we enter UI state mastery.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into **UI state mastery** — this is where implementations usually break.
+
+---
+
+# 🟢 Stage 9 — Keyboard Navigation (Arrow Keys + Enter + Escape)
+
+This is where frontend maturity shows.
+
+We will implement:
+
+- ⬇ Arrow Down → move selection down
+    
+- ⬆ Arrow Up → move selection up
+    
+- ⏎ Enter → select active item
+    
+- ⎋ Escape → close dropdown
+    
+
+---
+
+# 🧠 New Concept: Active Index State
+
+We need to track:
+
+> Which suggestion is currently highlighted?
+
+Add at top of `script.js`:
+
+```javascript
+let activeIndex = -1;
+```
+
+- `-1` means nothing selected
+    
+
+---
+
+# 🧠 Step 1 — Update renderSuggestions to Track Items
+
+Modify `renderSuggestions`:
+
+```javascript
+function renderSuggestions(items) {
+  suggestionsList.innerHTML = "";
+  activeIndex = -1;
+
+  if (items.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No results found";
+    li.classList.add("no-results");
+    suggestionsList.appendChild(li);
+    suggestionsList.classList.remove("hidden");
+    return;
+  }
+
+  items.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    li.setAttribute("data-index", index);
+    suggestionsList.appendChild(li);
+  });
+
+  suggestionsList.classList.remove("hidden");
+}
+```
+
+---
+
+# 🧠 Step 2 — Add Active Styling in CSS
+
+In `styles.css` add:
+
+```css
+.suggestions li.active {
+  background-color: #e0e0e0;
+}
+```
+
+---
+
+# 🧠 Step 3 — Add Keydown Listener
+
+Add this in `script.js`:
+
+```javascript
+input.addEventListener("keydown", function (event) {
+  const items = suggestionsList.querySelectorAll("li:not(.no-results)");
+
+  if (!items.length) return;
+
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+
+    activeIndex = (activeIndex + 1) % items.length;
+    updateActiveItem(items);
+
+  } else if (event.key === "ArrowUp") {
+    event.preventDefault();
+
+    activeIndex =
+      (activeIndex - 1 + items.length) % items.length;
+    updateActiveItem(items);
+
+  } else if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (activeIndex >= 0) {
+      input.value = items[activeIndex].textContent;
+      suggestionsList.classList.add("hidden");
+      suggestionsList.innerHTML = "";
+    }
+
+  } else if (event.key === "Escape") {
+    suggestionsList.classList.add("hidden");
+  }
+});
+```
+
+---
+
+# 🧠 Step 4 — Add updateActiveItem Function
+
+Add below:
+
+```javascript
+function updateActiveItem(items) {
+  items.forEach(item => item.classList.remove("active"));
+
+  if (activeIndex >= 0) {
+    items[activeIndex].classList.add("active");
+  }
+}
+```
+
+---
+
+# 🧠 What We Just Built
+
+✔ Loop navigation  
+✔ Prevent page scrolling  
+✔ Active visual state  
+✔ Enter selection  
+✔ Escape close
+
+---
+
+# 🧪 Test Carefully
+
+1. Type “A”
+    
+2. Press Arrow Down multiple times
+    
+3. It should loop
+    
+4. Press Enter
+    
+5. It should select highlighted item
+    
+6. Press Escape → closes
+    
+
+---
+
+# 🧠 Why This Is Hard
+
+Common mistakes:
+
+- Index out of bounds
+    
+- Not resetting activeIndex
+    
+- Not preventing default scroll
+    
+- Not clearing previous active classes
+    
+
+We handled all.
+
+---
+
+# 🧱 Current System Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Click select  
+✔ Click outside  
+✔ Keyboard navigation
+
+This is already stronger than 80% of candidates.
+
+---
+
+Still missing:
+
+❌ Highlight matching substring  
+❌ Accessibility ARIA roles  
+❌ Edge case refinement  
+❌ Performance deep dive
+
+---
+
+# 🚀 Next Stage
+
+Stage 10 — Highlight Matching Substring
+
+This requires safe string manipulation.
+
+Say:
+
+**“Stage 9 complete”**
+
+and we refine UI polish.
+
+--------------------------------------------------------------------------
+
