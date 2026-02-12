@@ -1052,3 +1052,259 @@ and we evolve to async behavior.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into **Stage 4 — Async API Simulation (Vue Way)**.
+
+Now complexity increases.
+
+We are introducing:
+
+- Loading state
+    
+- Async fetch simulation
+    
+- Error handling
+    
+- Proper reactive updates
+    
+- Avoiding UI flicker
+    
+
+Still no debounce.  
+Still no race protection.  
+Correctness first.
+
+---
+
+# 🟢 Stage 4 — Async Suggestions
+
+## 🎯 Goal
+
+Replace local computed filtering with:
+
+- Simulated async API call
+    
+- Loading indicator
+    
+- Error state
+    
+- Clean state transitions
+    
+
+---
+
+# 🧠 Important Architecture Change
+
+Previously:
+
+```
+computed → filteredResults
+```
+
+Now:
+
+Filtering becomes async → cannot use computed.
+
+We must:
+
+- Use `watch(query)`
+    
+- Trigger async fetch
+    
+- Store results in reactive `results`
+    
+
+We move from derived state → side-effect state.
+
+---
+
+# 🧠 Step 1 — Add New Reactive State
+
+Inside `<script setup>`:
+
+```js
+const results = ref([]);
+const isLoading = ref(false);
+const error = ref(null);
+```
+
+Explanation:
+
+- `results` → API response
+    
+- `isLoading` → controls loading UI
+    
+- `error` → stores error message
+    
+
+---
+
+# 🧠 Step 2 — Simulated Async API Function
+
+Add:
+
+```js
+function fetchSuggestions(query) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Simulate occasional error (optional)
+      if (Math.random() < 0.05) {
+        reject("Network error");
+        return;
+      }
+
+      const filtered = data
+        .filter(item =>
+          item.toLowerCase().startsWith(query.toLowerCase())
+        )
+        .slice(0, 5);
+
+      resolve(filtered);
+    }, Math.random() * 800 + 200); // 200–1000ms delay
+  });
+}
+```
+
+Why random delay?  
+To simulate real network unpredictability.
+
+---
+
+# 🧠 Step 3 — Replace Filtering Watcher
+
+Remove previous simple watch.
+
+Add new watch:
+
+```js
+watch(query, async (newQuery) => {
+  const trimmed = newQuery.trim();
+
+  if (!trimmed) {
+    isOpen.value = false;
+    results.value = [];
+    return;
+  }
+
+  isOpen.value = true;
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const response = await fetchSuggestions(trimmed);
+    results.value = response;
+  } catch (err) {
+    error.value = err;
+    results.value = [];
+  } finally {
+    isLoading.value = false;
+  }
+});
+```
+
+Explanation:
+
+- Watch triggers on query change
+    
+- If empty → reset
+    
+- Otherwise:
+    
+    - Open dropdown
+        
+    - Show loading
+        
+    - Await API
+        
+    - Update results
+        
+
+---
+
+# 🧠 Step 4 — Update Template
+
+Replace previous `filteredResults` usage with `results`.
+
+```vue
+<ul v-if="isOpen" class="suggestions">
+
+  <li v-if="isLoading">
+    Loading...
+  </li>
+
+  <li v-else-if="error">
+    Something went wrong
+  </li>
+
+  <li
+    v-else-if="results.length === 0"
+    class="no-results"
+  >
+    No results found
+  </li>
+
+  <li
+    v-for="item in results"
+    :key="item"
+    @click="selectItem(item)"
+  >
+    {{ item }}
+  </li>
+
+</ul>
+```
+
+---
+
+# 🧪 Test Carefully
+
+Type:
+
+- A
+    
+- Quickly Ap
+    
+- Quickly App
+    
+
+You may notice something strange.
+
+Sometimes older results overwrite newer.
+
+That is:
+
+🔥 Race Condition
+
+We intentionally introduced it.
+
+---
+
+# 🧠 What We Achieved
+
+✔ Async API simulation  
+✔ Loading state  
+✔ Error state  
+✔ Realistic latency  
+✔ Clean reactive updates
+
+But:
+
+❌ No debounce  
+❌ No race handling  
+❌ No cache
+
+We are now in real-world territory.
+
+---
+
+# 🚀 Next Stage
+
+Stage 5 — Debounce with `watch` + Timer
+
+This is where Vue reactivity and performance meet.
+
+Say:
+
+**“Stage 4 complete”**
+
+and we optimize intelligently.
