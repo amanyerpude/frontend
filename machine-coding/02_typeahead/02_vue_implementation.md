@@ -863,3 +863,189 @@ and we move deeper.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into something that separates mid-level Vue developers from senior ones.
+
+---
+
+# 🟢 Stage 3 — Click Outside Handling (Vue Lifecycle Correct Way)
+
+In vanilla JS, we did:
+
+```js
+document.addEventListener("click", ...)
+```
+
+But in Vue, we must:
+
+- Attach listener in `onMounted`
+    
+- Remove it in `onBeforeUnmount`
+    
+- Avoid memory leaks
+    
+- Avoid breaking reactivity
+    
+
+This is lifecycle discipline.
+
+---
+
+# 🎯 Goal
+
+If user clicks outside the autocomplete container:
+
+- Dropdown closes
+    
+- No memory leak
+    
+- No accidental close when clicking inside
+    
+
+---
+
+# 🧠 Step 1 — Get Container Reference
+
+In template, add a `ref`:
+
+```vue
+<div class="autocomplete-container" ref="containerRef">
+```
+
+Now Vue will bind this DOM element to a reactive reference.
+
+---
+
+# 🧠 Step 2 — Create containerRef in Script
+
+Inside `<script setup>`:
+
+```js
+import { onMounted, onBeforeUnmount } from "vue";
+
+const containerRef = ref(null);
+```
+
+This will hold the DOM node after mount.
+
+---
+
+# 🧠 Step 3 — Add Click Outside Logic
+
+Add:
+
+```js
+function handleClickOutside(event) {
+  if (
+    containerRef.value &&
+    !containerRef.value.contains(event.target)
+  ) {
+    isOpen.value = false;
+  }
+}
+```
+
+Explanation:
+
+- `containerRef.value` → actual DOM node
+    
+- `.contains()` → checks if click was inside component
+    
+- If not → close dropdown
+    
+
+Clean and safe.
+
+---
+
+# 🧠 Step 4 — Attach & Cleanup Properly
+
+Add:
+
+```js
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
+```
+
+This ensures:
+
+- Listener attaches when component mounts
+    
+- Listener removes when component unmounts
+    
+- No memory leak
+    
+
+This is senior-level hygiene.
+
+---
+
+# 🧪 Test It
+
+1. Type "A"
+    
+2. Dropdown appears
+    
+3. Click outside → dropdown closes
+    
+4. Click inside → dropdown stays open
+    
+5. Click suggestion → works as before
+    
+
+---
+
+# 🧠 Why This Is Important
+
+Common mistakes:
+
+- Not cleaning event listener
+    
+- Forgetting null check on ref
+    
+- Causing dropdown to close even when clicking inside
+    
+
+We avoided all.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Reactive filtering  
+✔ Controlled dropdown  
+✔ Click selection  
+✔ Click outside handling  
+✔ Proper lifecycle cleanup
+
+This is now structurally clean.
+
+---
+
+# 🚀 Next Stage
+
+Stage 4 — Convert to Async API Simulation
+
+Now we introduce:
+
+- Loading state
+    
+- Promise-based fetch
+    
+- Async thinking in Vue
+    
+- Error handling
+    
+
+We begin real-world complexity.
+
+Say:
+
+**“Stage 3 complete”**
+
+and we evolve to async behavior.
