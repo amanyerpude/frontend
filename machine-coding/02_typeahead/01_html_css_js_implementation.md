@@ -2288,3 +2288,273 @@ Say:
 **“Stage 10 complete”**
 
 and we enter accessibility engineering.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we enter the stage that truly separates **mid-level frontend devs from senior engineers**.
+
+Most autocomplete implementations stop before this.
+
+You won’t.
+
+---
+
+# 🔵 Stage 11 — Accessibility (ARIA + Screen Reader Support)
+
+Right now visually everything works.
+
+But for:
+
+- Screen reader users
+    
+- Keyboard-only users
+    
+- Assistive technology
+    
+
+Our component is still incomplete.
+
+FAANG absolutely cares about this.
+
+---
+
+# 🎯 Goal
+
+We will properly implement:
+
+- `role="combobox"`
+    
+- `aria-expanded`
+    
+- `aria-controls`
+    
+- `role="listbox"`
+    
+- `role="option"`
+    
+- `aria-activedescendant`
+    
+
+And wire it correctly.
+
+---
+
+# 🧠 Step 1 — Update index.html
+
+Modify input:
+
+```html
+<input 
+  type="text" 
+  id="autocomplete-input" 
+  placeholder="Search..."
+  autocomplete="off"
+  role="combobox"
+  aria-autocomplete="list"
+  aria-expanded="false"
+  aria-controls="suggestions-list"
+/>
+```
+
+Modify `<ul>`:
+
+```html
+<ul 
+  id="suggestions-list" 
+  class="suggestions hidden"
+  role="listbox"
+></ul>
+```
+
+---
+
+# 🧠 Why These Roles?
+
+### role="combobox"
+
+Indicates input controls a popup list.
+
+### aria-autocomplete="list"
+
+Indicates suggestions appear dynamically.
+
+### aria-expanded
+
+Tells screen reader if dropdown is open.
+
+### aria-controls
+
+Links input to listbox.
+
+---
+
+# 🧠 Step 2 — Update renderSuggestions
+
+Modify `renderSuggestions` to:
+
+```javascript
+function renderSuggestions(items) {
+  suggestionsList.innerHTML = "";
+  activeIndex = -1;
+
+  const query = input.value.trim();
+
+  if (items.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No results found";
+    li.classList.add("no-results");
+    li.setAttribute("role", "option");
+    suggestionsList.appendChild(li);
+
+    suggestionsList.classList.remove("hidden");
+    input.setAttribute("aria-expanded", "true");
+    return;
+  }
+
+  items.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.setAttribute("data-index", index);
+    li.setAttribute("role", "option");
+    li.setAttribute("id", `option-${index}`);
+
+    const highlighted = createHighlightedText(item, query);
+    li.appendChild(highlighted);
+
+    suggestionsList.appendChild(li);
+  });
+
+  suggestionsList.classList.remove("hidden");
+  input.setAttribute("aria-expanded", "true");
+}
+```
+
+---
+
+# 🧠 Step 3 — Update Close Behavior
+
+Anywhere we hide dropdown, add:
+
+```javascript
+input.setAttribute("aria-expanded", "false");
+```
+
+Examples:
+
+- Empty query
+    
+- Escape pressed
+    
+- Click outside
+    
+- After selection
+    
+
+---
+
+# 🧠 Step 4 — Update Active Item Logic
+
+Modify `updateActiveItem`:
+
+```javascript
+function updateActiveItem(items) {
+  items.forEach(item => item.classList.remove("active"));
+
+  if (activeIndex >= 0) {
+    const activeItem = items[activeIndex];
+    activeItem.classList.add("active");
+
+    input.setAttribute(
+      "aria-activedescendant",
+      activeItem.id
+    );
+  } else {
+    input.removeAttribute("aria-activedescendant");
+  }
+}
+```
+
+---
+
+# 🧠 Why aria-activedescendant?
+
+Instead of moving focus to `<li>`,  
+we keep focus in input (correct UX)  
+but tell screen reader which option is active.
+
+This is how real accessible comboboxes work.
+
+---
+
+# 🧪 Manual Accessibility Check
+
+Even without screen reader, verify:
+
+- `aria-expanded` toggles properly
+    
+- Each option has unique ID
+    
+- Active option updates `aria-activedescendant`
+    
+
+---
+
+# 🧠 What You Just Achieved
+
+You now built:
+
+✔ Fully async  
+✔ Debounced  
+✔ Race-safe  
+✔ Cached  
+✔ Keyboard navigable  
+✔ Click-safe  
+✔ Highlighted  
+✔ Accessibility compliant combobox
+
+This is beyond typical interview implementations.
+
+---
+
+# 🧱 Now We Enter FAANG Deep Dive Discussion
+
+We are done with implementation.
+
+Now comes:
+
+1. Scaling to 10k results
+    
+2. Virtualization
+    
+3. Memory growth strategy
+    
+4. Event loop reasoning
+    
+5. Paint & reflow optimization
+    
+6. Browser performance discussion
+    
+7. SSR compatibility
+    
+8. Mobile UX adjustments
+    
+9. Testing strategy
+    
+10. Refactoring into reusable module
+    
+
+---
+
+# 🎯 Next Step
+
+Do you want to:
+
+A) Do the FAANG deep-dive discussion now  
+B) Refactor this into a clean modular architecture first  
+C) Convert to React (Senior version)  
+D) Simulate interviewer cross-questioning
+
+Choose one.
+
+--------------------------------------------------------------------------
+
