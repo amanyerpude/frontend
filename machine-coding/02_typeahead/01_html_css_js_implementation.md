@@ -1218,4 +1218,190 @@ We now prevent:
     
 
 --------------------------------------------------------------------------
+Excellent. Now we enter real performance engineering territory.
+# 🟣 Stage 6 — Debouncing (Prevent API Spam)
 
+Right now, if user types:
+
+```
+A
+Ap
+App
+Appl
+Apple
+```
+
+We fire 5 API calls.
+
+That is:
+
+- Wasteful
+    
+- Expensive
+    
+- Bad UX
+    
+- Bad backend design
+    
+
+Senior engineers fix this immediately.
+
+---
+
+# 🎯 Goal of This Stage
+
+We will:
+
+- Wait ~400ms after user stops typing
+    
+- Only then fire API call
+    
+- Cancel previous timer if user keeps typing
+    
+
+---
+
+# 🧠 Important Concept
+
+Debounce means:
+
+> “Only execute function if no new event occurs within X milliseconds.”
+
+---
+
+# 🧠 Step 1 — Add Debounce Timer Variable
+
+At top of `script.js`, add:
+
+```javascript
+let debounceTimer;
+```
+
+---
+
+# 🧠 Step 2 — Modify Input Listener
+
+Replace current input listener with:
+
+```javascript
+input.addEventListener("input", function () {
+  const query = input.value.trim();
+
+  if (!query) {
+    suggestionsList.classList.add("hidden");
+    suggestionsList.innerHTML = "";
+    return;
+  }
+
+  // Clear previous timer
+  clearTimeout(debounceTimer);
+
+  // Set new timer
+  debounceTimer = setTimeout(async () => {
+    showLoading();
+
+    try {
+      const results = await fetchSuggestions(query);
+      renderSuggestions(results);
+    } catch (error) {
+      suggestionsList.innerHTML = "";
+      const li = document.createElement("li");
+      li.textContent = "Something went wrong";
+      suggestionsList.appendChild(li);
+    }
+  }, 400); // 400ms delay
+});
+```
+
+---
+
+# 🧠 What Just Happened
+
+Before:  
+Every keystroke → API call
+
+Now:  
+Keystroke → resets timer  
+Only final pause → API call
+
+---
+
+# 🧪 Test It
+
+Open DevTools → Console.
+
+Add inside `fetchSuggestions`:
+
+```javascript
+console.log("API Call for:", query);
+```
+
+Now type quickly.
+
+You should see:
+
+Only ONE log after you stop typing.
+
+That means debounce works.
+
+---
+
+# 🧠 Why 400ms?
+
+Tradeoff:
+
+- Too small → still many calls
+    
+- Too large → feels laggy
+    
+
+Common industry value: 300–500ms
+
+---
+
+# 🚨 Important: Race Condition Still Exists
+
+Debouncing reduces calls.
+
+It does NOT fix race condition.
+
+If:
+
+User types  
+Pause  
+Call fires  
+Then types again quickly
+
+Older request can still override newer.
+
+We fix that next.
+
+---
+
+# 🧱 Current Status
+
+✔ Async  
+✔ Loading  
+✔ Error state  
+✔ Debouncing
+
+Still missing:
+
+❌ Race condition handling  
+❌ Caching  
+❌ Keyboard navigation  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 7 — Race Condition Handling (Critical Senior Skill)
+
+This is where many strong mid-level devs fail.
+
+Say:
+
+**“Stage 6 complete”**
+
+and we move into concurrency safety.
