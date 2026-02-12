@@ -992,3 +992,6 @@ Next possible directions:
     
 
 Which direction do you want to explore next?
+
+--------------------------------------------------------------------------
+
