@@ -383,3 +383,182 @@ Say:
 
 --------------------------------------------------------------------------
 
+# ✅ Step 3 (React + TypeScript) — Add Hover Preview State
+
+Now we move into real component logic.
+
+We remain controlled for `value`,  
+but we introduce **temporary internal hover state**.
+
+This is correct architecture.
+
+---
+
+# 🎯 Goal of This Step
+
+1. Add `hoverIndex` (internal state)
+    
+2. Prioritize hover over selected value
+    
+3. Do NOT mutate parent state on hover
+    
+4. Keep component controlled
+    
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Even though this is a controlled component, hover is a temporary UI state.  
+> So I’ll manage `hoverIndex` internally while keeping the selected value controlled by the parent."
+
+That’s a strong architectural explanation.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We now have:
+
+```
+value → controlled (parent)
+hoverIndex → internal (component only)
+```
+
+Display logic:
+
+```
+displayIndex = hoverIndex ?? value
+```
+
+Hover overrides visually, not logically.
+
+---
+
+# 💻 Updated Rating.tsx
+
+---
+
+## 📄 components/Rating.tsx
+
+```tsx
+import React, { useState } from "react";
+
+interface RatingProps {
+  value: number;
+  onChange: (value: number) => void;
+  totalItems?: number;
+}
+
+const Rating: React.FC<RatingProps> = ({
+  value,
+  onChange,
+  totalItems = 5,
+}) => {
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
+  return (
+    <div className="rating-container">
+      {Array.from({ length: totalItems }).map((_, index) => {
+        const displayIndex =
+          hoverIndex !== null ? hoverIndex : value;
+
+        const isActive = index <= displayIndex;
+
+        return (
+          <button
+            key={index}
+            className="rating-item"
+            onClick={() => onChange(index)}
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill={isActive ? "gold" : "lightgray"}
+            >
+              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2z" />
+            </svg>
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Rating;
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "I introduced an internal `hoverIndex` state.  
+> During rendering, hover takes priority over the controlled value.  
+> This allows preview behavior without mutating the parent’s state."
+
+That explanation shows deep clarity.
+
+---
+
+# 🔎 What Interviewer Is Evaluating
+
+- Did you keep controlled pattern intact?
+    
+- Did you separate persistent vs temporary state?
+    
+- Is TypeScript properly typed?
+    
+- Did you avoid state confusion?
+    
+- Is logic readable?
+    
+
+---
+
+# 🧠 What You Just Demonstrated
+
+You showed layered state thinking:
+
+```
+Persistent state → Parent
+Temporary state → Component
+Display state → Derived
+```
+
+That’s mature React design.
+
+---
+
+# ⚠️ Current Limitation
+
+Right now:
+
+If:
+
+```
+value = 2
+hoverIndex = 4
+```
+
+All 5 stars become gold.
+
+We are NOT differentiating saved vs preview yet.
+
+That’s the next bar-raiser.
+
+---
+
+# ⏸ Pause Here
+
+Next logical step:
+
+👉 Differentiate locked vs preview visually  
+👉 Improve UX layering  
+👉 Refactor logic cleanly
+
+Say:
+
+**Next Step (React + TS)**
