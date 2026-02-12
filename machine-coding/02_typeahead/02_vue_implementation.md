@@ -619,3 +619,247 @@ and we layer the next piece properly.
 
 --------------------------------------------------------------------------
 
+Perfect.  
+Now we move to **Stage 2 — Click Selection + Controlled Dropdown State**.
+
+We’re still disciplined.
+
+No async yet.  
+No debounce.  
+No optimization.
+
+We now refine behavior.
+
+---
+
+# 🟢 Stage 2 — Click Selection & Proper Dropdown Control
+
+## 🎯 Goal
+
+We will add:
+
+- Click on suggestion → populate input
+    
+- Close dropdown after selection
+    
+- Prevent dropdown from showing when selection is made
+    
+- Clean state control (not hacky)
+    
+
+---
+
+# 🧠 Important Design Change
+
+Right now dropdown visibility depends on:
+
+```vue
+v-if="query && filteredResults.length"
+```
+
+But this is insufficient.
+
+Why?
+
+Because if user clicks a suggestion:
+
+- `query` still has value
+    
+- `filteredResults` still matches
+    
+- Dropdown would reappear immediately
+    
+
+So we need **explicit dropdown state control**.
+
+Senior engineers always separate:
+
+> Data state  
+> UI visibility state
+
+---
+
+# 🧠 Step 1 — Add Dropdown Visibility State
+
+Inside `<script setup>`:
+
+```js
+const isOpen = ref(false);
+```
+
+Now dropdown visibility will depend on `isOpen`.
+
+---
+
+# 🧠 Step 2 — Open Dropdown When Typing
+
+Instead of relying purely on computed rendering,  
+we control it with a watcher.
+
+Add:
+
+```js
+import { watch } from "vue";
+
+watch(query, (newValue) => {
+  if (newValue.trim()) {
+    isOpen.value = true;
+  } else {
+    isOpen.value = false;
+  }
+});
+```
+
+Now:
+
+- When user types → dropdown opens
+    
+- When input cleared → dropdown closes
+    
+
+---
+
+# 🧠 Step 3 — Update Template Visibility Conditions
+
+Modify template:
+
+```vue
+<ul
+  v-if="isOpen && filteredResults.length"
+  class="suggestions"
+>
+```
+
+And:
+
+```vue
+<ul
+  v-else-if="isOpen && !filteredResults.length"
+  class="suggestions"
+>
+```
+
+Now dropdown is controlled explicitly.
+
+---
+
+# 🧠 Step 4 — Add Click Selection Handler
+
+Inside `<script setup>`:
+
+```js
+function selectItem(item) {
+  query.value = item;   // Populate input
+  isOpen.value = false; // Close dropdown
+}
+```
+
+---
+
+# 🧠 Step 5 — Attach Click in Template
+
+Modify `li`:
+
+```vue
+<li
+  v-for="item in filteredResults"
+  :key="item"
+  @click="selectItem(item)"
+>
+  {{ item }}
+</li>
+```
+
+---
+
+# 🧠 Why This Is Better Than Vanilla
+
+In vanilla:
+
+- We had to manually clear innerHTML
+    
+- Manually toggle class
+    
+- Manually manage state
+    
+
+In Vue:
+
+We update reactive state → Vue updates DOM.
+
+Cleaner.  
+Safer.  
+Predictable.
+
+---
+
+# 🧪 Test It
+
+1. Type "A"
+    
+2. Click "Apple"
+    
+3. Input should show "Apple"
+    
+4. Dropdown should close
+    
+5. It should NOT immediately reopen
+    
+
+Now clear input:
+
+- Dropdown should remain closed
+    
+
+---
+
+# 🧠 What We Achieved
+
+✔ Explicit dropdown state  
+✔ Clean click selection  
+✔ No DOM manipulation  
+✔ Controlled behavior
+
+This is already architecturally cleaner than many Vue tutorials.
+
+---
+
+# 🧱 Current Status
+
+✔ Reactive filtering  
+✔ Controlled dropdown  
+✔ Click selection
+
+Still missing:
+
+❌ Click outside close  
+❌ Async behavior  
+❌ Debounce  
+❌ Race handling  
+❌ Cache  
+❌ Keyboard navigation  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 3 — Click Outside Handling (Vue Way)
+
+This introduces:
+
+- `onMounted`
+    
+- `onBeforeUnmount`
+    
+- Proper event cleanup
+    
+
+Say:
+
+**“Stage 2 complete”**
+
+and we move deeper.
+
+--------------------------------------------------------------------------
+
