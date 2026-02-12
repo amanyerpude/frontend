@@ -3,7 +3,6 @@
 
 --------------------------------------------------------------------------
 #### OOP in JS
-
 1. OOPs (Encapsulation & Abstraction) and Factory Functions
 	1. video_url : https://youtu.be/FH_6ww5b52k?si=eK-B0HAZrqRAmmLN
 2. Constructor Function and new Keyword

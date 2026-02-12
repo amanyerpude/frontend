@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "26095ea856631a47",
+        "id": "abe0c03f1b823745",
         "type": "tabs",
         "children": [
           {
-            "id": "5ef1895a2b5789ae",
+            "id": "97535b26bec0f130",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/conceptual-based/CORE/01_this_keyword_in_javascript.md",
+                "file": "machine-coding/01_star_rating_component/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_this_keyword_in_javascript"
-            }
-          },
-          {
-            "id": "cb6cf36dd8c3cf08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02_Prototypal_Inheritance_in_Javascript"
-            }
-          },
-          {
-            "id": "14aa7a73d0011b2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OOP_in_JS"
+              "title": "Untitled"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,15 +176,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "14aa7a73d0011b2b",
+  "active": "97535b26bec0f130",
   "lastOpenFiles": [
+    "machine-coding/01_star_rating_component/00_index.md",
+    "machine-coding/01_star_rating_component/Untitled.md",
     "javascript-interview-questions/conceptual-based/CORE/01_Event_Loop_in_Javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/00_How_JavaScript_Works.md",
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS.md",
+    "javascript-interview-questions/conceptual-based/CORE/Functions_in_JS.md",
+    "javascript-interview-questions/conceptual-based/00_index.md",
+    "javascript-interview-questions/conceptual-based/CORE/02_this_keyword_in_javascript.md",
+    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS/Untitled.md",
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS",
-    "javascript-interview-questions/conceptual-based/CORE/00_How_javascript_works.md",
-    "javascript-interview-questions/conceptual-based/CORE/02_Prototypal_Inheritance_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/02_this_keyword_in_javascript.md",
     "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
     "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
     "javascript-interview-questions/conceptual-based/CORE/05_Events_in_Javascript.md",
@@ -239,10 +214,6 @@
     "Web_Fundamentals.md",
     "State_Management.md",
     "React_Hooks.md",
-    "Low_Level_Design_and_Machine_Coding.md",
-    "frontend-system-design/optimization-techniques/web-performance.md",
-    "CSS/01_CSS_Display_Property.md",
-    "CSS/01_Box_Model.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
