@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/01_star_rating_component/02_vue_implementation.md",
+                "file": "machine-coding/01_star_rating_component/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_vue_implementation"
+              "title": "Untitled"
             }
           }
         ]
@@ -176,10 +176,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "385f7fa91e0985fa",
+  "active": "97535b26bec0f130",
   "lastOpenFiles": [
-    "machine-coding/01_star_rating_component/01_HTML_CSS_JS_implementation.md",
     "machine-coding/01_star_rating_component/02_vue_implementation.md",
+    "machine-coding/01_star_rating_component/Untitled.md",
+    "machine-coding/01_star_rating_component/01_HTML_CSS_JS_implementation.md",
     "machine-coding/01_star_rating_component/prompt.md",
     "machine-coding/01_star_rating_component/00_index.md",
     "javascript-interview-questions/conceptual-based/CORE/01_Event_Loop_in_Javascript.md",
@@ -213,7 +214,6 @@
     "React/Hooks/02_Optimization_&_Advanced_State/03_useMemo",
     "TypeScript/01--Learn-TypeScript–Full-Tutorial.md",
     "TypeScript/02--TypeScript-Full-Course-for-Beginners.md",
-    "Web_Fundamentals.md",
     "Building_Blocks/Real_Time_Updates/media/Sticky_Session.png",
     "Building_Blocks/Real_Time_Updates/media/Scaling_Stateful_Servers.png",
     "Building_Blocks/Real_Time_Updates/media/Long_Polling.jpg",
