@@ -565,3 +565,430 @@ Say:
 
 --------------------------------------------------------------------------
 
+# ✅ Step 4 (React + TypeScript) — Differentiate Locked vs Hover Preview
+
+Now we enter **mid → senior territory**.
+
+Currently:
+
+If
+
+```
+value = 2
+hoverIndex = 4
+```
+
+All 5 stars turn gold.
+
+That hides the fact that only 3 are saved.
+
+We’ll fix that.
+
+---
+
+# 🎯 Goal of This Step
+
+1. Visually distinguish:
+    
+    - Saved rating (locked)
+        
+    - Hover preview (temporary)
+        
+2. Keep architecture clean
+    
+3. Avoid messy inline conditionals
+    
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Right now hover overrides the selected value visually.  
+> In a production UI, it’s better to distinguish between the saved rating and the preview state.  
+> I’ll update the rendering logic to layer these states."
+
+That signals UX maturity.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We want this behavior:
+
+If:
+
+```
+value = 2  → 3 locked
+hoverIndex = 4
+```
+
+Visually:
+
+```
+0 1 2 → gold (locked)
+3 4   → blue (preview)
+```
+
+Logic:
+
+```
+IF hover exists:
+    IF index <= value → gold
+    ELSE IF index <= hoverIndex → blue
+    ELSE → gray
+ELSE:
+    IF index <= value → gold
+    ELSE → gray
+```
+
+---
+
+# 💻 Updated Rating.tsx
+
+We’ll extract a helper function for clarity.
+
+---
+
+## 📄 Updated Component
+
+```tsx
+import React, { useState } from "react";
+
+interface RatingProps {
+  value: number;
+  onChange: (value: number) => void;
+  totalItems?: number;
+}
+
+const Rating: React.FC<RatingProps> = ({
+  value,
+  onChange,
+  totalItems = 5,
+}) => {
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
+  const getFillColor = (index: number): string => {
+    if (hoverIndex !== null) {
+      if (index <= value) return "gold"; // locked
+      if (index <= hoverIndex) return "dodgerblue"; // preview
+      return "lightgray";
+    }
+
+    return index <= value ? "gold" : "lightgray";
+  };
+
+  return (
+    <div className="rating-container">
+      {Array.from({ length: totalItems }).map((_, index) => (
+        <button
+          key={index}
+          className="rating-item"
+          onClick={() => onChange(index)}
+          onMouseEnter={() => setHoverIndex(index)}
+          onMouseLeave={() => setHoverIndex(null)}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            fill={getFillColor(index)}
+          >
+            <path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2z" />
+          </svg>
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default Rating;
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "I extracted the color logic into a helper function to keep the JSX clean.  
+> Now the saved rating and hover preview are visually distinct, improving clarity."
+
+That shows code hygiene and UX thinking.
+
+---
+
+# 🔎 What Interviewer Is Evaluating
+
+- Did you think beyond minimal implementation?
+    
+- Did you separate logic from JSX?
+    
+- Is TypeScript typing clean?
+    
+- Did you handle overlapping states correctly?
+    
+- Are conditions readable?
+    
+
+---
+
+# 🧠 What You Just Demonstrated
+
+You moved from:
+
+Basic functionality  
+→ UX-aware layered state design
+
+That’s a noticeable skill jump.
+
+---
+
+# ⚠️ Architecture Note
+
+We still:
+
+- Haven’t introduced async
+    
+- Haven’t optimized re-renders
+    
+- Haven’t memoized
+    
+- Haven’t added accessibility
+    
+
+Good. We’re pacing correctly.
+
+---
+
+# ⏸ Pause Here
+
+Next major leap:
+
+👉 Optimistic update (async simulation)  
+👉 Loading state  
+👉 Rollback on failure  
+👉 Prevent race conditions
+
+This shifts from UI → product engineering.
+
+Say:
+
+**Next Step (React + TS)**
+
+--------------------------------------------------------------------------
+
+# ✅ Step 5 (React + TypeScript) — Optimistic Update + Rollback
+
+Now we move from UI logic → real product engineering.
+
+This is where interview difficulty increases.
+
+---
+
+# 🎯 Goal of This Step
+
+1. Simulate backend save
+    
+2. Update UI immediately (optimistic update)
+    
+3. Show loading indicator
+    
+4. Roll back on failure
+    
+5. Prevent race conditions
+    
+
+---
+
+# ⚠️ Architectural Decision
+
+Since this is a **controlled component**,  
+the optimistic logic should live in the **parent**.
+
+That’s important.
+
+---
+
+## 🎤 What You Say to the Interviewer
+
+> "Since the component is controlled, optimistic updates should be handled in the parent.  
+> The `Rating` component will remain a pure UI component, while the parent simulates the async save and handles rollback."
+
+That is a very strong architectural answer.
+
+---
+
+## 🧠 What You're Thinking Internally
+
+We now manage in `App.tsx`:
+
+```
+rating
+loading
+previousRating
+```
+
+Flow:
+
+```
+1. Store previous rating
+2. Update rating immediately
+3. Set loading = true
+4. Simulate API
+5. On success → stop loading
+6. On failure → revert
+```
+
+Component remains unaware of async logic.
+
+---
+
+# 💻 Updated Code
+
+---
+
+## 📄 App.tsx
+
+```tsx
+import React, { useState } from "react";
+import Rating from "./components/Rating";
+
+function App() {
+  const [rating, setRating] = useState<number>(-1);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleRatingChange = async (newRating: number) => {
+    if (loading) return;
+
+    const previousRating = rating;
+
+    // Optimistic update
+    setRating(newRating);
+    setLoading(true);
+
+    try {
+      await simulateApiCall();
+      setLoading(false);
+    } catch (error) {
+      // Rollback
+      setRating(previousRating);
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Rate this product</h2>
+
+      <Rating
+        value={rating}
+        onChange={handleRatingChange}
+        totalItems={5}
+      />
+
+      {loading && <p>Saving...</p>}
+    </div>
+  );
+}
+
+function simulateApiCall(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const success = Math.random() > 0.3;
+      success ? resolve() : reject();
+    }, 1000);
+  });
+}
+
+export default App;
+```
+
+---
+
+## 🎤 What You Say After Writing It
+
+> "The parent now performs an optimistic update.  
+> The rating updates immediately for responsiveness.  
+> If the simulated API fails, the state rolls back to the previous value.  
+> I also prevent duplicate requests while loading."
+
+That’s a strong, structured explanation.
+
+---
+
+# 🔎 What Interviewer Is Evaluating
+
+- Did you keep separation of concerns?
+    
+- Did you maintain controlled pattern?
+    
+- Did you handle rollback properly?
+    
+- Did you prevent race conditions?
+    
+- Did you think like a product engineer?
+    
+
+---
+
+# 🧠 What You Just Demonstrated
+
+You showed:
+
+```
+UI component → pure
+Parent → state + async logic
+```
+
+That’s textbook React architecture.
+
+You also handled:
+
+- Async flow
+    
+- Optimistic UI
+    
+- Failure case
+    
+- Loading state
+    
+- State rollback
+    
+
+This is senior-level thinking.
+
+---
+
+# ⚠️ Subtle Improvement (Optional Discussion)
+
+If interviewer pushes further, they may ask:
+
+- What about multiple rapid clicks?
+    
+- What about cancellation?
+    
+- What about debouncing?
+    
+- What about accessibility during loading?
+    
+
+We haven’t handled keyboard or ARIA yet.
+
+That’s next-level refinement.
+
+---
+
+# ⏸ Pause Here
+
+Next possible directions:
+
+1. Improve accessibility (keyboard + ARIA)
+    
+2. Refactor for performance (memoization)
+    
+3. Add dynamic color scaling (low = red, high = green)
+    
+4. Make icon fully customizable (render prop pattern)
+    
+5. Support controlled + uncontrolled pattern
+    
+
+Which direction do you want to explore next?
