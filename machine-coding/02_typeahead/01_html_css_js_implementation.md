@@ -1405,3 +1405,187 @@ Say:
 **“Stage 6 complete”**
 
 and we move into concurrency safety.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we enter **true senior-level territory**.
+
+---
+
+# 🔴 Stage 7 — Race Condition Handling (Concurrency Safety)
+
+Even with debounce, this can still happen:
+
+### Scenario:
+
+1. User types: `A`
+    
+2. Debounce fires → API call #1
+    
+3. User types: `Ap`
+    
+4. Debounce fires → API call #2
+    
+5. API #2 returns first → renders “Ap” results ✅
+    
+6. API #1 returns later → overwrites with “A” results ❌
+    
+
+This is called:
+
+> 🔥 Stale response overwrite
+
+FAANG interviewers love this bug.
+
+---
+
+# 🎯 Goal
+
+Ensure:
+
+Only the **latest request** is allowed to update UI.
+
+Older responses must be ignored.
+
+---
+
+# 🧠 There Are 2 Professional Solutions
+
+### Option A — AbortController
+
+### Option B — Request ID Tracking
+
+In vanilla JS mock environment,  
+Request ID tracking is cleaner.
+
+We will implement that.
+
+---
+
+# 🧠 Step 1 — Add Request Counter
+
+At top of `script.js`, add:
+
+```javascript
+let currentRequestId = 0;
+```
+
+---
+
+# 🧠 Step 2 — Modify Debounced Function
+
+Update debounce section:
+
+```javascript
+debounceTimer = setTimeout(async () => {
+  const requestId = ++currentRequestId;
+
+  showLoading();
+
+  try {
+    const results = await fetchSuggestions(query);
+
+    // Ignore stale responses
+    if (requestId !== currentRequestId) return;
+
+    renderSuggestions(results);
+  } catch (error) {
+    if (requestId !== currentRequestId) return;
+
+    suggestionsList.innerHTML = "";
+    const li = document.createElement("li");
+    li.textContent = "Something went wrong";
+    suggestionsList.appendChild(li);
+  }
+}, 400);
+```
+
+---
+
+# 🧠 What Just Happened?
+
+Every time a new request starts:
+
+```
+currentRequestId++
+```
+
+Each request captures its own ID.
+
+When response returns:
+
+If ID is not the latest → ignore.
+
+This guarantees:
+
+✔ No stale overwrite  
+✔ Concurrency safe  
+✔ Predictable UI
+
+---
+
+# 🧪 Test It Aggressively
+
+Type:
+
+- A
+    
+- Quickly Ap
+    
+- Quickly App
+    
+
+Even with random delay,  
+results should always match latest input.
+
+---
+
+# 🧠 Why This Is Senior-Level
+
+Because:
+
+- You understand async concurrency
+    
+- You understand non-deterministic network timing
+    
+- You protect UI from stale state
+    
+
+Most mid-level devs stop at debounce.
+
+You just moved beyond that.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async simulation  
+✔ Loading state  
+✔ Error handling  
+✔ Debounce  
+✔ Race protection
+
+Still missing:
+
+❌ Caching  
+❌ Keyboard navigation  
+❌ Highlighting match  
+❌ Accessibility  
+❌ Click outside edge cleanup improvement
+
+---
+
+# 🚀 Next Stage
+
+Stage 8 — Caching Strategy
+
+We now prevent redundant API calls.
+
+This introduces memory thinking.
+
+Say:
+
+**“Stage 7 complete”**
+
+and we move to intelligent caching.
