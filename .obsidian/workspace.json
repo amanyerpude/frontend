@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS.md",
+                "file": "Design_Patterns/SOLID/02_OCP_Open_Closed_Principle/01_Open_Close_Principle__SOLID_Principles_in_React_JS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS"
+              "title": "01_Open_Close_Principle__SOLID_Principles_in_React_JS"
             }
           }
         ]
@@ -178,8 +178,9 @@
   },
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
-    "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
     "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS.md",
+    "Design_Patterns/SOLID/02_OCP_Open_Closed_Principle/01_Open_Close_Principle__SOLID_Principles_in_React_JS.md",
+    "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
     "Design_Patterns/SOLID/React_Clean_Code__Advanced_Examples_of_SOLID_Principles.md",
     "Design_Patterns/SOLID/Clean_Code_Lessons_for_the_Front_End_Developer.md",
     "frontend-system-design/optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
@@ -206,7 +207,6 @@
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS/Untitled.md",
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS",
     "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
-    "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
     "React/Hooks/Custom_Hooks",
     "React/Hooks/02_Optimization_&_Advanced_State/05_useTransition",
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/04_useLayoutEffect",
