@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/02_typeahead/03_react_implementation.md",
+                "file": "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP (Single Responsibility Principle) - SOLID Principles in React JS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_react_implementation"
+              "title": "01_SRP (Single Responsibility Principle) - SOLID Principles in React JS"
             }
           }
         ]
@@ -178,8 +178,14 @@
   },
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
-    "machine-coding/02_typeahead/00_index.md",
+    "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
+    "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP (Single Responsibility Principle) - SOLID Principles in React JS.md",
+    "Design_Patterns/SOLID/React_Clean_Code__Advanced_Examples_of_SOLID_Principles.md",
+    "Design_Patterns/SOLID/Clean_Code_Lessons_for_the_Front_End_Developer.md",
+    "frontend-system-design/optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
+    "frontend-system-design/browser-and-communication-techniques/03-real-time-updates.md",
     "machine-coding/02_typeahead/03_react_implementation.md",
+    "machine-coding/02_typeahead/00_index.md",
     "machine-coding/02_typeahead/01_html_css_js_implementation.md",
     "machine-coding/02_typeahead/02_vue_implementation.md",
     "machine-coding/03_/00_index.md",
@@ -201,12 +207,6 @@
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS",
     "javascript-interview-questions/conceptual-based/CORE/04_Closures.md",
     "javascript-interview-questions/conceptual-based/CORE/07_Asynchronous_JavaScript.md",
-    "javascript-interview-questions/conceptual-based/CORE/05_Events_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/03_Event_Loop_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/04_Functions_&_Scoping.md",
-    "javascript-interview-questions/conceptual-based/03_Arrays & Objects.md",
-    "javascript-interview-questions/conceptual-based/02_Variables & Scope.md",
-    "javascript-interview-questions/conceptual-based/01_JavaScript Fundamentals.md",
     "React/Hooks/Custom_Hooks",
     "React/Hooks/02_Optimization_&_Advanced_State/05_useTransition",
     "React/Hooks/03_Specialized_&_Edge_Case_Hooks/04_useLayoutEffect",
