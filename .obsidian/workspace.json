@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP (Single Responsibility Principle) - SOLID Principles in React JS.md",
+                "file": "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_SRP (Single Responsibility Principle) - SOLID Principles in React JS"
+              "title": "01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS"
             }
           }
         ]
@@ -179,7 +179,7 @@
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
     "Design_Patterns/SOLID/SOLID_Principles_in_React_with_Examples.md",
-    "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP (Single Responsibility Principle) - SOLID Principles in React JS.md",
+    "Design_Patterns/SOLID/01_SRP_Single_Responsblity_Principle/01_SRP_Single_Responsibility_Principle__SOLID_Principles_in_React_JS.md",
     "Design_Patterns/SOLID/React_Clean_Code__Advanced_Examples_of_SOLID_Principles.md",
     "Design_Patterns/SOLID/Clean_Code_Lessons_for_the_Front_End_Developer.md",
     "frontend-system-design/optimization-techniques/assest-optimization/optimize-assets-performance-for-web-apps.md",
