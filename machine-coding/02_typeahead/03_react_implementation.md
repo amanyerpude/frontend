@@ -2223,3 +2223,210 @@ and we refine UI polish.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into:
+
+# 🟢 Stage 9 — Highlight Matching Substring (React + TypeScript, Safe Version)
+
+This is UI polish — but we implement it like a senior engineer.
+
+---
+
+# 🎯 Goal
+
+If user types:
+
+```
+Ap
+```
+
+We render:
+
+```
+<strong>Ap</strong>ple
+```
+
+Instead of:
+
+```
+Apple
+```
+
+But we must:
+
+- Avoid `dangerouslySetInnerHTML`
+    
+- Avoid regex injection
+    
+- Avoid XSS
+    
+- Keep rendering declarative
+    
+
+---
+
+# 🧠 Why Not Use `dangerouslySetInnerHTML`?
+
+Because:
+
+- It opens XSS risks
+    
+- It requires sanitization
+    
+- It’s unnecessary for simple prefix match
+    
+- Interviewers may question security awareness
+    
+
+We’ll use safe string splitting instead.
+
+---
+
+# 🧠 Step 1 — Create Highlight Helper Function
+
+Add inside component (above return):
+
+```tsx
+const highlightMatch = (text: string, query: string) => {
+  const trimmed = query.trim();
+  if (!trimmed) return text;
+
+  const lowerText = text.toLowerCase();
+  const lowerQuery = trimmed.toLowerCase();
+
+  if (!lowerText.startsWith(lowerQuery)) {
+    return text;
+  }
+
+  const prefix = text.slice(0, trimmed.length);
+  const suffix = text.slice(trimmed.length);
+
+  return (
+    <>
+      <strong>{prefix}</strong>
+      {suffix}
+    </>
+  );
+};
+```
+
+---
+
+# 🧠 Why This Is Safe
+
+- We return JSX
+    
+- React escapes text automatically
+    
+- No raw HTML injection
+    
+- No regex complexity
+    
+
+Clean and secure.
+
+---
+
+# 🧠 Step 2 — Update List Rendering
+
+Replace `{item}` with:
+
+```tsx
+{highlightMatch(item, query)}
+```
+
+Full list item becomes:
+
+```tsx
+{results.map((item, index) => (
+  <li
+    key={item}
+    onClick={() => handleSelect(item)}
+    style={{
+      padding: "10px",
+      cursor: "pointer",
+      backgroundColor:
+        index === activeIndex ? "#e0e0e0" : "white",
+    }}
+  >
+    {highlightMatch(item, query)}
+  </li>
+))}
+```
+
+---
+
+# 🧪 Test It
+
+Type:
+
+```
+Ap
+Ba
+Ma
+```
+
+You should see:
+
+- Prefix bolded
+    
+- Keyboard navigation still works
+    
+- Click still works
+    
+- No console errors
+    
+
+---
+
+# 🧠 Minor Senior Optimization Thought
+
+Right now `highlightMatch` runs per render per item.
+
+Since max results = 5, this is trivial.
+
+If results were 1000:
+
+We might memoize or precompute.
+
+But for current case:
+
+This is perfectly fine.
+
+Balanced engineering decision.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Click outside  
+✔ Highlighting
+
+We are nearly production-complete.
+
+---
+
+Still missing:
+
+❌ Accessibility (ARIA combobox pattern)  
+❌ Extraction into reusable component  
+❌ Extraction into `useAutocomplete` hook
+
+---
+
+# 🚀 Next Stage
+
+Stage 10 — Accessibility (ARIA Combobox Compliance)
+
+This is what truly differentiates senior frontend engineers.
+
+Say:
+
+**“Stage 9 complete”**
+
+and we finalize with accessibility.
