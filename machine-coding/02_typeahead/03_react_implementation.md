@@ -1729,3 +1729,244 @@ and we add intelligent caching.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into:
+
+# 🟡 Stage 7 — Caching (React + TypeScript, Senior Pattern)
+
+At this point your async logic is already production-safe.
+
+Now we optimize intelligently.
+
+---
+
+# 🎯 Problem
+
+Even with:
+
+- Debounce
+    
+- Race protection
+    
+
+If user types:
+
+```
+Apple
+(clear)
+Apple
+```
+
+We still call API twice.
+
+Wasteful.
+
+We fix that.
+
+---
+
+# 🧠 Design Strategy
+
+We will:
+
+- Use a `Map` to cache results
+    
+- Store cache in `useRef`
+    
+- Check cache before fetching
+    
+- Skip API call if data exists
+    
+- Avoid loading flicker
+    
+
+Why `useRef`?
+
+Because:
+
+- Cache is mutable
+    
+- It should persist across renders
+    
+- Updating cache should NOT cause re-render
+    
+
+Perfect use case.
+
+---
+
+# 🧠 Step 1 — Add Cache Ref
+
+Add at top of component:
+
+```tsx
+const cacheRef = useRef<Map<string, Suggestion[]>>(new Map());
+```
+
+Explanation:
+
+- Key = query string
+    
+- Value = suggestion array
+    
+- Not reactive
+    
+- Internal optimization
+    
+
+---
+
+# 🧠 Step 2 — Modify Fetch Effect
+
+Update effect:
+
+```tsx
+useEffect(() => {
+  const trimmed = debouncedQuery.trim();
+
+  if (!trimmed) {
+    setResults([]);
+    setIsOpen(false);
+    return;
+  }
+
+  // 🔥 Check Cache First
+  if (cacheRef.current.has(trimmed)) {
+    setResults(cacheRef.current.get(trimmed)!);
+    setIsOpen(true);
+    return;
+  }
+
+  const currentRequestId = ++requestIdRef.current;
+
+  setIsLoading(true);
+  setError(null);
+
+  fetchSuggestions(trimmed)
+    .then((response) => {
+      if (currentRequestId !== requestIdRef.current) return;
+
+      // 🔥 Store in Cache
+      cacheRef.current.set(trimmed, response);
+
+      setResults(response);
+    })
+    .catch((err) => {
+      if (currentRequestId !== requestIdRef.current) return;
+
+      setError(err);
+      setResults([]);
+    })
+    .finally(() => {
+      if (currentRequestId === requestIdRef.current) {
+        setIsLoading(false);
+      }
+    });
+
+}, [debouncedQuery]);
+```
+
+---
+
+# 🧠 What Just Improved
+
+Now flow is:
+
+1. User types
+    
+2. Debounce fires
+    
+3. Check cache
+    
+    - If exists → instant render
+        
+    - If not → fetch → store → render
+        
+
+No duplicate network calls.
+
+---
+
+# 🧪 Test It
+
+Add inside `fetchSuggestions`:
+
+```tsx
+console.log("API CALL:", query);
+```
+
+Then:
+
+1. Type “Apple”
+    
+2. Clear
+    
+3. Type “Apple” again
+    
+
+You should see:
+
+Only one API call logged.
+
+Second time = instant render.
+
+---
+
+# 🧠 Senior Interview Insight
+
+If interviewer asks:
+
+> What about cache growth?
+
+You say:
+
+- For small datasets → acceptable
+    
+- For large scale → implement:
+    
+    - LRU eviction
+        
+    - TTL expiration
+        
+    - Max cache size
+        
+
+That shows production thinking.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Loading  
+✔ Error  
+✔ Click selection  
+✔ Click outside
+
+This is now serious production-level async logic.
+
+---
+
+Still missing:
+
+❌ Keyboard navigation  
+❌ Highlight  
+❌ Accessibility  
+❌ Reusable hook extraction
+
+---
+
+# 🚀 Next Stage
+
+Stage 8 — Keyboard Navigation (React Controlled State)
+
+This is where coordination gets interesting.
+
+Say:
+
+**“Stage 7 complete”**
+
+and we move into interactive state mastery.
