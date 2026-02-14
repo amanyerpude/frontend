@@ -838,3 +838,894 @@ and we continue.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we move into something that reveals real React maturity.
+
+---
+
+# 🟢 Stage 3 — Click Outside Handling (React Way)
+
+This is where:
+
+- `useRef`
+    
+- `useEffect`
+    
+- Cleanup discipline
+    
+- Event propagation awareness
+    
+
+all come together.
+
+---
+
+# 🎯 Goal
+
+If user clicks outside the autocomplete component:
+
+- Dropdown closes
+    
+- No memory leak
+    
+- No accidental closing when clicking inside
+    
+
+---
+
+# 🧠 Step 1 — Create Container Ref
+
+At top of component:
+
+```tsx
+import React, { useState, useRef, useEffect } from "react";
+```
+
+Then inside component:
+
+```tsx
+const containerRef = useRef<HTMLDivElement | null>(null);
+```
+
+Explanation:
+
+- `useRef` stores a mutable reference
+    
+- Does NOT cause re-render
+    
+- Used for DOM access
+    
+- TypeScript typed for safety
+    
+
+---
+
+# 🧠 Step 2 — Attach Ref to Container
+
+Update outer div:
+
+```tsx
+<div
+  ref={containerRef}
+  style={{
+    width: "300px",
+    margin: "100px auto",
+    position: "relative",
+  }}
+>
+```
+
+Now we can detect outside clicks.
+
+---
+
+# 🧠 Step 3 — Add Click Outside Effect
+
+Add this inside component:
+
+```tsx
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      containerRef.current &&
+      !containerRef.current.contains(event.target as Node)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("click", handleClickOutside);
+  };
+}, []);
+```
+
+---
+
+# 🧠 Why This Is Correct
+
+### 1️⃣ Why empty dependency array `[]`?
+
+Because:
+
+- We only want to attach once on mount
+    
+- And remove on unmount
+    
+
+If we included `isOpen`, listener would reattach every render.
+
+Senior discipline.
+
+---
+
+### 2️⃣ Why Type Assertion `as Node`?
+
+Because:
+
+`event.target` is `EventTarget | null`
+
+TypeScript requires proper casting.
+
+---
+
+### 3️⃣ Why Cleanup?
+
+Without cleanup:
+
+- Memory leak
+    
+- Duplicate listeners
+    
+- Hard-to-debug behavior
+    
+
+Senior React = always cleanup side effects.
+
+---
+
+# 🧪 Test It
+
+1. Type “A”
+    
+2. Dropdown opens
+    
+3. Click outside → closes
+    
+4. Click inside → stays open
+    
+5. Click suggestion → works
+    
+
+---
+
+# 🧠 Why This Is More Subtle Than It Looks
+
+Common mistakes:
+
+- Forgetting cleanup
+    
+- Missing null check
+    
+- Attaching inside render
+    
+- Using wrong dependency array
+    
+
+We avoided all.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Controlled input  
+✔ Derived filtering  
+✔ Explicit dropdown state  
+✔ Click selection  
+✔ Click outside handling  
+✔ Proper effect cleanup
+
+Now we’re structurally clean.
+
+---
+
+Still missing:
+
+❌ Async  
+❌ Loading state  
+❌ Debounce  
+❌ Race protection  
+❌ Cache  
+❌ Keyboard navigation  
+❌ Highlight  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 4 — Convert to Async API Simulation
+
+This is where React side-effects start becoming interesting.
+
+Say:
+
+**“Stage 3 complete”**
+
+and we move into async complexity.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we enter:
+
+# 🔵 Stage 4 — Async API Simulation (React + TypeScript)
+
+Now complexity increases.
+
+We are introducing:
+
+- Loading state
+    
+- Error state
+    
+- Async fetch simulation
+    
+- Side-effect driven state updates
+    
+
+Still no debounce.  
+Still no race protection.  
+Correctness first.
+
+---
+
+# 🎯 Architectural Shift
+
+Until now:
+
+```
+filteredResults = derived from query
+```
+
+Now:
+
+Results come from async API.
+
+So:
+
+- We cannot derive results synchronously
+    
+- We must store `results` in state
+    
+- We must trigger fetch in `useEffect`
+    
+
+This is a major React shift.
+
+---
+
+# 🧠 Step 1 — Add New State
+
+Inside component:
+
+```tsx
+const [results, setResults] = useState<Suggestion[]>([]);
+const [isLoading, setIsLoading] = useState<boolean>(false);
+const [error, setError] = useState<string | null>(null);
+```
+
+Explanation:
+
+- `results` → API data
+    
+- `isLoading` → controls loading UI
+    
+- `error` → error message
+    
+
+We are now in side-effect territory.
+
+---
+
+# 🧠 Step 2 — Simulated Async API Function
+
+Add inside component (or outside if preferred):
+
+```tsx
+const fetchSuggestions = (query: string): Promise<Suggestion[]> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Simulate occasional error
+      if (Math.random() < 0.05) {
+        reject("Network error");
+        return;
+      }
+
+      const filtered = data
+        .filter((item) =>
+          item.toLowerCase().startsWith(query.toLowerCase())
+        )
+        .slice(0, 5);
+
+      resolve(filtered);
+    }, Math.random() * 800 + 200);
+  });
+};
+```
+
+Random delay simulates real-world unpredictability.
+
+---
+
+# 🧠 Step 3 — Replace Derived Filtering With Effect
+
+Remove old `filteredResults`.
+
+Add:
+
+```tsx
+useEffect(() => {
+  const trimmed = query.trim();
+
+  if (!trimmed) {
+    setResults([]);
+    setIsOpen(false);
+    return;
+  }
+
+  setIsLoading(true);
+  setError(null);
+
+  fetchSuggestions(trimmed)
+    .then((response) => {
+      setResults(response);
+    })
+    .catch((err) => {
+      setError(err);
+      setResults([]);
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+
+}, [query]);
+```
+
+---
+
+# 🧠 Important React Concept
+
+`useEffect` runs whenever `query` changes.
+
+This replaces Vue’s `watch`.
+
+React requires explicit dependency arrays.
+
+---
+
+# 🧠 Step 4 — Update Render Logic
+
+Replace list rendering with:
+
+```tsx
+{isOpen && (
+  <ul
+    style={{
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+      border: "1px solid #ccc",
+      borderTop: "none",
+      background: "white",
+    }}
+  >
+    {isLoading ? (
+      <li style={{ padding: "10px" }}>Loading...</li>
+    ) : error ? (
+      <li style={{ padding: "10px", color: "red" }}>
+        Something went wrong
+      </li>
+    ) : results.length === 0 ? (
+      <li style={{ padding: "10px", color: "gray" }}>
+        No results found
+      </li>
+    ) : (
+      results.map((item) => (
+        <li
+          key={item}
+          onClick={() => handleSelect(item)}
+          style={{ padding: "10px", cursor: "pointer" }}
+        >
+          {item}
+        </li>
+      ))
+    )}
+  </ul>
+)}
+```
+
+---
+
+# 🧪 Test Carefully
+
+Type quickly:
+
+- A
+    
+- Ap
+    
+- App
+    
+
+You may notice:
+
+Sometimes older results override newer.
+
+That is:
+
+🔥 Race Condition
+
+We intentionally introduced it.
+
+---
+
+# 🧠 What We Achieved
+
+✔ Async behavior  
+✔ Loading state  
+✔ Error handling  
+✔ Realistic delay  
+✔ Proper useEffect usage
+
+But still:
+
+❌ No debounce  
+❌ No race protection  
+❌ No cache
+
+---
+
+# 🚀 Next Stage
+
+Stage 5 — Debounce in React (useEffect + timer)
+
+This is where many React candidates make mistakes.
+
+Say:
+
+**“Stage 4 complete”**
+
+and we optimize properly.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we move into **Stage 5 — Debouncing in React (Correctly, Without Bugs)**.
+
+This is where React discipline really matters.
+
+---
+
+# 🟣 Stage 5 — Debounce API Calls
+
+## 🎯 Problem
+
+Right now:
+
+Every keystroke → `query` changes → `useEffect` runs → API call fires.
+
+If user types:
+
+```
+A
+Ap
+App
+Appl
+Apple
+```
+
+We fire 5 API calls.
+
+Not acceptable.
+
+---
+
+# 🧠 React Debounce Strategy
+
+We will:
+
+- Add a separate debounced value
+    
+- Use `setTimeout`
+    
+- Clear previous timer
+    
+- Trigger API only when debounce completes
+    
+
+Important:
+
+We will NOT debounce inside the fetch effect.  
+We will debounce the query itself.
+
+This keeps architecture clean.
+
+---
+
+# 🧠 Step 1 — Add Debounced Query State
+
+Add:
+
+```tsx
+const [debouncedQuery, setDebouncedQuery] = useState<string>("");
+```
+
+Now we separate:
+
+- `query` → immediate input value
+    
+- `debouncedQuery` → stable value after delay
+    
+
+Senior pattern.
+
+---
+
+# 🧠 Step 2 — Add Debounce Effect
+
+Add this above the fetch effect:
+
+```tsx
+useEffect(() => {
+  const handler = setTimeout(() => {
+    setDebouncedQuery(query);
+  }, 400); // 400ms delay
+
+  return () => {
+    clearTimeout(handler);
+  };
+}, [query]);
+```
+
+---
+
+# 🧠 Why This Pattern Is Correct
+
+Instead of:
+
+Debouncing inside fetch effect,
+
+We:
+
+- Derive a debounced value
+    
+- Use it as trigger for API effect
+    
+
+This keeps responsibilities separated.
+
+---
+
+# 🧠 Step 3 — Update Fetch Effect
+
+Now change dependency from `query` to `debouncedQuery`:
+
+```tsx
+useEffect(() => {
+  const trimmed = debouncedQuery.trim();
+
+  if (!trimmed) {
+    setResults([]);
+    setIsOpen(false);
+    return;
+  }
+
+  setIsLoading(true);
+  setError(null);
+
+  fetchSuggestions(trimmed)
+    .then((response) => {
+      setResults(response);
+    })
+    .catch((err) => {
+      setError(err);
+      setResults([]);
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+
+}, [debouncedQuery]);
+```
+
+Now API fires only after debounce.
+
+---
+
+# 🧪 Test It
+
+Add console log inside `fetchSuggestions`.
+
+Type quickly.
+
+You should see:
+
+Only one API call after you stop typing.
+
+Debounce works.
+
+---
+
+# 🧠 Why This Is Senior-Level React
+
+Common mistakes:
+
+❌ Debouncing inside onChange  
+❌ Storing timer in state  
+❌ Missing cleanup  
+❌ Incorrect dependency arrays  
+❌ Causing stale closure bugs
+
+We avoided all.
+
+---
+
+# 🚨 Important: Race Condition Still Exists
+
+Even with debounce:
+
+If:
+
+- API call #1 starts
+    
+- User types again
+    
+- API call #2 starts
+    
+- #1 returns after #2
+    
+
+Older response can overwrite newer.
+
+We fix that next.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Loading  
+✔ Error  
+✔ Debounce  
+✔ Click outside  
+✔ Click selection
+
+Still missing:
+
+❌ Race handling  
+❌ Cache  
+❌ Keyboard navigation  
+❌ Highlight  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 6 — Race Condition Handling (React-Safe Version)
+
+This is where most candidates break.
+
+Say:
+
+**“Stage 5 complete”**
+
+and we harden the system.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we enter **Stage 6 — Race Condition Handling (React + TypeScript, Production-Safe)**.
+
+This is where senior React thinking becomes very visible.
+
+---
+
+# 🔴 Stage 6 — Prevent Stale API Responses
+
+## 🎯 The Problem (Revisited)
+
+Even with debounce:
+
+1. `debouncedQuery = "A"` → API call #1
+    
+2. User types → `debouncedQuery = "Ap"` → API call #2
+    
+3. Call #2 returns first → correct results
+    
+4. Call #1 returns later → overwrites results ❌
+    
+
+This creates inconsistent UI.
+
+We must guarantee:
+
+> Only the latest request is allowed to update state.
+
+---
+
+# 🧠 Design Strategy
+
+We will use:
+
+> Request ID tracking via `useRef`
+
+Why `useRef`?
+
+- It persists across renders
+    
+- Updating it does NOT cause re-render
+    
+- Perfect for mutable concurrency control
+    
+
+---
+
+# 🧠 Step 1 — Add Request ID Ref
+
+Add at top of component:
+
+```tsx
+const requestIdRef = useRef<number>(0);
+```
+
+Explanation:
+
+- Stores latest request ID
+    
+- Mutable
+    
+- Safe across renders
+    
+
+---
+
+# 🧠 Step 2 — Modify Fetch Effect
+
+Update fetch effect like this:
+
+```tsx
+useEffect(() => {
+  const trimmed = debouncedQuery.trim();
+
+  if (!trimmed) {
+    setResults([]);
+    setIsOpen(false);
+    return;
+  }
+
+  const currentRequestId = ++requestIdRef.current;
+
+  setIsLoading(true);
+  setError(null);
+
+  fetchSuggestions(trimmed)
+    .then((response) => {
+      // Ignore stale responses
+      if (currentRequestId !== requestIdRef.current) return;
+
+      setResults(response);
+    })
+    .catch((err) => {
+      if (currentRequestId !== requestIdRef.current) return;
+
+      setError(err);
+      setResults([]);
+    })
+    .finally(() => {
+      if (currentRequestId === requestIdRef.current) {
+        setIsLoading(false);
+      }
+    });
+
+}, [debouncedQuery]);
+```
+
+---
+
+# 🧠 What Just Happened
+
+Each time effect runs:
+
+```
+requestIdRef.current++
+```
+
+Each request captures its own ID.
+
+When response returns:
+
+If ID ≠ latest → ignore it.
+
+Guarantee:
+
+✔ No stale UI  
+✔ No incorrect overwrites  
+✔ Predictable state
+
+---
+
+# 🧪 Test Aggressively
+
+Type:
+
+- A
+    
+- Quickly Ap
+    
+- Quickly App
+    
+
+Even with random delay:
+
+Results should always match latest input.
+
+No flickering.  
+No wrong results.
+
+---
+
+# 🧠 Why This Is Senior-Level React
+
+Because you now understand:
+
+- Async concurrency in React
+    
+- Non-deterministic timing
+    
+- State consistency guarantees
+    
+- Mutable refs for concurrency control
+    
+
+Most developers stop at debounce.  
+You didn’t.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Debounce  
+✔ Race-safe  
+✔ Loading  
+✔ Error  
+✔ Click selection  
+✔ Click outside
+
+Still missing:
+
+❌ Cache  
+❌ Keyboard navigation  
+❌ Highlight  
+❌ Accessibility
+
+---
+
+# 🚀 Next Stage
+
+Stage 7 — Caching (Map + useRef)
+
+We now prevent redundant API calls.
+
+Say:
+
+**“Stage 6 complete”**
+
+and we add intelligent caching.
+
+--------------------------------------------------------------------------
+
