@@ -1970,3 +1970,253 @@ Say:
 **“Stage 7 complete”**
 
 and we move into interactive state mastery.
+
+--------------------------------------------------------------------------
+
+Excellent.  
+Now we move into:
+
+# 🟢 Stage 8 — Keyboard Navigation (React + TypeScript)
+
+This is where coordination between state and UI becomes subtle.
+
+We will implement:
+
+- ⬇ Arrow Down
+    
+- ⬆ Arrow Up
+    
+- ⏎ Enter
+    
+- ⎋ Escape
+    
+- Loop behavior
+    
+- Highlight active item
+    
+
+All using React state cleanly.
+
+---
+
+# 🎯 Goal
+
+Add keyboard support without:
+
+- Direct DOM manipulation
+    
+- classList hacks
+    
+- querySelector
+    
+- Imperative logic
+    
+
+Everything must flow from state.
+
+---
+
+# 🧠 Step 1 — Add Active Index State
+
+Add:
+
+```tsx
+const [activeIndex, setActiveIndex] = useState<number>(-1);
+```
+
+Meaning:
+
+- `-1` → nothing selected
+    
+- `0...n` → highlighted item
+    
+
+---
+
+# 🧠 Step 2 — Reset Active Index When Results Change
+
+Add:
+
+```tsx
+useEffect(() => {
+  setActiveIndex(-1);
+}, [results]);
+```
+
+Why?
+
+When new results arrive:
+
+- Reset highlight
+    
+- Prevent stale index
+    
+
+Senior state hygiene.
+
+---
+
+# 🧠 Step 3 — Add Keydown Handler
+
+Add this function:
+
+```tsx
+const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  if (!isOpen || results.length === 0) return;
+
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+
+    setActiveIndex((prev) =>
+      (prev + 1) % results.length
+    );
+
+  } else if (event.key === "ArrowUp") {
+    event.preventDefault();
+
+    setActiveIndex((prev) =>
+      (prev - 1 + results.length) % results.length
+    );
+
+  } else if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (activeIndex >= 0) {
+      handleSelect(results[activeIndex]);
+    }
+
+  } else if (event.key === "Escape") {
+    setIsOpen(false);
+  }
+};
+```
+
+---
+
+# 🧠 Why Use Functional State Update?
+
+For ArrowDown/Up:
+
+```tsx
+setActiveIndex((prev) => ...)
+```
+
+Because:
+
+- It uses latest state
+    
+- Avoids stale closure
+    
+- Safe under rapid key presses
+    
+
+Senior React pattern.
+
+---
+
+# 🧠 Step 4 — Attach to Input
+
+Update input:
+
+```tsx
+<input
+  type="text"
+  value={query}
+  onChange={(e) => {
+    const value = e.target.value;
+    setQuery(value);
+    setIsOpen(!!value.trim());
+  }}
+  onKeyDown={handleKeyDown}
+  placeholder="Search..."
+  autoComplete="off"
+/>
+```
+
+---
+
+# 🧠 Step 5 — Add Active Styling
+
+Update list rendering:
+
+```tsx
+{results.map((item, index) => (
+  <li
+    key={item}
+    onClick={() => handleSelect(item)}
+    style={{
+      padding: "10px",
+      cursor: "pointer",
+      backgroundColor:
+        index === activeIndex ? "#e0e0e0" : "white",
+    }}
+  >
+    {item}
+  </li>
+))}
+```
+
+---
+
+# 🧪 Test It Carefully
+
+1. Type “A”
+    
+2. Press Arrow Down
+    
+3. Highlight should move
+    
+4. Press Enter → selects
+    
+5. Press Escape → closes
+    
+6. Loop behavior works
+    
+
+No weird jumps.  
+No console errors.
+
+---
+
+# 🧠 Why This Is Clean
+
+We:
+
+✔ Used state-driven highlighting  
+✔ Avoided DOM access  
+✔ Used functional updates  
+✔ Reset on results change
+
+This is idiomatic React.
+
+---
+
+# 🧱 Current Architecture Status
+
+✔ Async  
+✔ Debounce  
+✔ Race safe  
+✔ Cache  
+✔ Click selection  
+✔ Click outside  
+✔ Keyboard navigation
+
+We are now feature-complete except:
+
+❌ Highlight matching substring  
+❌ Accessibility (ARIA)  
+❌ Refactor into reusable hook
+
+---
+
+# 🚀 Next Stage
+
+Stage 9 — Highlight Matching Substring (Safe React Pattern)
+
+We will implement bolded prefix safely without `dangerouslySetInnerHTML`.
+
+Say:
+
+**“Stage 8 complete”**
+
+and we refine UI polish.
