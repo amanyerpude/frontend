@@ -1052,3 +1052,258 @@ And we continue.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we enter **Phase 4 — Optimistic Update + Rollback**.
+
+This is where the problem shifts from UI → product engineering.
+
+Most candidates struggle here.
+
+---
+
+# 🚀 Stage 5 — Add Parent Callback + Optimistic Update + Rollback
+
+We now implement:
+
+- `onChange` callback
+    
+- Loading state
+    
+- Previous value tracking
+    
+- Async simulation
+    
+- Rollback on failure
+    
+- Prevent race conditions
+    
+
+---
+
+# 🎤 What You Say to the Interviewer
+
+> “Now I’ll simulate a real backend call.  
+> I’ll implement optimistic updates so the UI updates immediately,  
+> show a loading indicator,  
+> and revert the rating if the request fails.”
+
+That’s a strong statement.
+
+---
+
+# 🧠 What You're Thinking Internally
+
+We now extend state:
+
+```
+state = {
+  selectedIndex,
+  hoverIndex,
+  loading,
+  previousValue
+}
+```
+
+Flow:
+
+```
+1. Store previousValue
+2. Update selectedIndex immediately
+3. Set loading = true
+4. Call simulated API
+5. On success → loading = false
+6. On failure → revert selectedIndex
+7. Prevent clicks while loading
+```
+
+---
+
+# 💻 Updated script.js
+
+We now modify factory signature and logic.
+
+---
+
+```javascript
+function createRating({
+  container,
+  totalItems = 5,
+  onChange = () => {},
+}) {
+  const state = {
+    selectedIndex: -1,
+    hoverIndex: -1,
+    loading: false,
+    previousValue: -1,
+  };
+
+  function simulateApiCall() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const success = Math.random() > 0.3;
+        success ? resolve() : reject();
+      }, 1000);
+    });
+  }
+
+  function getFillColor(index) {
+    if (state.hoverIndex !== -1) {
+      if (index <= state.selectedIndex) return "gold";
+      if (index <= state.hoverIndex) return "dodgerblue";
+      return "lightgray";
+    }
+
+    return index <= state.selectedIndex
+      ? "gold"
+      : "lightgray";
+  }
+
+  async function handleClick(index) {
+    if (state.loading) return;
+
+    state.previousValue = state.selectedIndex;
+    state.selectedIndex = index;
+    state.loading = true;
+
+    onChange(index);
+    render();
+
+    try {
+      await simulateApiCall();
+    } catch (error) {
+      state.selectedIndex = state.previousValue;
+    } finally {
+      state.loading = false;
+      render();
+    }
+  }
+
+  function render() {
+    container.innerHTML = "";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "rating-container";
+
+    for (let i = 0; i < totalItems; i++) {
+      const button = document.createElement("button");
+      button.className = "rating-item";
+      button.disabled = state.loading;
+
+      const fillColor = getFillColor(i);
+
+      button.innerHTML = `
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="${fillColor}">
+          <path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2z"/>
+        </svg>
+      `;
+
+      button.addEventListener("click", () => handleClick(i));
+      button.addEventListener("mouseenter", () => {
+        state.hoverIndex = i;
+        render();
+      });
+      button.addEventListener("mouseleave", () => {
+        state.hoverIndex = -1;
+        render();
+      });
+
+      wrapper.appendChild(button);
+    }
+
+    if (state.loading) {
+      const loader = document.createElement("span");
+      loader.textContent = " Saving...";
+      loader.style.marginLeft = "10px";
+      wrapper.appendChild(loader);
+    }
+
+    container.appendChild(wrapper);
+  }
+
+  render();
+}
+```
+
+---
+
+# 🎤 What You Say After Writing It
+
+> “The component now performs optimistic updates.  
+> It updates the rating immediately for responsiveness.  
+> If the simulated API fails, it rolls back to the previous value.  
+> I also disabled interaction during loading to prevent race conditions.”
+
+Very strong explanation.
+
+---
+
+# 🔎 What Interviewer Is Evaluating
+
+- Did you track previous value?
+    
+- Did you handle rollback?
+    
+- Did you prevent race conditions?
+    
+- Did you keep render deterministic?
+    
+- Did you separate async logic cleanly?
+    
+- Did you maintain UX responsiveness?
+    
+
+---
+
+# 🧠 What You Just Demonstrated
+
+You handled:
+
+- Async state
+    
+- Optimistic UI
+    
+- Rollback logic
+    
+- Race condition prevention
+    
+- Proper re-rendering
+    
+- Clean architecture
+    
+
+That’s senior-level thinking in vanilla JS.
+
+---
+
+# ⚠️ We Still Haven’t Done
+
+- Render props abstraction (Phase 2)
+    
+- Dynamic color scaling (Phase 6)
+    
+- Keyboard accessibility (arrow keys)
+    
+- UI abstraction injection
+    
+
+Those are next-level refinements.
+
+---
+
+# ⏸ Pause Here
+
+Next direction:
+
+1. Implement Render Props abstraction (UI-agnostic)
+    
+2. Add dynamic red/yellow/green scaling
+    
+3. Improve accessibility (keyboard navigation)
+    
+4. Refactor for better structure
+    
+
+Which one do you want to tackle next?
+
+--------------------------------------------------------------------------
+
