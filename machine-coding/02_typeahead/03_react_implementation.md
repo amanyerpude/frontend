@@ -2433,3 +2433,246 @@ and we finalize with accessibility.
 
 --------------------------------------------------------------------------
 
+Excellent.  
+Now we implement the final functional layer:
+
+# 🟣 Stage 10 — Accessibility (ARIA Combobox Pattern in React)
+
+This is what separates feature developers from senior frontend engineers.
+
+Right now:
+
+✔ Async  
+✔ Debounce  
+✔ Race-safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Highlight
+
+But for:
+
+- Screen readers
+    
+- Assistive technology
+    
+- Accessibility compliance
+    
+
+We are incomplete.
+
+Now we fix that.
+
+---
+
+# 🎯 Goal
+
+Implement proper ARIA Combobox pattern:
+
+- `role="combobox"` on input
+    
+- `aria-expanded`
+    
+- `aria-controls`
+    
+- `aria-autocomplete="list"`
+    
+- `role="listbox"` on dropdown
+    
+- `role="option"` on items
+    
+- `aria-selected`
+    
+- `aria-activedescendant`
+    
+
+---
+
+# 🧠 Step 1 — Add Active Descendant ID
+
+Add derived ID:
+
+```tsx
+const activeDescendantId =
+  activeIndex >= 0 ? `option-${activeIndex}` : undefined;
+```
+
+We don’t need useMemo — simple derivation is fine.
+
+---
+
+# 🧠 Step 2 — Update Input Element
+
+Modify input:
+
+```tsx
+<input
+  type="text"
+  value={query}
+  onChange={(e) => {
+    const value = e.target.value;
+    setQuery(value);
+    setIsOpen(!!value.trim());
+  }}
+  onKeyDown={handleKeyDown}
+  placeholder="Search..."
+  autoComplete="off"
+  role="combobox"
+  aria-autocomplete="list"
+  aria-expanded={isOpen}
+  aria-controls="autocomplete-list"
+  aria-activedescendant={activeDescendantId}
+/>
+```
+
+Explanation:
+
+- `role="combobox"` → indicates input controls list
+    
+- `aria-expanded` → tells screen reader dropdown state
+    
+- `aria-controls` → links input to list
+    
+- `aria-activedescendant` → indicates active option
+    
+
+---
+
+# 🧠 Step 3 — Update Dropdown `<ul>`
+
+Modify:
+
+```tsx
+<ul
+  id="autocomplete-list"
+  role="listbox"
+  style={{
+    listStyle: "none",
+    margin: 0,
+    padding: 0,
+    border: "1px solid #ccc",
+    borderTop: "none",
+    background: "white",
+  }}
+>
+```
+
+Now screen readers know it’s a selectable list.
+
+---
+
+# 🧠 Step 4 — Update List Items
+
+Modify `<li>`:
+
+```tsx
+{results.map((item, index) => (
+  <li
+    key={item}
+    id={`option-${index}`}
+    role="option"
+    aria-selected={index === activeIndex}
+    onClick={() => handleSelect(item)}
+    style={{
+      padding: "10px",
+      cursor: "pointer",
+      backgroundColor:
+        index === activeIndex ? "#e0e0e0" : "white",
+    }}
+  >
+    {highlightMatch(item, query)}
+  </li>
+))}
+```
+
+Explanation:
+
+- `role="option"` → indicates selectable item
+    
+- `aria-selected` → indicates active item
+    
+- Unique `id` → required for aria-activedescendant
+    
+
+---
+
+# 🧪 Manual Verification
+
+Open DevTools.
+
+While typing:
+
+- `aria-expanded` should toggle
+    
+- `aria-activedescendant` should update
+    
+- Each option has unique ID
+    
+- Escape closes dropdown properly
+    
+
+Even without screen reader, inspect DOM.
+
+---
+
+# 🧠 Why This Is Senior-Level
+
+Many candidates:
+
+- Ignore accessibility
+    
+- Or add partial ARIA incorrectly
+    
+- Or move focus to list items (bad UX)
+    
+
+Correct combobox behavior:
+
+- Focus remains in input
+    
+- Active option indicated via aria-activedescendant
+    
+
+That’s professional implementation.
+
+---
+
+# 🧱 Final System Status
+
+You now built:
+
+✔ Async  
+✔ Debounce  
+✔ Race-safe  
+✔ Cache  
+✔ Keyboard navigation  
+✔ Click outside  
+✔ Highlighting  
+✔ ARIA compliant combobox
+
+This is production-grade.
+
+---
+
+# 🚀 Now We Move Beyond Feature Coding
+
+We now enter architectural refinement stage.
+
+Next possible directions:
+
+1️⃣ Extract into reusable `AutoComplete.tsx` component  
+2️⃣ Extract async logic into `useAutocomplete()` hook  
+3️⃣ Convert into interview-ready explanation script  
+4️⃣ Deep dive scaling discussion (10k results, SSR, performance)  
+5️⃣ Mock FAANG cross-questioning
+
+---
+
+You’ve implemented the full system.
+
+Now tell me:
+
+👉 Do you want to refactor this into a reusable hook?  
+👉 Or simulate senior-level interview probing?
+
+--------------------------------------------------------------------------
+
