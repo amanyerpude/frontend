@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/05_Nested_Comments/01_html_css_js_implementation.md",
+                "file": "machine-coding/03_File_Explorer/01_html_css_js_implementation.md",
                 "mode": "source",
                 "source": false
               },
@@ -178,8 +178,8 @@
   },
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
-    "machine-coding/01_star_rating_component/prompt.md",
     "machine-coding/05_Nested_Comments/01_html_css_js_implementation.md",
+    "machine-coding/01_star_rating_component/prompt.md",
     "machine-coding/05_Nested_Comments/00_index.md",
     "machine-coding/04_Nested_Checkbox/01_html_css_js_implementation.md",
     "machine-coding/05_Nested_Comments",
