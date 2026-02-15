@@ -459,3 +459,219 @@ Stage 2:
 This is where recursion meets mutation logic.
 
 Ready to implement real insert logic?
+
+--------------------------------------------------------------------------
+# 🧱 Stage 2 — Insert Reply (Tree Update + Re-render)
+
+Now we connect UI → Data → Re-render.
+
+Goal:
+
+> When user clicks Save:
+> 
+> 1. Insert new node into correct place in tree (DFS)
+>     
+> 2. Clear container
+>     
+> 3. Re-render entire tree
+>     
+
+No shortcuts.
+
+---
+
+# 🎯 What I Say to the Interviewer
+
+> “Now I’ll implement the insert logic.  
+> I’ll write a recursive DFS function to find the target node by ID and insert the new reply.  
+> After updating the tree, I’ll re-render the UI from the updated state.”
+
+This signals:
+
+- You understand state as single source of truth
+    
+- You understand immutable update thinking (even in vanilla)
+    
+- You understand recursion for unknown depth
+    
+
+---
+
+# 🧠 What I’m Thinking Internally
+
+We need:
+
+```
+insertNode(tree, targetId, newNode)
+```
+
+Rules:
+
+- Traverse depth-first
+    
+- If match → add child
+    
+- Else → recurse into children
+    
+- Return updated subtree
+    
+
+Even though we are mutating (since it's vanilla), structure should mirror immutable logic mentally.
+
+---
+
+# 🔧 Step 1 — Add Insert Function
+
+Add this in script.js:
+
+```js
+function insertNode(node, targetId, newNode) {
+  if (node.id === targetId) {
+    node.items.unshift(newNode); // Add newest at top
+    return;
+  }
+
+  for (let child of node.items) {
+    insertNode(child, targetId, newNode);
+  }
+}
+```
+
+This is DFS.
+
+Base case:
+
+```
+node.id === targetId
+```
+
+Recursive case:
+
+```
+loop children
+```
+
+Stops naturally.
+
+---
+
+# 🔁 Step 2 — Connect Save Button
+
+Inside renderTree, modify Save button:
+
+Replace empty Save logic with:
+
+```js
+saveBtn.addEventListener("click", () => {
+  const value = input.value.trim();
+  if (!value) return;
+
+  const newComment = {
+    id: Date.now().toString(),
+    content: value,
+    items: []
+  };
+
+  insertNode(commentsTree, node.id, newComment);
+
+  // Clear input
+  input.value = "";
+  replyContainer.style.display = "none";
+
+  // Re-render entire tree
+  container.innerHTML = "";
+  renderTree(commentsTree, container);
+});
+```
+
+---
+
+# 🔁 Important — Why Full Re-render?
+
+Because:
+
+Vanilla JS does not diff.
+
+So safest pattern:
+
+1. Update state
+    
+2. Clear container
+    
+3. Re-render from scratch
+    
+
+This ensures UI always reflects tree.
+
+Time cost = O(N). Acceptable for interview.
+
+---
+
+# 🧠 What Interviewer Is Evaluating
+
+- Do you understand DFS?
+    
+- Are you inserting at correct depth?
+    
+- Are you regenerating UI properly?
+    
+- Are you clearing old DOM?
+    
+- Do new replies appear in correct place?
+    
+
+---
+
+# ⚠️ Common Mistakes Here
+
+❌ Not clearing container → duplicate nodes  
+❌ Forgetting to stop recursion  
+❌ Using wrong ID  
+❌ Mutating wrong object  
+❌ Trying to update DOM manually instead of re-rendering
+
+---
+
+# 🧮 Complexity
+
+Insert traversal:
+
+Time: O(N)
+
+Re-render:
+
+Time: O(N)
+
+Total per insert:
+
+O(N)
+
+You should mention:
+
+> “For very large trees, we might optimize partial re-render, but for interview scope this is acceptable.”
+
+That signals senior awareness without overengineering.
+
+---
+
+# 🧱 Current Capabilities
+
+We now have:
+
+✔ Recursive render  
+✔ Per-node reply toggle  
+✔ DFS insert  
+✔ Full re-render  
+✔ Stable state model
+
+This is already mid-level strong.
+
+---
+
+Next logical step:
+
+Stage 3 — Edit functionality  
+OR  
+Stage 4 — Delete functionality
+
+Which one do you want first?
