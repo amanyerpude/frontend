@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "machine-coding/05_Nested_Comments/00_index.md",
+                "file": "machine-coding/05_Nested_Comments/01_html_css_js_implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_index"
+              "title": "01_html_css_js_implementation"
             }
           }
         ]
@@ -178,11 +178,12 @@
   },
   "active": "97535b26bec0f130",
   "lastOpenFiles": [
-    "machine-coding/04_Nested_Checkbox/01_html_css_js_implementation.md",
+    "machine-coding/01_star_rating_component/prompt.md",
+    "machine-coding/05_Nested_Comments/01_html_css_js_implementation.md",
     "machine-coding/05_Nested_Comments/00_index.md",
+    "machine-coding/04_Nested_Checkbox/01_html_css_js_implementation.md",
     "machine-coding/05_Nested_Comments",
     "machine-coding/04_Nested_Checkbox/00_index.md",
-    "machine-coding/01_star_rating_component/prompt.md",
     "machine-coding/03_File_Explorer/01_html_css_js_implementation.md",
     "machine-coding/04_Nested_Checkbox",
     "machine-coding/03_File_Explorer/00_index.md",
@@ -207,7 +208,6 @@
     "machine-coding/03_File_Explorer",
     "machine-coding/02_typeahead",
     "javascript-interview-questions/conceptual-based/CORE/01_Event_Loop_in_Javascript.md",
-    "javascript-interview-questions/conceptual-based/CORE/00_How_JavaScript_Works.md",
     "javascript-interview-questions/conceptual-based/CORE/OOP_in_JS",
     "React/Hooks/Custom_Hooks",
     "React/Hooks/02_Optimization_&_Advanced_State/05_useTransition",
