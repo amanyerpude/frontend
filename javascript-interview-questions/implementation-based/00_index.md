@@ -108,7 +108,7 @@
 49. Implement clearAllTimeout
 50. Throttle an array of task
 51. Create a throttle function with trailing and leading option
-52. Implement throttling
+52. Implement throttling (NOT-FOUND)
 53. Implement debouncing
 54. Debouncing with leading and trailing options
 55. Create promiseSchedular that can be paused and resumed
