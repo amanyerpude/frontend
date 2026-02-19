@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javascript-interview-questions/implementation-based/00_index.md",
+                "file": "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/55-Create-promiseSchedular-that-can-be-paused-and resumed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_index"
+              "title": "55-Create-promiseSchedular-that-can-be-paused-and resumed"
             }
           },
           {
@@ -207,9 +207,9 @@
   },
   "active": "a54c925639b94c25",
   "lastOpenFiles": [
+    "javascript-interview-questions/implementation-based/00_index.md",
     "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/55-Create-promiseSchedular-that-can-be-paused-and resumed.md",
     "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/54-Debouncing-with-leading-and-trailing-options.md",
-    "javascript-interview-questions/implementation-based/00_index.md",
     "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/53-Implement-debouncing.md",
     "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/51-Create a throttle function with trailing and leading option.md",
     "javascript-interview-questions/implementation-based/06_Timers_&_Task_Scheduling/50-Throttle-an-array-of-task.md",
