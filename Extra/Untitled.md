@@ -1,0 +1,32 @@
+- DSA knowledge
+- ReactJS
+- NodeJS
+- Experience building highly scalable services using Node.js or similar technologies and associated frameworks such as Express.
+- Modern web tools & patterns (npm, webpack, rollup, or other bundlers)
+- Knowledge of best practices around monorepo packages
+- Working in an environment where quality is top of the mind (unit, integration, e2e testing)
+- Familiarity with Agile/SCRUM practices
+- **Frontend**: Bootstrap
+- **Infrastructure**: Docker, Kubernetes, Terraform
+- **Cloud**: GCP, AWS, Azure
+- **Tools**: GitHub for repo management, actions, and issues
+- Tailwind, Bootstrap
+- JavaScript programming experience with knowledge of advanced JavaScript concepts like compilation, webpack, bundling, and TypeScript.
+- Hands-on experience in NodeJS and Micro-frontend architecture.
+- Experienced frontend engineer with deep expertise in architecture, performance optimization, and leading complex UI initiatives from design to delivery.
+
+
+- Solid Hands-On experience in JavaScript, TypeScript, Fundamental HTML, and CSS.
+- Deep understanding of JavaScript and its working across different browsers - Deep knowledge of Browser(s) architecture & internal working (iframe, ShadowDOM & Rendering of webpages)
+- Experience with React Ecosystem (React Router, Styled-components, Server-side rendering, Context API, React Hooks) is strongly preferred
+- Experience with state management libraries such as Redux or MobX is a huge plus.
+- Proficient understanding of cross-browser compatibility issues and ways to work around such issues
+- Core Java Basics & OOP concepts - Understanding of MVC, MVVM, MVP, and other UI design patterns
+- Solid understanding of design principles and patterns
+- Solid problem-solving skills with an understanding of data structures and algorithms
+- Knowledge of front-end compilers and bundlers
+- Experience in Unit Testing and Automation, NoSQL DB, CI/CD, Jenkins.
+- Analyze Functional & Non-Functional requirements with effort estimation and deployment strategies
+- Hands-on in Architecting and developing large-scale applications
+- Hands-on debugging skills
+- Design for performance, scalability, fault tolerance, and high availability

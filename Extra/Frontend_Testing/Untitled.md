@@ -1,0 +1,3 @@
+- Experience with End to End test using **Playwright**
+- Strong experience with **testing and automation**, and familiar with agile development practices.
+- 
